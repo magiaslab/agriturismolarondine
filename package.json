@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.11.5",
+    "astro": "^4.12.2",
     "astro-i18next": "^1.0.0-beta.21",
     "astro-icon": "^1.1.0",
     "astro-robots-txt": "^1.0.0",

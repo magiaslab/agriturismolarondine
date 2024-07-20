@@ -1,59 +1,59 @@
 ---
 import { SEO } from "astro-seo";
-
 const {title} = Astro.props;
 import i18next, { t } from "i18next";
 
 import { HeadHrefLangs } from "astro-i18next/components";
+
 ---
+
+
 <!DOCTYPE html>
-    <html lang={i18next.language} class="scroll-smooth">
-        <>
-        <SEO
-        title={t("site.title")}
-        description={t("site.description")}
-        openGraph={{
-          basic: {
-            title: "Agriturismo Le Rondini",
-            type: "A type.",
-            image: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
-          }
-        }}
-        twitter={{
-          creator: "@alessandrocipri"
-        }}
-        extend={{
-          // extending the default link tags
-          link: [{ rel: "icon", href: "/favicon.png" }],
-          // extending the default meta tags
-          meta: [
-            {
-              name: "twitter:image",
-              content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
-            },
-            { name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
-            { name: "twitter:description", content: "Agent" },
-          ],
-        }}
-      />
+<html lang={i18next.language} class="scroll-smooth">
+<head>
+    <SEO
+    title={t("site.title")}
+    description={t("site.description")}
+    openGraph={{
+      basic: {
+        title: "Agriturismo La Rondine Bolgheri",
+        type: "A type.",
+        image: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+      }
+    }}
+    twitter={{
+      creator: "@alessandrocipri"
+    }}
+    extend={{
+      // extending the default link tags
+      link: [{ rel: "icon", href: "/favicon.png" }],
+      // extending the default meta tags
+      meta: [
+        {
+          name: "twitter:image",
+          content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+        },
+        { name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
+        { name: "twitter:description", content: "Agent" },
+      ],
+    }}
+  />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{t("site.title")}</title>
+    <meta name="description" content={t("site.description")} />
+    <HeadHrefLangs />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+</head>
+<body>
     
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-      <title>{t("site.title")}</title>
-      <meta name="description" content={t("site.description")} />
-      <HeadHrefLangs />
-          <meta name="viewport" content="width=device-width" />
-          <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-      <meta name="generator" content={Astro.generator} />
-      <link rel="sitemap" href="/sitemap-index.xml" />
-      
-  </head>
-    <body>
-        <slot />
+<slot />
 <script is:inline defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
 
     <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
-
-    </body>
+</body>
 </html>
