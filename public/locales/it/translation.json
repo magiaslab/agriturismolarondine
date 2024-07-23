@@ -4,7 +4,9 @@
       "description": "Ospitalità a Bolgheri Costa degli Etruschi"
     },
     "hero": {
-      "subtitle": "Glamping per naturisti nella Costa degli Etruschi",
+        "title": "Nel cuore della campagna bolgherese",
+        "claim": "La Rondine Agriturismo",
+      "subtitle": "Un agriturismo semplice, con persone semplici, in un posto bellissimo!",
       "prenota": "Prenota ora",
       "contatti": "Contatti"
     },
@@ -13,5 +15,15 @@
     },
     "struttura": {
         "title": "Pagina Glamping in Italiano"
-      }
+      },
+      "nav": {
+    "home": "Home",
+    "contatti": "Contatti",
+    "agriturismo": "Agriturismo",
+    "cantina": "Cantina",
+    "dintorni": "Territorio",
+    "appartamenti": "Appartamenti",
+    "prenota": "Prenota ora"
+  }
+ 
 }
