@@ -24,6 +24,9 @@
     "dintorni": "Territorio",
     "appartamenti": "Appartamenti",
     "prenota": "Prenota ora"
+  },
+  "booking": {
+    "title": "Prenota ora!"
   }
  
 }

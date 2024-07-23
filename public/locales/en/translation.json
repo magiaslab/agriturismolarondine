@@ -24,5 +24,8 @@
     "prenota": "Booking Now",
     "dintorni": "Surroundings",
     "cantina":"Winery"
+  },
+  "booking": {
+    "title": "Booking Now!"
   }
 }
