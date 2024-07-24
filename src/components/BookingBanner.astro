@@ -44,8 +44,8 @@ const base = lang === 'it' ? '' : `/${lang}`;
           <div class="">
           <label for="numeroCamere" class="block mb-2 text-sm font-medium text-white">Num. app.</label>
           <select id="numeroCamere" name="numeroCamere" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            <option selected>Seleziona</option>
-            <option value="1">1</option>
+            
+            <option selected value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -55,18 +55,67 @@ const base = lang === 'it' ? '' : `/${lang}`;
         <div class="">
             <label for="Camera_1_Adulti"  class="block mb-2 text-sm font-medium text-white">Adulti</label>
             <select id="Camera_1_Adulti" name='Camera_1_Adulti' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-              <option selected>Seleziona</option>
+            
+              <option value="1">1</option>
+              <option selected value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="">
+            <label for="Camera_1_Bambini"  class="block mb-2 text-sm font-medium text-white">Bambini</label>
+            <select hidden id="Camera_1_Bambini" name='Camera_1_Bambini' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option selected value="0">Seleziona</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
             </select>
+            <select hidden name='Camera_1_EtaBambino_1'>
+                <option value='0' selected>0</option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10'>10</option>
+                <option value='11'>11</option>
+                <option value='12'>12</option>
+            </select>
+            <select hidden name='Camera_1_EtaBambino_2'>
+                <option value='0' selected>0</option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10'>10</option>
+                <option value='11'>11</option>
+                <option value='12'>12</option>
+            </select>
           </div>
-        <input type="hidden" value="0" name="Camera_1_Bambini">
-  
+          <select hidden name='IdTrattamento'>
+            <option value='0' selected>Appartamento</option>
+        </select>  
   <input type="submit" value={t("nav.prenota")} class="inline-block rounded-lg bg-crusta px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base" >
       </div>
     </div>
   </div>
   
 </form>
+
+
+
+
+	
+
+	
+
