@@ -24,7 +24,7 @@ const base = lang === 'it' ? '' : `/${lang}`;
                   <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                 </svg>
             </div>
-            <input id="datepicker-format2" name="arrivo" datepicker datepicker-format="dd-mm-yyyy" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Data di Arrivo">
+            <input id="datepicker-format2" name="Arrivo" datepicker datepicker-format="dd-mm-yyyy" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Data di Arrivo">
           </div>
         </div>
           <div>
@@ -38,12 +38,12 @@ const base = lang === 'it' ? '' : `/${lang}`;
                 </svg>
             </div>
             
-            <input id="datepicker-format" name="partenza" datepicker datepicker-format="dd-mm-yyyy" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Seleziona">
+            <input id="datepicker-format" name="Partenza" datepicker datepicker-format="dd-mm-yyyy" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Seleziona">
           </div>
         </div>
           <div class="">
-          <label for="NumeroCamere" class="block mb-2 text-sm font-medium text-white">Numero di appartamento</label>
-          <select id="NumeroCamere" name="NumeroCamere" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <label for="numeroCamere" class="block mb-2 text-sm font-medium text-white">Num. app.</label>
+          <select id="numeroCamere" name="numeroCamere" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             <option selected>Seleziona</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -51,12 +51,18 @@ const base = lang === 'it' ? '' : `/${lang}`;
             <option value="4">4</option>
           </select>
         </div>
-        <select name='IdTrattamento'>
-        </select>
-        <select name='Camera_1_Adulti'>
-        </select>
-        <select name='Camera_1_Bambini'>
-        </select>
+        
+        <div class="">
+            <label for="Camera_1_Adulti"  class="block mb-2 text-sm font-medium text-white">Adulti</label>
+            <select id="Camera_1_Adulti" name='Camera_1_Adulti' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <option selected>Seleziona</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+        <input type="hidden" value="0" name="Camera_1_Bambini">
   
   <input type="submit" value={t("nav.prenota")} class="inline-block rounded-lg bg-crusta px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base" >
       </div>
