@@ -5,7 +5,7 @@
     },
     "hero": {
         "title": "In the heart of the Bolgheri countryside",
-        "claim": "La Rondine Agriturism",
+        "claim": "La Rondine Agriturism in Bolgheri",
       "subtitle": "A simple agriturismo, with simple people, in a beautiful place!",
       "prenota": "Booking Now",
       "contatti": "Contacts"
@@ -26,6 +26,7 @@
     "cantina":"Winery"
   },
   "booking": {
-    "title": "Booking Now!"
+    "title": "Booking Now!",
+    "subtitle": "You can only find the best price on our website."
   }
 }

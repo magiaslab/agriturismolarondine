@@ -5,7 +5,7 @@
     },
     "hero": {
         "title": "Nel cuore della campagna bolgherese",
-        "claim": "La Rondine Agriturismo",
+        "claim": "La Rondine Agriturismo a Bolgheri",
       "subtitle": "Un agriturismo semplice, con persone semplici, in un posto bellissimo!",
       "prenota": "Prenota ora",
       "contatti": "Contatti"
@@ -26,7 +26,8 @@
     "prenota": "Prenota ora"
   },
   "booking": {
-    "title": "Prenota ora!"
+    "title": "Prenota ora!",
+    "subtitle": "il prezzo migliore lo trovi solo sul nostro sito"
   }
  
 }
