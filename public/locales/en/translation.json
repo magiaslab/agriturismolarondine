@@ -28,5 +28,10 @@
   "booking": {
     "title": "Booking Now!",
     "subtitle": "You can only find the best price on our website."
-  }
+  },
+  "content1_home":{
+    "title": "Immerso nei vigneti di Bolgheri",
+    "text1": "L’agriturismo si trova alla fine di una comoda strada di campagna tra Castagneto Carducci e Bolgheri, a soli 6 km dal mare.",
+    "text2": "Circondato da vigneti ed uliveti ed a completa gestione familiare, dispone di quattro appartamenti ricavati dalla ristrutturazione di una casa colonica."
+  } 
 }
