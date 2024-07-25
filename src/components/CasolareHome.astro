@@ -1,0 +1,35 @@
+---
+import { getImage } from "astro:assets";
+import Image from "astro/components/Image.astro";
+import i18next, { t } from "i18next";
+import myBackground from "../assets/img/sfondohome.png"
+const optimizedBackground = await getImage({src: myBackground, format: 'webp'});
+const lang = i18next.language;
+const base = lang === 'it' ? '' : `/${lang}`;
+import img1 from "../assets/img/vini-di-bolgheri.jpg"
+---
+
+
+<section class=" my-32 bg-secondary py-9">
+    <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
+      <div class="grid grid-cols-12 gap-y-8 lg:gap-8 items-center">
+        <div class="col-span-12 lg:col-span-6">
+          <div class="flex flex-col gap-4">
+            <h1 class="font-extrabold text-gray-900 font-sans  text-6xl">Un casolare con la vigna intorno</h1>
+            <p class="leading-normal">Per coloro che lo desiderano, durante la permanenza, sarà possibile visitare la cantina e degustare i vini in produzione.
+                Inoltre nel periodo della vendemmia, gli ospiti potranno assistere alla raccolta dell'uva, potendo constatare dal vivo quanto sia emozionante il lavoro della campagna.</p>
+        
+            <div class="flex flex-wrap gap-4 items-center">
+
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-span-12 lg:col-span-6">
+          <figure>
+            <Image class="w-full rounded-xl" data-img-light src={img1} alt="Image description">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
