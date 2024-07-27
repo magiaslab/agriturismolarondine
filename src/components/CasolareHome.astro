@@ -7,29 +7,31 @@ const optimizedBackground = await getImage({src: myBackground, format: 'webp'});
 const lang = i18next.language;
 const base = lang === 'it' ? '' : `/${lang}`;
 import img1 from "../assets/img/vini-di-bolgheri.jpg"
+import logo1 from "../assets/img/Logo-bassa.webp"
+import logo2 from "../assets/img/lop_bolgheri.png"
+import logo3 from "../assets/img/logoambitocde.png"
+
 ---
 
 
-<section class=" my-32 bg-secondary py-9">
-    <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
-      <div class="grid grid-cols-12 gap-y-8 lg:gap-8 items-center">
-        <div class="col-span-12 lg:col-span-6">
-          <div class="flex flex-col gap-4">
-            <h1 class="font-extrabold text-gray-900 font-sans  text-6xl">Un casolare con la vigna intorno</h1>
-            <p class="leading-normal">Per coloro che lo desiderano, durante la permanenza, sarà possibile visitare la cantina e degustare i vini in produzione.
-                Inoltre nel periodo della vendemmia, gli ospiti potranno assistere alla raccolta dell'uva, potendo constatare dal vivo quanto sia emozionante il lavoro della campagna.</p>
-        
-            <div class="flex flex-wrap gap-4 items-center">
+<section class="bg-secondary dark:bg-gray-900">
+  <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+      <div class="mr-auto place-self-center lg:col-span-7">
+          <h1 class="max-w-2xl mb-6 text-6xl text-primary font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">{t("casolare_home.title")}</h1>
+          <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{t("casolare_home.text1")}</p>
+          <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{t("casolare_home.text2")}</p>
 
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-span-12 lg:col-span-6">
-          <figure>
-            <Image class="w-full rounded-xl" data-img-light src={img1} alt="Image description">
-          </figure>
-        </div>
+          <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center  rounded-lg hover:bg-gray-100  focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+            <Image src={logo1} alt="Logo Cantina" width={150}/>         </a>
+          <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center rounded-lg hover:bg-gray-100  focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+            <Image src={logo2} alt="Logo Cantina" width={100}/>         </a>
+          </a> 
+          <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center rounded-lg hover:bg-gray-100  focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+            <Image src={logo3} alt="Logo Cantina" width={150}/>         </a>
+          </a> 
       </div>
-    </div>
-  </section>
+      <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+          <Image src={img1} alt="mockup" class="rounded-lg" width={900}>
+      </div>                
+  </div>
+</section>

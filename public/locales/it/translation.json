@@ -40,6 +40,11 @@
     "text3": "L'agriturismo dispone di quattro appartamenti: 2 trilocali denominati Farfalla e Libellula, un monolocale denominato Coccinella ed un bilocale chiamato Jolly attrezzato per disabili.",
     "text4": "Tutti climatizzati, dotati di angolo cottura attrezzato, Wi-Fi gratuito, tv e riscaldamento autonomo. Disponibili lenzuola e coperte in loco. Lavatrice in comune.",
     "text5": "Agriturismo Pet Friendly: la famiglia Sgariglia è lieta di ospitare i vostri amici cani e gatti."
-  } 
+  },
+  "casolare_home": {
+    "title": "Un casolare con la vigna intorno",
+    "text1": "Per coloro che lo desiderano, durante la permanenza, sarà possibile visitare la cantina e degustare i vini in produzione.",
+    "text2": "Inoltre nel periodo della vendemmia, gli ospiti potranno assistere alla raccolta dell'uva, potendo constatare dal vivo quanto sia emozionante il lavoro della campagna."
+  }
  
 }

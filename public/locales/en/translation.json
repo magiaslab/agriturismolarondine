@@ -40,5 +40,10 @@
     "text3": "It is situated at the end of a country road (very smooth), where noises do not exist: a farmhouse of 1960 renovated in 2003, with 4 large apartments, each with panoramic view over the surrounding countryside.",
     "text4": "The quiet location away from chaos, clean air, a garden with slide, swing, a small house and other games, make our holiday farm the ideal place for vacations with children in Tuscany. Parents can relax while their children play safely.",
     "text5": "Pet Friendly farm: The Sgariglia family is glad to host your inseparable friends."
-  } 
+  } ,
+  "casolare_home": {
+    "title": "Un casolare con la vigna intorno",
+    "text1": "Per coloro che lo desiderano, durante la permanenza, sarà possibile visitare la cantina e degustare i vini in produzione.",
+    "text2": "Inoltre nel periodo della vendemmia, gli ospiti potranno assistere alla raccolta dell'uva, potendo constatare dal vivo quanto sia emozionante il lavoro della campagna."
+  }
 }
