@@ -1,0 +1,56 @@
+---
+import Image from "astro/components/Image.astro";
+import i18next, { t } from "i18next";
+const lang = i18next.language;
+const base = lang === 'it' ? '' : `/${lang}`;
+import img1 from "../assets/img/vialedibolgheri.jpg"
+---
+
+<div class="bg-secondary py-6 sm:py-8 lg:py-12">
+    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
+      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
+        <div>
+          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
+            <Image src={img1} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
+          </div>
+        </div>
+  
+        <div class="md:pt-8">
+          <p class="text-center font-bold text-green md:text-left">Dove Siamo</p>
+  
+          <h1 class="mb-4  text-6xl font-extrabold text-primary sm:text-6xl md:mb-6 md:text-left">Tra storia e Natura</h1>
+  
+          <p class="mb-6 text-gray-500 sm:text-lg md:mb-8 italic">
+            Davanti a San Guido I cipressi che a Bólgheri alti e schietti van da San Guido in duplice filar, quasi in corsa giganti giovinetti mi balzarono incontro e mi guardar. 
+          </p>
+  
+          <h2 class="mb-2 text-center text-xl font-semibold  sm:text-2xl md:mb-4 md:text-left text-green">Il territorio di Bolgheri e Castagneto Carducci
+        </h2>
+  
+          <p class="mb-6 text-gray-500 sm:text-lg md:mb-8">Un lembo di terra pressoché intatto di natura preservata, di opere d'arte, di prodotti genuini e di buona gastronomia, di botteghe dai sapori antichi, di ospitalità e tradizione.
+            Uno straordinario paesaggio di boschi e campi curati meticolosamente, diretta espressione di una raffinata cultura del territorio.</p>
+
+            <p class="mb-6 text-gray-500 sm:text-lg md:mb-8">Mai troppo caldo in estate e temperatura ideale in autunno e primavera rendono il clima mite e piacevole nella Costa degli Etruschi, capace di creare veri spettacoli della natura, come gli olivi della campagna di Castagneto Carducci, presenti direttamente a ridosso del Viale dei Cipressi che da San Guido porta a Bolgheri, vecchi di millenni, con tronchi enormi di oltre 2,5 metri di diametro alla base e con altezze che raggiungono i 25 metri.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="bg-white dark:bg-gray-900">
+    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div class="mr-auto place-self-center lg:col-span-7">
+            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Payments tool for software companies</h1>
+            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p>
+            <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                Get started
+                <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>
+            <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                Speak to Sales
+            </a> 
+        </div>
+        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+            <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup">
+        </div>                
+    </div>
+</section>
