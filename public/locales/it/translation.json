@@ -45,6 +45,20 @@
     "title": "Un casolare con la vigna intorno",
     "text1": "Per coloro che lo desiderano, durante la permanenza, sarà possibile visitare la cantina e degustare i vini in produzione.",
     "text2": "Inoltre nel periodo della vendemmia, gli ospiti potranno assistere alla raccolta dell'uva, potendo constatare dal vivo quanto sia emozionante il lavoro della campagna."
+  },
+  "territorio_home": {
+    "pretitle" : "Dove siamo",
+    "title": "Tra storia e natura",
+    "poesia": "Davanti a San Guido I cipressi che a Bólgheri alti e schietti van da San Guido in duplice filar, quasi in corsa giganti giovinetti mi balzarono incontro e mi guardar.",
+    "title2": "Il territorio di Bolgheri e Castagneto Carducci",
+    "text1": "Un lembo di terra pressoché intatto di natura preservata, di opere d'arte, di prodotti genuini e di buona gastronomia, di botteghe dai sapori antichi, di ospitalità e tradizione. Uno straordinario paesaggio di boschi e campi curati meticolosamente, diretta espressione di una raffinata cultura del territorio.",
+    "text2": "Mai troppo caldo in estate e temperatura ideale in autunno e primavera rendono il clima mite e piacevole nella Costa degli Etruschi, capace di creare veri spettacoli della natura, come gli olivi della campagna di Castagneto Carducci, presenti direttamente a ridosso del Viale dei Cipressi che da San Guido porta a Bolgheri, vecchi di millenni, con tronchi enormi di oltre 2,5 metri di diametro alla base e con altezze che raggiungono i 25 metri.",
+    "title3": "Il mare a soli 10 minuti",
+    "text3": "A soli 6 chilometri dal nostro agriturismo, il mare ed una spiaggia sabbiosa e profonda, antistante una rigogliosa pineta per riposarsi all'ombra.",
+    "button": "Scoprilo"
+  },
+  "app_home": {
+    "title": "Scegli la casa per le tue prossime vacanze"
   }
  
 }

@@ -42,8 +42,22 @@
     "text5": "Pet Friendly farm: The Sgariglia family is glad to host your inseparable friends."
   } ,
   "casolare_home": {
-    "title": "Un casolare con la vigna intorno",
-    "text1": "Per coloro che lo desiderano, durante la permanenza, sarà possibile visitare la cantina e degustare i vini in produzione.",
-    "text2": "Inoltre nel periodo della vendemmia, gli ospiti potranno assistere alla raccolta dell'uva, potendo constatare dal vivo quanto sia emozionante il lavoro della campagna."
+    "title": "A vineyard farmhouse",
+    "text1": "Guests will have the opportunity to tour the winery and sample our current vintages",
+    "text2": "Plus, guests can join in the grape harvest and experience the excitement of farm life."
+  },
+  "territorio_home": {
+    "pretitle" : "We are on the Etruscan Coast.",
+    "title": "Between history and nature",
+    "poesia": "Facing Saint Guido, the cypresses of Bolgheri, towering and proud, stood in double file, like youthful giants in a race, leaping toward me with a curious gaze.",
+    "title2": "The land of Bolgheri and Castagneto Carducci",
+    "text1": "A nearly pristine piece of land, where nature, art, and authentic flavors thrive. Enjoy the hospitality, tradition, and exquisite local cuisine in charming shops. The meticulously tended forests and fields are a testament to the region's refined culture.",
+    "text2": "The mild, pleasant climate of the Etruscan Coast, with its never-too-hot summers and ideal spring and autumn temperatures, fosters stunning natural landscapes. A prime example is the olive groves of Castagneto Carducci, found right alongside the iconic Viale dei Cipressi. These ancient trees, some over a millennium old, boast enormous trunks measuring over 2.5 meters in diameter and towering up to 25 meters high.",
+    "title3": "The beach is just 10 minutes away!",
+    "text3": "Just 6 kilometers from our farmhouse, you can enjoy a sandy beach, deep waters, and a shady pine forest",
+    "button": "Discover the sea"
+  },
+  "app_home": {
+    "title": "Pick your perfect vacation home"
   }
 }
