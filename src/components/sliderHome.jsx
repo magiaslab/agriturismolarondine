@@ -32,7 +32,7 @@ export default function App() {
         className="mySwiper"
       >
         <SwiperSlide><img src="/img/image00001.jpeg" alt="" /></SwiperSlide>
-        <SwiperSlide><h1 class="text-5xl mb-8 lg:text-7xl font-sans font-black subpixel-antialiased text-primary uppercase">Titolo della slide</h1>
+        <SwiperSlide><h1 className="text-5xl mb-8 lg:text-7xl font-sans font-black subpixel-antialiased text-primary uppercase">Titolo della slide</h1>
         </SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>
