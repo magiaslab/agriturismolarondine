@@ -1,6 +1,27 @@
 ---
 import { changeLanguage } from "i18next";
+import MainLayout from "../layouts/Main.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Slider from "../components/sliderHome.jsx";
+import HeroHome from "../components/HeroHome.astro";
+import BookingBanner from "../components/BookingBanner.astro";
+import Content1Home from "../components/Content1_Home.astro";
+import Content2Home from "../components/Content2_Home.astro";
+import AppartamentiHome from "../components/Appartamenti_home.astro";
+import CasolareHome from "../components/CasolareHome.astro";
+import Video from "../components/Video.astro";
+import TerritorioHome from "../components/Territorio_home.astro";
 
 changeLanguage("it");
 ---
 
+
+
+
+
+<MainLayout title="Agriturismo La Rondine Bolgheri">
+<Header/>
+<Slider client:load />
+<Footer/>
+</MainLayout>
