@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
 
 
 
@@ -34,7 +35,7 @@ export default function App() {
         <SwiperSlide><img src="/img/image00001.jpeg" alt="" /></SwiperSlide>
         <SwiperSlide><h1 className="text-5xl mb-8 lg:text-7xl font-sans font-black subpixel-antialiased text-primary uppercase">Titolo della slide</h1>
         </SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide><img src="/img/117_castagneto.jpg" alt="" /></SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>
         <SwiperSlide>Slide 5</SwiperSlide>
         <SwiperSlide>Slide 6</SwiperSlide>
