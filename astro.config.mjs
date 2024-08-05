@@ -9,6 +9,6 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), robotsTxt(), sitemap(), icon(), astroI18next(), react()],
+  integrations: [tailwind(), robotsTxt(), sitemap(), icon(), react(), astroI18next()],
 
 });
