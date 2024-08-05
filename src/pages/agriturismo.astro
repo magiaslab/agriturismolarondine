@@ -19,6 +19,7 @@ import Img4 from"../assets/img/image00004.jpeg"
 import Img5 from"../assets/img/image00005.jpeg"
 import Img6 from"../assets/img/image00006.jpeg"
 import Img7 from"../assets/img/image00009.jpeg"
+import Content2 from "../components/Content2_Home.astro"
 
 changeLanguage("it");
 ---
@@ -31,8 +32,8 @@ changeLanguage("it");
 <Header/>
 <Slider client:load />
 <BookingBanner/>
-
-  <div class="adv-gallery-v6 w-full overflow-hidden pt-8 lg:pt-12 pb-20 lg:pb-32 2xl:flex 2xl:justify-center">
+<Content2/>
+  <div class="adv-gallery-v6 w-full overflow-hidden pt-8 lg:pt-12 pb-20 lg:pb-32 2xl:flex 2xl:justify-center bg-secondary">
     <div class="adv-gallery-v6__inner w-[240%] ml-[-70%] transition-opacity duration-300 md:w-[160%] md:ml-[-30%] 2xl:w-[2304px] 2xl:shrink-0 2xl:mx-auto 2xl:my-0">
       <ul class="grid grid-cols-12 gap-5 lg:gap-8">
         <li class="col-span-12 relative z-[2]">
