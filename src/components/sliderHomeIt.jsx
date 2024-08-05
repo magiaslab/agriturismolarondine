@@ -37,9 +37,9 @@ export default function App() {
         <SwiperSlide>
         <section class="hero flex items-center min-h-screen relative z-[1] py-16 lg:py-28 px-0 bg-gray-100 bg-cover bg-no-repeat bg-center text-center bg-[url('/img/image00001.jpeg')]" >
   <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg sm:max-w-3xl">
-  <div class="text-3xl text-primary font-sans mb-3">This is a Label</div>
+  <div class="text-3xl text-primary font-sans mb-3">Agriturismo La Rondine</div>
 
-<h1 class="text-6xl font-sans font-extrabold text-white mb-2">Every champion was once a contender who refused to give up</h1>
+<h1 class="text-6xl font-sans font-extrabold text-white mb-2">Qui, dove i rumori non esistono</h1>
 
     <p class="leading-normal mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, rem neque doloribus impedit explicabo minus laborum cupiditate atque esse consectetur.</p>
 
