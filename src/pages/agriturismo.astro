@@ -4,14 +4,21 @@ import MainLayout from "../layouts/Main.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Slider from "../components/sliderHomeIt.jsx";
-import HeroHome from "../components/HeroHome.astro";
 import BookingBanner from "../components/BookingBanner.astro";
-import Content1Home from "../components/Content1_Home.astro";
-import Content2Home from "../components/Content2_Home.astro";
-import AppartamentiHome from "../components/Appartamenti_home.astro";
-import CasolareHome from "../components/CasolareHome.astro";
-import Video from "../components/Video.astro";
-import TerritorioHome from "../components/Territorio_home.astro";
+import { getImage } from "astro:assets";
+import { Image } from "astro:assets";
+import i18next, { t } from "i18next";
+import myBackground from "../assets/img/image00002.jpeg"
+const optimizedBackground = await getImage({src: myBackground, format: 'webp'});
+const lang = i18next.language;
+const base = lang === 'it' ? '' : `/${lang}`;
+import Img1 from"../assets/img/image00001.jpeg"
+import Img2 from"../assets/img/image00002.jpeg"
+import Img3 from"../assets/img/image00003.jpeg"
+import Img4 from"../assets/img/image00004.jpeg"
+import Img5 from"../assets/img/image00005.jpeg"
+import Img6 from"../assets/img/image00006.jpeg"
+import Img7 from"../assets/img/image00009.jpeg"
 
 changeLanguage("it");
 ---
@@ -24,32 +31,33 @@ changeLanguage("it");
 <Header/>
 <Slider client:load />
 <BookingBanner/>
-<div class="adv-gallery-v6 w-full overflow-hidden pt-8 lg:pt-12 pb-20 lg:pb-32 2xl:flex 2xl:justify-center">
+
+  <div class="adv-gallery-v6 w-full overflow-hidden pt-8 lg:pt-12 pb-20 lg:pb-32 2xl:flex 2xl:justify-center">
     <div class="adv-gallery-v6__inner w-[240%] ml-[-70%] transition-opacity duration-300 md:w-[160%] md:ml-[-30%] 2xl:w-[2304px] 2xl:shrink-0 2xl:mx-auto 2xl:my-0">
       <ul class="grid grid-cols-12 gap-5 lg:gap-8">
         <li class="col-span-12 relative z-[2]">
           <ul class="grid grid-cols-12 gap-5 lg:gap-8">
             <li class="col-span-4 reveal-fx reveal-fx--translate-up md:col-span-3" data-reveal-fx-delay="200">
               <a href="#0" class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-md">
-                <img class="adv-gallery-v6__img block w-full h-full object-cover" src="../assets/img/adv-gallery-v6-img-1.jpg" alt="Image description" loading="lazy">
+                <Image class="adv-gallery-v6__img block w-full h-full object-cover" src={Img1} alt="Image description" loading="lazy">
               </a>
             </li>
   
             <li class="col-span-4 reveal-fx reveal-fx--translate-up md:col-span-3" data-reveal-fx-delay="100">
               <a href="#0" class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-lg">
-                <img class="adv-gallery-v6__img block w-full h-full object-cover" src="../assets/img/adv-gallery-v6-img-2.jpg" alt="Image description" loading="lazy">
+                <Image class="adv-gallery-v6__img block w-full h-full object-cover" src={Img2} alt="Image description" loading="lazy">
               </a>
             </li>
   
             <li class="col-span-4 reveal-fx reveal-fx--translate-up md:col-span-3">
               <a href="#0" class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-xl">
-                <img class="adv-gallery-v6__img block w-full h-full object-cover" src="../assets/img/adv-gallery-v6-img-3.jpg" alt="Image description" loading="lazy">
+                <Image class="adv-gallery-v6__img block w-full h-full object-cover" src={Img3} alt="Image description" loading="lazy">
               </a>
             </li>
   
             <li class="reveal-fx reveal-fx--translate-up md:col-span-3 hidden md:block" data-reveal-fx-delay="300">
               <a href="#0" class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-sm">
-                <img class="adv-gallery-v6__img block w-full h-full object-cover" src="../assets/img/adv-gallery-v6-img-4.jpg" alt="Image description" loading="lazy">
+                <Image class="adv-gallery-v6__img block w-full h-full object-cover" src={Img4} alt="Image description" loading="lazy">
               </a>
             </li>
           </ul>
@@ -59,19 +67,19 @@ changeLanguage("it");
           <ul class="grid grid-cols-[repeat(24,_minmax(0,_1fr))] gap-5 lg:gap-8 justify-center">
             <li class="col-span-8 col-start-5 reveal-fx reveal-fx--translate-up md:col-start-4 md:col-span-6" data-reveal-fx-delay="300">
               <a href="#0" class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-sm">
-                <img class="adv-gallery-v6__img block w-full h-full object-cover" src="../assets/img/adv-gallery-v6-img-5.jpg" alt="Image description" loading="lazy">
+                <Image class="adv-gallery-v6__img block w-full h-full object-cover" src={Img5} alt="Image description" loading="lazy">
               </a>
             </li>
   
             <li class="col-span-8 reveal-fx reveal-fx--translate-up md:col-span-6" data-reveal-fx-delay="100">
               <a href="#0" class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-xl">
-                <img class="adv-gallery-v6__img block w-full h-full object-cover" src="../assets/img/adv-gallery-v6-img-6.jpg" alt="Image description" loading="lazy">
+                <Image class="adv-gallery-v6__img block w-full h-full object-cover" src={Img6} alt="Image description" loading="lazy">
               </a>
             </li>
   
             <li class="reveal-fx reveal-fx--translate-up md:col-span-6 hidden md:block" data-reveal-fx-delay="200">
               <a href="#0" class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-md">
-                <img class="adv-gallery-v6__img block w-full h-full object-cover" src="../assets/img/adv-gallery-v6-img-7.jpg" alt="Image description" loading="lazy">
+                <Image class="adv-gallery-v6__img block w-full h-full object-cover" src={Img7} alt="Image description" loading="lazy">
               </a>
             </li>
           </ul>
@@ -79,6 +87,8 @@ changeLanguage("it");
       </ul>
     </div>
   </div>
+</div>
+
 <Footer/>
 </MainLayout>
 
