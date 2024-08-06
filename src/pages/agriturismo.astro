@@ -19,7 +19,9 @@ import Img4 from"../assets/img/image00004.jpeg"
 import Img5 from"../assets/img/image00005.jpeg"
 import Img6 from"../assets/img/image00006.jpeg"
 import Img7 from"../assets/img/image00009.jpeg"
-import Content2 from "../components/Content2_Home.astro"
+import Content1 from "../components/Content1_agri.astro"
+import Content2 from "../components/Content2_agri.astro"
+
 
 changeLanguage("it");
 ---
@@ -32,32 +34,32 @@ changeLanguage("it");
 <Header/>
 <Slider client:load />
 <BookingBanner/>
-<Content2/>
+<Content1/>
   <div class="adv-gallery-v6 w-full overflow-hidden pt-8 lg:pt-12 pb-20 lg:pb-32 2xl:flex 2xl:justify-center bg-secondary">
     <div class="adv-gallery-v6__inner w-[240%] ml-[-70%] transition-opacity duration-300 md:w-[160%] md:ml-[-30%] 2xl:w-[2304px] 2xl:shrink-0 2xl:mx-auto 2xl:my-0">
       <ul class="grid grid-cols-12 gap-5 lg:gap-8">
         <li class="col-span-12 relative z-[2]">
           <ul class="grid grid-cols-12 gap-5 lg:gap-8">
             <li class="col-span-4 reveal-fx reveal-fx--translate-up md:col-span-3" data-reveal-fx-delay="200">
-              <a href="#0" class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-md">
+              <a data-fslightbox href={Img1.src} class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-md">
                 <Image class="adv-gallery-v6__img block w-full h-full object-cover" src={Img1} alt="Image description" loading="lazy">
               </a>
             </li>
   
             <li class="col-span-4 reveal-fx reveal-fx--translate-up md:col-span-3" data-reveal-fx-delay="100">
-              <a href="#0" class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-lg">
+              <a data-fslightbox href={Img2.src} class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-lg">
                 <Image class="adv-gallery-v6__img block w-full h-full object-cover" src={Img2} alt="Image description" loading="lazy">
               </a>
             </li>
   
             <li class="col-span-4 reveal-fx reveal-fx--translate-up md:col-span-3">
-              <a href="#0" class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-xl">
+              <a data-fslightbox href={Img3.src} class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-xl">
                 <Image class="adv-gallery-v6__img block w-full h-full object-cover" src={Img3} alt="Image description" loading="lazy">
               </a>
             </li>
   
             <li class="reveal-fx reveal-fx--translate-up md:col-span-3 hidden md:block" data-reveal-fx-delay="300">
-              <a href="#0" class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-sm">
+              <a data-fslightbox href={Img4.src} class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-sm">
                 <Image class="adv-gallery-v6__img block w-full h-full object-cover" src={Img4} alt="Image description" loading="lazy">
               </a>
             </li>
@@ -67,19 +69,19 @@ changeLanguage("it");
         <li class="col-span-12 relative z-[1]">
           <ul class="grid grid-cols-[repeat(24,_minmax(0,_1fr))] gap-5 lg:gap-8 justify-center">
             <li class="col-span-8 col-start-5 reveal-fx reveal-fx--translate-up md:col-start-4 md:col-span-6" data-reveal-fx-delay="300">
-              <a href="#0" class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-sm">
+              <a data-fslightbox href={Img5.src} class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-sm">
                 <Image class="adv-gallery-v6__img block w-full h-full object-cover" src={Img5} alt="Image description" loading="lazy">
               </a>
             </li>
   
             <li class="col-span-8 reveal-fx reveal-fx--translate-up md:col-span-6" data-reveal-fx-delay="100">
-              <a href="#0" class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-xl">
+              <a data-fslightbox href={Img6.src} class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-xl">
                 <Image class="adv-gallery-v6__img block w-full h-full object-cover" src={Img6} alt="Image description" loading="lazy">
               </a>
             </li>
   
             <li class="reveal-fx reveal-fx--translate-up md:col-span-6 hidden md:block" data-reveal-fx-delay="200">
-              <a href="#0" class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-md">
+              <a data-fslightbox href={Img7.src} class="adv-gallery-v6__card relative bg-white block rounded-md overflow-hidden grayscale-[90%] aspect-w-16 aspect-h-9 transition-all duration-300 hover:grayscale-0 hover:-translate-y-2 active:translate-y-2 shadow-md">
                 <Image class="adv-gallery-v6__img block w-full h-full object-cover" src={Img7} alt="Image description" loading="lazy">
               </a>
             </li>
@@ -89,7 +91,7 @@ changeLanguage("it");
     </div>
   </div>
 </div>
-
+<Content2/>
 <Footer/>
 </MainLayout>
 

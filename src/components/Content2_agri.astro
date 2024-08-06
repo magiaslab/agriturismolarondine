@@ -1,0 +1,35 @@
+---
+import { getImage } from "astro:assets";
+import Image from "astro/components/Image.astro";
+import i18next, { t } from "i18next";
+const lang = i18next.language;
+const base = lang === 'it' ? '' : `/${lang}`;
+import img1 from "../assets/img/toscana.svg"
+
+
+---
+
+<section class="relative py-10 bg-secondary">
+    <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
+      <p class="text-sm text-primary-400 capitalize mb-6 lg:mb-8 flex gap-4 items-center after:content-[''] after:h-px after:grow after:bg-primary-500/30">{t("agriturismo.pretitle")}</p>
+  
+      <div class="grid grid-cols-12 gap-y-6 lg:gap-0">
+        <div class="col-span-12 lg:col-span-4">
+          <h1 class=" text-primary font-sans font-extrabold text-4xl lg:text-6xl leading-tight">{t("agriturismo.title2")}</h1>
+          <Image src={img1} alt="Toscana" width="300" height="300" class="mt-8"/>
+        
+        </div>
+      
+        <div class="col-span-12 lg:col-span-7 lg:col-start-6">
+          <div class="leading-relaxed">
+            <p class="mb-6">{t("agriturismo.text4")}</p>
+  
+            <p class="mb-6">{t("agriturismo.text5")}</p>
+            <p class="mb-6">{t("agriturismo.text6")}</p>
+            <p class="mb-6">{t("agriturismo.text7")}</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

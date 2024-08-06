@@ -61,7 +61,19 @@
     "title": "Scegli la casa per le tue prossime vacanze"
   },
   "agriturismo": {
-    "slide1title": "I rumori qui non esistono"
+    "title": "I rumori qui non esistono",
+    "text1": "Circondato da vigneti ed uliveti ed a completa gestione familiare, dispone di 4 appartamenti ricavati dalla ristrutturazione di una casa colonica degli anni '60, tutti dotati di tv, Wi-Fi gratuito, riscaldamento ed aria condizionata autonomi, completi di arredo bagno ed attrezzatura da cucina.",
+    "text2" : "La posizione tranquilla e lontana dal caos, l'aria pulita, il giardino attrezzato con scivolo, altalena, una piccola casetta ed altri giochi, rendono il nostro agriturismo l’ideale anche per le vacanze con bambini in Toscana. I genitori possono rilassarsi, mentre i propri piccoli giocano sereni.",
+    "text3_title": "Agriturismo Pet Friendly",
+    "text3_desc": "La famiglia Sgariglia è lieta di ospitare i vostri amici cani e gatti.",
+    "text3_desc2": "Con un piccolo supplemento i nostri amici pelosi potranno godere delle vacanze con voi e correre liberi e spenzierati nelle nostre campagne",
+    "pretitle": "Agriturismo La Rondine",
+    "title2": "Vicino a tutto ciò che serve",
+    "text4": "A soli 6 chilometri dal nostro agriturismo, il mare ed una spiaggia sabbiosa e profonda, antistante una rigogliosa pineta per riposarsi all'ombra. A Marina di Castagneto potrete trovare negozi, ristoranti, bar, centro termale, ecc...",
+    "text5": "Non esistono problemi di parcheggio per il mare: un simpatico trenino/navetta gratuito che fa su e giù tutto il giorno, vi accompagnerà da Donoratico a Marina di Castagneto (tempo di viaggio 10 minuti a 20 chilometri/ora).",
+    "text6": "La posizione strategica della struttura, vi permetterà di raggiungere in breve tempo sia le città d'arte più famose della Toscana, sia i piccoli borghi, ricchi di storia, cultura e fascino, come Bolgheri (4 km), Castagneto Carducci (6 km), Populonia (15 km) e molti altri.",
+    "text7": "Tante le possibilità di svago: oltre al mare, centro termale a Marina di Castagneto (6 Km), escursioni in quad o in bicicletta, shopping, ristoranti, visite guidate nella cantine di Bolgheri, ecc..."
+
   }
  
 }
