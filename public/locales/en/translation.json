@@ -60,7 +60,19 @@
   "app_home": {
     "title": "Pick your perfect vacation home"
   },
-  "agriturismo": {
-    "slide1title": "Noises here do not exist"
+ "agriturismo": {
+    "title": "There are no noises here",
+    "text1": "Surrounded by vineyards and olive groves, and entirely family-run, the farmhouse offers 4 apartments created from the renovation of a 1960s farmhouse. Each apartment is equipped with TV, free Wi-Fi, independent heating and air conditioning, a fully equipped kitchen, and a private bathroom. Wake up to the sound of birdsong and enjoy the breathtaking views of the vineyards and olive groves.",
+    "text2" : "A peaceful escape for families, our farmhouse offers clean air, a spacious playground, and a tranquil setting. While the kids are busy playing, parents can relax and soak up the Tuscan sun. It's the perfect place for a family vacation.",
+    "text3_title": "Pet-friendly farmhouse",
+    "text3_desc": "The Sgariglia family welcomes your dogs and cats.",
+    "text3_desc2": "For a small extra fee, your pets can experience the freedom of our countryside and enjoy a vacation with you.",
+    "pretitle": "Agriturismo La Rondine",
+    "title2": "Close to everything you need",
+    "text4": "Only 6 kilometers away from our farmhouse, you'll discover a stunning sandy beach with deep waters, nestled beneath a towering pine forest. In the nearby town of Marina di Castagneto, you'll find a variety of amenities including shops, restaurants, bars, and a spa.",
+    "text5": "No need to worry about parking at the beach: a free shuttle bus runs back and forth all day long, taking you from Donoratico to Marina di Castagneto in just 10 minutes (traveling at 20 km/h).",
+    "text6": "Thanks to its strategic location, you can easily reach Tuscany's most famous art cities, as well as charming small towns rich in history and culture, such as Bolgheri (4 km), Castagneto Carducci (6 km), Populonia (15 km), and many others.",
+    "text7": "There are endless possibilities for fun and relaxation: besides the beach, you can enjoy a spa day in Marina di Castagneto (6 km), go quad biking or cycling, go shopping, dine at various restaurants, or take guided tours of the Bolgheri wineries,"
+
   }
 }

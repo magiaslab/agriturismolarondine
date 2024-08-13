@@ -1,6 +1,23 @@
 ---
 import { changeLanguage } from "i18next";
+import MainLayout from "../layouts/Main.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { getImage } from "astro:assets";
+import { Image } from "astro:assets";
+import i18next, { t, changeLanguage } from "i18next";
+import myBackground from "../assets/img/image00002.jpeg";
+const optimizedBackground = await getImage({ src: myBackground, format: "webp" });
+const lang = i18next.language;
+const base = lang === "it" ? "" : `/${lang}`;
 
 changeLanguage("it");
 ---
 
+
+<MainLayout title="Agriturismo La Rondine Bolgheri">
+<Header/>
+
+
+<Footer/>
+</MainLayout>

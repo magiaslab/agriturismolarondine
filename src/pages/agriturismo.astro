@@ -7,21 +7,20 @@ import Slider from "../components/sliderHomeIt.jsx";
 import BookingBanner from "../components/BookingBanner.astro";
 import { getImage } from "astro:assets";
 import { Image } from "astro:assets";
-import i18next, { t } from "i18next";
-import myBackground from "../assets/img/image00002.jpeg"
-const optimizedBackground = await getImage({src: myBackground, format: 'webp'});
+import i18next, { t, changeLanguage } from "i18next";
+import myBackground from "../assets/img/image00002.jpeg";
+const optimizedBackground = await getImage({ src: myBackground, format: "webp" });
 const lang = i18next.language;
-const base = lang === 'it' ? '' : `/${lang}`;
-import Img1 from"../assets/img/image00001.jpeg"
-import Img2 from"../assets/img/image00002.jpeg"
-import Img3 from"../assets/img/image00003.jpeg"
-import Img4 from"../assets/img/image00004.jpeg"
-import Img5 from"../assets/img/image00005.jpeg"
-import Img6 from"../assets/img/image00006.jpeg"
-import Img7 from"../assets/img/image00009.jpeg"
-import Content1 from "../components/Content1_agri.astro"
-import Content2 from "../components/Content2_agri.astro"
-
+const base = lang === "it" ? "" : `/${lang}`;
+import Img1 from "../assets/img/image00001.jpeg";
+import Img2 from "../assets/img/image00002.jpeg";
+import Img3 from "../assets/img/image00003.jpeg";
+import Img4 from "../assets/img/image00004.jpeg";
+import Img5 from "../assets/img/image00005.jpeg";
+import Img6 from "../assets/img/image00006.jpeg";
+import Img7 from "../assets/img/image00009.jpeg";
+import Content1 from "../components/Content1_agri.astro";
+import Content2 from "../components/Content2_agri.astro";
 
 changeLanguage("it");
 ---
