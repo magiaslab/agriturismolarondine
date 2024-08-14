@@ -1,0 +1,27 @@
+---
+import { getImage } from "astro:assets";
+import i18next, { t } from "i18next";
+import Image from "astro/components/Image.astro";
+import img1 from "../assets/img/app/image00007.jpeg"
+import img2 from "../assets/img/app/image00008.jpeg"
+
+import myBackground2 from "../assets/img/sfondohome.png"
+const optimizedBackground2 = await getImage({src: myBackground2, format: 'webp'});
+const lang = i18next.language;
+const base = lang === 'it' ? '' : `/${lang}`;
+---
+
+<section class="bg-green-50 dark:bg-gray-900" style={`background-image: url(${optimizedBackground2.src});`}>
+    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+        <div class="font-light text-secondary sm:text-lg dark:text-gray-400">
+            <h2 class="mb-4 text-6xl tracking-tight font-extrabold text-secondary">Questo è ciò che vedrai appena sveglio</h2>
+            <p class="mb-4">L'agriturismo dispone di quattro appartamenti: 2 trilocali denominati Farfalla e Libellula, un monolocale denominato Coccinella ed un bilocale chiamato Jolly attrezzato per disabili.</p>
+            <p>Tutti climatizzati, dotati di angolo cottura attrezzato, Wi-Fi gratuito, tv e riscaldamento autonomo.
+                Disponibili lenzuola e coperte in loco.
+                Lavatrice i comune.</p>
+        </div>
+        <div class="grid grid-cols-1 gap-2 mt-8">
+            <Image class="w-full rounded-lg" src={img1} alt="office content 1">
+        </div>
+    </div>
+</section>
