@@ -10,6 +10,14 @@ import { getImage } from "astro:assets";
 import myBackground from "../assets/img/app/image00002.jpeg";
 const optimizedBackground = await getImage({ src: myBackground, format: "webp" });
 import { Image } from "astro:assets";
+import img1 from "../assets/img/app/image00001.jpeg"
+import img2 from "../assets/img/app/image00002.jpeg"
+import img3 from "../assets/img/app/image00003.jpeg"
+import img4 from "../assets/img/app/image00004.jpeg"
+import img5 from "../assets/img/app/image00005.jpeg"
+import img6 from "../assets/img/app/image00006.jpeg"
+
+
 
 changeLanguage("it");
 ---
@@ -51,30 +59,28 @@ changeLanguage("it");
     <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-4 gap-4">
         <div class="grid gap-4">
             <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
+                <Image class="h-auto max-w-full rounded-lg" src={img1} alt="">
             </div>
             <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+                <Image class="h-auto max-w-full rounded-lg" src={img2} alt="">
             </div>
             <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
+                <Image class="h-auto max-w-full rounded-lg" src={img3} alt="">
             </div>
         </div>
         <div class="grid gap-4">
             <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
+                <Image class="h-auto max-w-full rounded-lg" src={img2} alt="">
             </div>
             <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
-            </div>
+                <Image class="h-auto max-w-full rounded-lg" src={img4} alt="">            </div>
             <div>
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
             </div>
         </div>
         <div class="grid gap-4">
             <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
-            </div>
+                <Image class="h-auto max-w-full rounded-lg" src={img5} alt="">            </div>
             <div>
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
             </div>
@@ -84,7 +90,7 @@ changeLanguage("it");
         </div>
         <div class="grid gap-4">
             <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
+                <Image class="h-auto max-w-full rounded-lg" src={img3} alt="">
             </div>
             <div>
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
