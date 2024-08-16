@@ -80,5 +80,20 @@
     "title" :"Appartamenti a Bolgheri semplici e confortevoli",
     "subtitle" : "Scopri quello giusto per te!"
 
+  },
+  
+  "jolly": {
+  "title" : "Jolly",
+  "subtitle" : "Appartamento bilocale 4 posti letto, attrezzato anche per disabili",
+  "description" : "Composto da 3 stanze ( 33 mq ), al piano terreno.",
+  "desc1" : "cucina-soggiorno di 14 mq",
+  "desc2" : "camera di 15 mq con letto matrimoniale",
+  "desc3" : "antibagno",
+  "desc4" : "bagno con doccia attrezzato per disabili",
+  "desc5" : "corte privata esterna",
+  "desc6" : "Climatizzatore, Wi-Fi Gratis e TV",
+  "text1" :"Tariffa tutto compreso: biancheria da camera, biancheria da cucina (compreso stoviglie), biancheria da bagno, acqua, luce, gas, TV, riscaldamento, aria condizionata, giardino, barbecue, giochi per bambini, uso lavatrice condominiale, pulizie finali.",
+  "text2" : "N.B: dalle tariffe è esclusa la eventuale tassa di soggiorno applicata dal Comune di Castagneto Carducci."
+
   }
 }
