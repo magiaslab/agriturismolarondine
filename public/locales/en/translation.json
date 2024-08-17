@@ -89,7 +89,7 @@
   "jolly": {
   "title" : "Jolly Apartment",
   "subtitle" : "Two-room apartment for up to 4 people, with accessibility features for disabled guests",
-  "description" : "This apartment consists of 3 rooms (33 square meters) and is located on the ground floor.",
+  "description" : "Two-bedroom ground floor apartment for 4 guests, with the possibility of an extra bed.",
   "desc1" : "cucina-soggiorno di 14 mq",
   "desc2" : "camera di 15 mq con letto matrimoniale",
   "desc3" : "antibagno",
@@ -97,7 +97,8 @@
   "desc5" : "corte privata esterna",
   "desc6" : "Climatizzatore, Wi-Fi Gratis e TV",
   "text1" :"Tariffa tutto compreso: biancheria da camera, biancheria da cucina (compreso stoviglie), biancheria da bagno, acqua, luce, gas, TV, riscaldamento, aria condizionata, giardino, barbecue, giochi per bambini, uso lavatrice condominiale, pulizie finali.",
-  "text2" : "N.B: dalle tariffe è esclusa la eventuale tassa di soggiorno applicata dal Comune di Castagneto Carducci."
+  "text2" : "N.B: dalle tariffe è esclusa la eventuale tassa di soggiorno applicata dal Comune di Castagneto Carducci.",
+"text3" : "Spacious and bright two-room apartment with ground floor access. The veranda and courtyard allow you to enjoy the common areas of our farm, perfect for barbecues or relaxing on the sunbeds under the shade of the garden pines."
 
   }
 }
