@@ -1,6 +1,29 @@
 ---
-import { changeLanguage } from "i18next";
+import MainLayout from "../../layouts/Main.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import BookingBanner from "../../components/BookingBanner.astro";
+import i18next, { t, changeLanguage } from "i18next";
+const lang = i18next.language;
+const base = lang === "it" ? "" : `/${lang}`;
+import { getImage } from "astro:assets";
+import myBackground from "../../assets/img/app/image00002.jpeg";
+const optimizedBackground = await getImage({ src: myBackground, format: "webp" });
+import { Image } from "astro:assets";
+import img1 from "../../assets/img/app/image00001.jpeg";
+import img2 from "../../assets/img/app/image00002.jpeg";
+import img3 from "../../assets/img/app/image00003.jpeg";
+import img4 from "../../assets/img/app/image00004.jpeg";
+import img5 from "../../assets/img/app/image00005.jpeg";
+import img6 from "../../assets/img/app/image00006.jpeg";
 
 changeLanguage("en");
 ---
 
+
+<MainLayout title="Appartamento Jolly - Agriturismo La Rondine Bolgheri">
+<Header/>
+
+<BookingBanner/>
+<Footer/>
+</MainLayout>

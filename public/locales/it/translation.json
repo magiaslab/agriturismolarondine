@@ -78,13 +78,16 @@
   "appartamenti": {
     "pretitle": "Appartamenti in campagna per vacanze in Toscana a 6 km dal mare",
     "title" :"Appartamenti a Bolgheri semplici e confortevoli",
-    "subtitle" : "Scopri quello giusto per te!"
+    "subtitle" : "Scopri quello giusto per te!",
+    "content1" : "Questo è ciò che vedrai appena sveglio",
+    "content2" : "L'agriturismo dispone di quattro appartamenti: 2 trilocali denominati Farfalla e Libellula, un monolocale denominato Coccinella ed un bilocale chiamato Jolly attrezzato per disabili.",
+    "content3" : "Tutti climatizzati, dotati di angolo cottura attrezzato, Wi-Fi gratuito, tv e riscaldamento autonomo. Disponibili lenzuola e coperte in loco. Lavatrice i comune."
 
   },
   "jolly": {
   "title" : "Appartamento Jolly",
   "subtitle" : "Appartamento bilocale 4 posti letto, attrezzato anche per disabili",
-  "description" : "Composto da 3 stanze ( 33 mq ), al piano terreno.",
+  "description" : "Questo appartamento è Composto da 3 stanze ( 33 mq ), è posto al piano terreno.",
   "desc1" : "cucina-soggiorno di 14 mq",
   "desc2" : "camera di 15 mq con letto matrimoniale",
   "desc3" : "antibagno",

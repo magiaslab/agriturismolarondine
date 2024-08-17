@@ -76,16 +76,20 @@
 
   },
   "appartamenti": {
-    "pretitle": "Appartamenti in campagna per vacanze in Toscana a 6 km dal mare",
-    "title" :"Appartamenti a Bolgheri semplici e confortevoli",
-    "subtitle" : "Scopri quello giusto per te!"
+    "pretitle": "Tuscan countryside apartments, perfectly located 6 km from the sea.",
+    "title" :"Comfortable apartments located in the charming village of Bolgheri.",
+    "subtitle" : "Find the perfect one for you!",
+    "content1" : "This is what you'll see first thing in the morning.",
+    "content2" : "The farmhouse offers four apartments 2 three-room apartments named Butterfly and Dragonfly, a studio apartment called Ladybug, and a two-room apartment called Jolly, equipped for disabled guests.",
+    "content3" : "Each apartment features air conditioning, a fully equipped kitchenette, free Wi-Fi, TV, and individual heating. Bed linens and blankets are provided. A shared laundry room is available for guests."
+
 
   },
   
   "jolly": {
-  "title" : "Jolly",
-  "subtitle" : "Appartamento bilocale 4 posti letto, attrezzato anche per disabili",
-  "description" : "Composto da 3 stanze ( 33 mq ), al piano terreno.",
+  "title" : "Jolly Apartment",
+  "subtitle" : "Two-room apartment for up to 4 people, with accessibility features for disabled guests",
+  "description" : "This apartment consists of 3 rooms (33 square meters) and is located on the ground floor.",
   "desc1" : "cucina-soggiorno di 14 mq",
   "desc2" : "camera di 15 mq con letto matrimoniale",
   "desc3" : "antibagno",

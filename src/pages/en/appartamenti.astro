@@ -1,6 +1,25 @@
 ---
-import { changeLanguage } from "i18next";
+import MainLayout from "../../layouts/Main.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import AppartamentiHome from "../../components/Appartamenti_home.astro";
+import HeroApp from "../../components/HeroApp.astro";
+import ContentApp from "../../components/ContentApp1.astro";
+import BookingBanner from "../../components/BookingBanner.astro";
+import i18next, { t, changeLanguage } from "i18next";
 
 changeLanguage("en");
+
+const lang = i18next.language;
+const base = lang === "it" ? "" : `/${lang}`;
 ---
 
+
+<MainLayout title="Agriturismo La Rondine Bolgheri">
+<Header/>
+<HeroApp/>
+<ContentApp/>
+<AppartamentiHome />
+<BookingBanner/>
+<Footer/>
+</MainLayout>
