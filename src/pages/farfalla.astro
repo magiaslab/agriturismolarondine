@@ -7,29 +7,29 @@ import i18next, { t, changeLanguage } from "i18next";
 const lang = i18next.language;
 const base = lang === "it" ? "" : `/${lang}`;
 import { getImage } from "astro:assets";
-import myBackground from "../assets/img/app/image00002.jpeg";
+import myBackground from "../assets/img/app/image00011.jpeg";
 const optimizedBackground = await getImage({ src: myBackground, format: "webp" });
 import { Image } from "astro:assets";
-import img1 from "../assets/img/app/image00001.jpeg";
-import img2 from "../assets/img/app/image00002.jpeg";
-import img3 from "../assets/img/app/image00003.jpeg";
-import img4 from "../assets/img/app/image00004.jpeg";
-import img5 from "../assets/img/app/image00005.jpeg";
-import img6 from "../assets/img/app/image00006.jpeg";
+import img1 from "../assets/img/app/image00010.jpeg";
+import img2 from "../assets/img/app/image00011.jpeg";
+import img3 from "../assets/img/app/image00012.jpeg";
+import img4 from "../assets/img/app/image00013.jpeg";
+import img5 from "../assets/img/app/image00014.jpeg";
+import img6 from "../assets/img/app/image00015.jpeg";
 
 changeLanguage("it");
 ---
 
 
-<MainLayout title="Appartamento Jolly - Agriturismo La Rondine Bolgheri">
+<MainLayout title="Appartamento farfalla - Agriturismo La Rondine Bolgheri">
 <Header/>
 <section class="hero relative z-[1] py-16 lg:py-28 px-0 bg-secondary bg-cover bg-no-repeat bg-center" style={`background-image: url(${optimizedBackground.src});`}>
         <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
           <div class="max-w-2xl">
         
-            <h1 class="text-6xl font-sans font-extrabold text-primary mb-2">{t("jolly.title")}</h1>
+            <h1 class="text-4xl lg:text-6xl font-sans font-extrabold text-primary mb-2">{t("farfalla.title")}</h1>
       
-            <p class="leading-normal mb-6 mt-6 font-sans font-bold text-white">{t("jolly.subtitle")}</p>
+            <p class="leading-normal mb-6 mt-6 font-sans font-bold text-white">{t("farfalla.subtitle")}</p>
         
             <div class="flex flex-wrap items-center gap-4">
             </div>
@@ -39,9 +39,10 @@ changeLanguage("it");
   <section class="bg-secondary dark:bg-gray-900">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
-            <h2 class="mb-4 text-4xl tracking-tight font-bold text-green dark:text-white">{t("jolly.description")}</h2>
-            <p class="mb-4 font-light font-sans">{t("jolly.text1")}</p>
-            <p class="mb-4 font-medium">{t("jolly.text2")}</p>
+            <h2 class="mb-4 text-2xl lg:text-4xl tracking-tight font-bold text-green dark:text-white">{t("farfalla.description")}</h2>
+            <p class="mb-4 font-medium font-sans">{t("farfalla.text3")}</p>
+            <p class="mb-4 text-base font-light">{t("farfalla.text1")}</p>
+            <p class="mb-4 text-base font-light">{t("farfalla.text2")}</p>
         </div>
 
 <ul class="space-y-4 text-left text-gray-500 dark:text-gray-400">
@@ -50,37 +51,55 @@ changeLanguage("it");
         <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
          </svg>
-        <span>{t("jolly.desc1")}</span>
+        <span>{t("farfalla.desc1")}</span>
     </li>
     <li class="flex items-center space-x-3 rtl:space-x-reverse">
         <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
          </svg>
-        <span>{t("jolly.desc2")}</span></span>
+        <span>{t("farfalla.desc2")}</span></span>
     </li>
     <li class="flex items-center space-x-3 rtl:space-x-reverse">
         <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
          </svg>
-        <span>{t("jolly.desc3")}</span></span>
+        <span>{t("farfalla.desc8")}</span></span>
     </li>
     <li class="flex items-center space-x-3 rtl:space-x-reverse">
         <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
          </svg>
-        <span>{t("jolly.desc4")}</span></span>
+        <span>{t("farfalla.desc9")}</span></span>
     </li>
     <li class="flex items-center space-x-3 rtl:space-x-reverse">
         <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
          </svg>
-        <span>{t("jolly.desc5")}</span></span>
+        <span>{t("farfalla.desc3")}</span></span>
     </li>
     <li class="flex items-center space-x-3 rtl:space-x-reverse">
         <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
          </svg>
-        <span>{t("jolly.desc6")}</span></span>
+        <span>{t("farfalla.desc4")}</span></span>
+    </li>
+    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+        <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+         </svg>
+        <span>{t("farfalla.desc5")}</span></span>
+    </li>
+    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+        <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+         </svg>
+        <span>{t("farfalla.desc6")}</span></span>
+    </li>
+    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+        <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+         </svg>
+        <span>{t("farfalla.desc7")}</span></span>
     </li>
 </ul>
 

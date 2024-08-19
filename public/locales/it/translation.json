@@ -98,6 +98,38 @@
   "text1" : "Tariffa tutto compreso: biancheria da camera, biancheria da cucina (compreso stoviglie), biancheria da bagno, acqua, luce, gas, TV, riscaldamento, aria condizionata, giardino, barbecue, giochi per bambini, uso lavatrice condominiale.",
   "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, cambio biancheria settimanale al costo di € 20,00, Animali di taglia piccola e media supplemento di € 7,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
 "text3" : "Ampio e luminoso appartamento bilocale con accesso dal piano terra, con la veranda e la corte permette di vivere e godere delle zone comuni del nostro agriturismo, per un buon barbeque o momenti di relax sui lettini all'ombra dei pini del giardino"
+  },
+  "coccinella": {
+  "title" : "Appartamento Coccinella",
+  "subtitle" : "Bilocale per 3 ospiti",
+  "description" : "Appartamento bilocale per 3 ospiti con possibilità di letto aggiuntivo, composto da 2 stanze al primo piano",
+  "desc1" : "Cucina-soggiorno di 14 mq con poltrona e Tv",
+  "desc2" : "Camera matrimoniale di 15 mq",
+  "desc3" : "Bagno con doccia",
+  "desc4" : "Aria condizionata in tutte le stanze",
+  "desc5" : "TV LCD",
+  "desc6" : "Wi-Fi free con connessione gratuita ",
+  "desc7" : "Colonnina di ricarica auto elettriche nella corte",
+  "text1" : "Tariffa tutto compreso: biancheria da camera, biancheria da cucina (compreso stoviglie), biancheria da bagno, acqua, luce, gas, TV, riscaldamento, aria condizionata, giardino, barbecue, giochi per bambini, uso lavatrice condominiale.",
+  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, cambio biancheria settimanale al costo di € 20,00, Animali di taglia piccola e media supplemento di € 7,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
+"text3" : "Appartamento bilocale al primo piano con vista sulla corte, la vista sulle vigne e sul panorama di bolgheri permette di vivere una splendida vacanza, potrete usufruire della corte per un buon barbeque o momenti di relax sui lettini all'ombra dei pini del giardino"
+  },
+  "farfalla": {
+  "title" : "Appartamento Farfalla",
+  "subtitle" : "Trilocale fino a 6 ospiti",
+  "description" : "Appartamento trilocale fino a 6 ospiti, composto da 3 stanze al primo piano",
+  "desc1" : "Cucina-soggiorno di 20 mq con divano",
+  "desc2" : "Camera matrimoniale di 20 mq",
+  "desc8" : "Camera matrimoniale di 14 mq con letto matrimoniale divisibile in due singoli",
+  "desc9" : "Balcone con vista panoramica",
+  "desc3" : "Bagno con doccia",
+  "desc4" : "Aria condizionata in tutte le stanze",
+  "desc5" : "TV LCD",
+  "desc6" : "Wi-Fi free con connessione gratuita ",
+  "desc7" : "Colonnina di ricarica auto elettriche nella corte",
+  "text1" : "Tariffa tutto compreso: biancheria da camera, biancheria da cucina (compreso stoviglie), biancheria da bagno, acqua, luce, gas, TV, riscaldamento, aria condizionata, giardino, barbecue, giochi per bambini, uso lavatrice condominiale.",
+  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, cambio biancheria settimanale al costo di € 20,00, Animali di taglia piccola e media supplemento di € 7,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
+"text3" : "Appartamento bilocale al primo piano con vista sulla corte, la vista sulle vigne e sul panorama di bolgheri permette di vivere una splendida vacanza, potrete usufruire della corte per un buon barbeque o momenti di relax sui lettini all'ombra dei pini del giardino"
   }
  
 }
