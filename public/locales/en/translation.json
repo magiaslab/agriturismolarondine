@@ -139,5 +139,23 @@
   "text2" : "Please note: Rates do not include the tourist tax imposed by the Municipality of Castagneto Carducci, weekly linen change at a cost of €20.00, small and medium-sized pets have a supplement of €7.00 per day, and final cleaning costs €40.00 per stay.",
 "text3" : "Spacious two-bedroom apartment on the first floor boasting a courtyard view, vineyard and panoramic vistas of Bolgheri. Make the most of the courtyard for barbecues or simply unwind on sun loungers under the shade of the garden's pine trees."
 
+  },
+  
+  "cantina" :{
+    "title1" :"Enjoy a delightful wine tasting featuring our wines.",
+    "text1" :"For those interested, during their stay, guests will have the opportunity to visit the winery and taste our current wines. Moreover, during the harvest season, guests can witness the grape harvest firsthand, experiencing the excitement of rural work.",
+    "btn1":"Book your tasting now!",
+    "btn2":"Where are we?",
+    "title2":"Bolgheri DOC wine: production, sales, and tastings",
+    "text2":"The area around Bolgheri and Castagneto Carducci is characterized by a unique terroir, with a very favorable microclimate thanks to the proximity of the sea and the protection of the wooded hills behind it; it is the production base for high-quality wines, famous worldwide.",
+    "text3": "The vineyards, owned by the Sgariglia family, are located at sea level between Castagneto Carducci and Bolgheri. Approximately 6 hectares of east-west facing vines are currently hand-harvested, resulting in a premium product at maturity. The grapes are processed artisanally using modern winemaking techniques.",
+    "title3": "Our Crafted Wines",
+    "text4": "Our production includes 5 wines: RIVERBERO Bolgheri DOC Superiore, MITERRE Bolgheri DOC, ASSIOLO Bolgheri DOC, VERMENTINO Bolgheri DOC, and ROSATO Bolgheri DOC.",
+    "title4": "Whit Passion",
+    "text5": "All production is aimed at achieving the highest possible quality. All my energy and passion have been and will continue to be crucial in growing all production, to bring to your tables not only a good wine, but something that makes you think of our land: Bolgheri and the whole of Tuscany.",
+    "btn3": "Discover the Winer",
+    "alt1": "La Rondine Farmhouse: Experience Bolgheri DOC Wine Tastings",
+    "alt2": "La Rondine Farmhouse: Campo al Noce Winery producing Bolgheri wines",
+    "alt3": "La Rondine Farmhouse, Campo al Noce Winery, Bolgheri: Wine production with a view of wooden barrels"
   }
 }

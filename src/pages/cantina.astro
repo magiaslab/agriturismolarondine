@@ -32,33 +32,30 @@ changeLanguage("it");
 <section class="bg-secondary dark:bg-gray-900">
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
         <div class="mr-auto place-self-center lg:col-span-7">
-            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-primary">Prova i nostri vini in una fantastica degustazione</h1>
-            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Per coloro che lo desiderano, durante la permanenza, sarà possibile visitare la cantina e degustare i vini in produzione.
-                Inoltre nel periodo della vendemmia, gli ospiti potranno assistere alla raccolta dell'uva, potendo constatare dal vivo quanto sia emozionante il lavoro della campagna.</p>
+            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-primary">{t("cantina.title1")}</h1>
+            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{t("cantina.text1")}</p>
             <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                Prenota adesso la degustazione
+              {t("cantina.btn1")}
                 <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </a>
             <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                Dove siamo
+              {t("cantina.btn2")}
             </a> 
         </div>
         <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <Image class="rounded-lg" src={img1} alt="mockup">
+            <Image class="rounded-lg" src={img1} alt={t("cantina.alt1")}>
         </div>                
     </div>
 </section>
 <section class="bg-secondary dark:bg-gray-900">
     <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-primary dark:text-white">Produzione, vendita e degustazioni vini DOC Bolgheri</h2>
-            <p class="mb-4">L'area intorno a Bolgheri e Castagneto Carducci è caratterizzata da un territorio unico al mondo, con un microclima molto favorevole, grazie alla vicinanza del mare ed alla protezione delle colline boscose retrostanti; è la base di produzione di vini di grande qualità, famosi nel mondo.</p>
-            <p>I terreni si trovano sul livello del mare, tra Castagneto Carducci e Bolgheri, di proprietà della famiglia Sgariglia.
-                Attualmente vengono raccolti a mano circa 6 ettari di vigneti con esposizione ad est-ovest, ottenendo così a maturazione un prodotto pregiato.
-                La lavorazione delle uve avviene in maniera artigianale, con moderne tecniche di vinificazione.</p>
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-primary dark:text-white">{t("cantina.title2")}</h2>
+            <p class="mb-4">{t("cantina.text2")}</p>
+            <p>{t("cantina.text3")}</p>
         </div>
         <div class="grid grid-cols-1 gap-4 mt-8">
-            <Image class="w-full rounded-lg" src={img3} alt="office content 1">
+            <Image class="w-full rounded-lg" src={img3} alt="Agriturismo la Rondine Cantina Campo al Noce">
         </div>
     </div>
 </section>
@@ -68,24 +65,21 @@ changeLanguage("it");
       <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
         <div>
           <div class="h-64 overflow-hidden rounded-lg bg-secondary shadow-lg md:h-auto">
-            <Image src={img8} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
+            <Image src={img8} loading="lazy" alt={t("cantina.alt1")} class="h-full w-full object-cover object-center" />
           </div>
         </div>
   
         <div class="md:pt-8">
   
-          <h1 class="mb-4 text-center text-4xl font-bold text-primary sm:text-3xl md:mb-6 md:text-left">La nostra produzione</h1>
+          <h1 class="mb-4 text-center text-4xl font-bold text-primary sm:text-3xl md:mb-6 md:text-left">{t("cantina.title3")}</h1>
   
-          <p class="mb-6 text-gray-500 sm:text-lg md:mb-8">
-            La produzione consiste in 5 vini: RIVERBERO Bolgheri Doc Superiore, MITERRE Bolgheri Doc, ASSIOLO Bolgheri Doc, VERMENTINO Bolgheri Doc e ROSATO Bolgheri Doc.
-          </p>
+          <p class="mb-6 text-gray-500 sm:text-lg md:mb-8">{t("cantina.text4")}</p>
   
-          <h2 class="mb-2 text-center text-xl font-semibold text-green sm:text-2xl md:mb-4 md:text-left">Con tutta la passione</h2>
+          <h2 class="mb-2 text-center text-xl font-semibold text-green sm:text-2xl md:mb-4 md:text-left">{t("cantina.title4")}</h2>
   
-          <p class="mb-6 text-gray-500 sm:text-lg md:mb-8">Tutta la produzione è rivolta alla ricerca della migliore qualità possibile.
-            Ogni energia e tutta la passione di Pierluigi Sgariglia sono state e saranno determinanti per far crescere tutta la produzione, per portare nelle vostre tavole non solo un buon vino, ma qualcosa che vi faccia pensare alla nostra terra: Bolgheri e la Toscana intera.</p>
+          <p class="mb-6 text-gray-500 sm:text-lg md:mb-8">{t("cantina.text5")}</p>
             <a href="https://www.campoalnoce.it/" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                Scopri la Cantina
+              {t("cantina.btn3")}
                 <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </a>
         </div>
@@ -96,28 +90,28 @@ changeLanguage("it");
   <div class="bg-secondary grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-4 px-4 lg:px-16">
     <div>
         <a data-fslightbox href={img4.src} class=" h-auto max-w-full rounded-lg">
-            <Image class="h-auto max-w-full rounded-lg" src={img4} alt="Image description" loading="lazy">
+            <Image class="h-auto max-w-full rounded-lg" src={img4} alt={t("cantina.alt1")} loading="lazy">
           </a>
     </div>
     <div>
         <a data-fslightbox href={img5.src} class=" h-auto max-w-full rounded-lg">
-            <Image class="h-auto max-w-full rounded-lg" src={img5} alt="Image description" loading="lazy">
+            <Image class="h-auto max-w-full rounded-lg" src={img5} alt={t("cantina.alt1")} loading="lazy">
           </a>        </div>
     <div>
         <a data-fslightbox href={img6.src} class=" h-auto max-w-full rounded-lg">
-            <Image class="h-auto max-w-full rounded-lg" src={img6} alt="Image description" loading="lazy">
+            <Image class="h-auto max-w-full rounded-lg" src={img6} alt={t("cantina.alt1")} loading="lazy">
           </a>        </div>
     <div>
         <a data-fslightbox href={img7.src} class=" h-auto max-w-full rounded-lg">
-            <Image class="h-auto max-w-full rounded-lg" src={img7} alt="Image description" loading="lazy">
+            <Image class="h-auto max-w-full rounded-lg" src={img7} alt={t("cantina.alt1")} loading="lazy">
           </a>        </div>
     <div>
         <a data-fslightbox href={img8.src} class=" h-auto max-w-full rounded-lg">
-            <Image class="h-auto max-w-full rounded-lg" src={img8} alt="Image description" loading="lazy">
+            <Image class="h-auto max-w-full rounded-lg" src={img8} alt={t("cantina.alt2")} loading="lazy">
           </a>        </div>
     <div>
         <a data-fslightbox href={img9.src} class=" h-auto max-w-full rounded-lg">
-            <Image class="h-auto max-w-full rounded-lg" src={img9} alt="Image description" loading="lazy">
+            <Image class="h-auto max-w-full rounded-lg" src={img9} alt={t("cantina.alt3")} loading="lazy">
           </a>        </div>
    
 </div>
