@@ -39,7 +39,7 @@ export default function App() {
   <div className="w-[calc(100%_-_3rem)] mx-auto max-w-lg sm:max-w-3xl">
   <div className="text-3xl text-secondary font-extrabold font-sans mb-3">Agriturismo La Rondine</div>
 
-<h1 className="text-6xl font-sans font-extrabold text-white mb-2">Qui, dove i rumori non esistono</h1>
+<h1 className="text-6xl font-sans font-extrabold text-white mb-2">Qui, solo il suono della campagna</h1>
 
 
     <div className="flex flex-wrap items-center gap-4 justify-center">

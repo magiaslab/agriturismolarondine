@@ -1,0 +1,51 @@
+---
+import Image from "astro/components/Image.astro";
+import i18next, { t } from "i18next";
+const lang = i18next.language;
+const base = lang === 'it' ? '' : `/${lang}`;
+import Img1 from "../assets/img/image00010.jpeg"
+---
+
+<section class="bg-secondary dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <div class="max-w-screen-md mb-8 lg:mb-16">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Designed for business teams like yours</h2>
+            <p class="text-gray-500 sm:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+        </div>
+        <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+            
+            <div>
+                <div class="bg-white rounded-md overflow-hidden shadow-[0_0_0_1px_hsl(221_39%_11%_/_0.05),0_0.3px_0.4px_hsl(221_39%_11%_/_0.02),0_0.9px_1.5px_hsl(221_39%_11%_/_0.045),0_3.5px_6px_hsl(221_39%_11%_/_0.09)]">
+                    <figure>
+                      <Image class="block w-full" src={Img1} alt="Image description">
+                    </figure>
+                  
+                    <div class="p-4 grid gap-3">
+                      <h4 class="text-xl"></h4>
+                  
+                      <p class="text-[0.9375rem] text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                      
+                      <footer>
+                        <a href="#0" class=" w-full bg-indigo-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700">Read more</a>
+                      </footer>
+                    </div>
+                  </div>
+            </div>
+            <div>
+                <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                    <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
+                </div>
+                <h3 class="mb-2 text-xl font-bold dark:text-white">Enterprise Design</h3>
+                <p class="text-gray-500 dark:text-gray-400">Craft beautiful, delightful experiences for both marketing and product with real cross-company collaboration.</p>
+            </div>
+            <div>
+                <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                    <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
+                </div>
+                <h3 class="mb-2 text-xl font-bold dark:text-white">Operations</h3>
+                <p class="text-gray-500 dark:text-gray-400">Keep your company’s lights on with customizable, iterative, and structured workflows built for all efficient teams and individual.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+

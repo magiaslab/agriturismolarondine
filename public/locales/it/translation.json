@@ -6,7 +6,7 @@
     "hero": {
         "title": "Nel cuore della campagna bolgherese",
         "claim": "La Rondine Agriturismo a Bolgheri",
-      "subtitle": "Un agriturismo semplice, con persone semplici, in un posto bellissimo!",
+      "subtitle": "Un agriturismo semplice, in un posto bellissimo!",
       "prenota": "Prenota ora",
       "contatti": "Contatti"
     },
@@ -35,11 +35,11 @@
     "text2": "Circondato da vigneti ed uliveti ed a completa gestione familiare, dispone di quattro appartamenti ricavati dalla ristrutturazione di una casa colonica."
   },
   "content2_home":{
-    "title": "I rumori qui non esistono",
+    "title": "Qui, solo il suono della campagna",
     "text2": "La tranquillità è garantita dal fatto che l'agriturismo si trova in fondo ad una strada chiusa di campagna (molto agevole), quindi non vi è possibilità alcuna di traffico. La casa è circondata da vigneti ed uliveti di proprietà della famiglia, ai piedi delle colline di Castagneto Carducci e Bolgheri.",
-    "text3": "L'agriturismo dispone di quattro appartamenti: 2 trilocali denominati Farfalla e Libellula, un monolocale denominato Coccinella ed un bilocale chiamato Jolly attrezzato per disabili.",
-    "text4": "Tutti climatizzati, dotati di angolo cottura attrezzato, Wi-Fi gratuito, tv e riscaldamento autonomo. Disponibili lenzuola e coperte in loco. Lavatrice in comune.",
-    "text5": "Agriturismo Pet Friendly: la famiglia Sgariglia è lieta di ospitare i vostri amici cani e gatti."
+    "text3": "L'agriturismo dispone di quattro appartamenti: 2 trilocali denominati Farfalla e Libellula, e due bilocali Coccinella e Jolly attrezzato per disabili.",
+    "text4": "Tutti climatizzati, dotati di angolo cottura attrezzato, Wi-Fi gratuito, tv e riscaldamento autonomo. Per il vostro soggiorno avete a disposizione la biancheria da letto e da bagno. La lavatrice è in comune.",
+    "text5": "Agriturismo Pet Friendly: Accogliamo i vostri amici pelosi (di taglia piccola e media) con un piccolo supplemento, potete portarli con voi e trascorrere una vacanza perfetta per tutta la famiglia"
   },
   "casolare_home": {
     "title": "Un casolare con la vigna intorno",
@@ -61,12 +61,12 @@
     "title": "Scegli la casa per le tue prossime vacanze"
   },
   "agriturismo": {
-    "title": "I rumori qui non esistono",
+    "title": "Qui, solo il suono della campagna",
     "text1": "Circondato dai vigneti dell'azienda ed a completa gestione familiare, dispone di 4 appartamenti ricavati dalla ristrutturazione di una casa colonica degli anni '60, tutti dotati di tv, Wi-Fi gratuito, riscaldamento ed aria condizionata autonomi, completi di arredo bagno ed attrezzatura da cucina.",
     "text2" : "La posizione tranquilla e lontana dal caos, l'aria pulita, il giardino attrezzato con scivolo, altalena, una piccola casetta ed altri giochi, rendono il nostro agriturismo l’ideale anche per le vacanze con bambini in Toscana. I genitori possono rilassarsi, mentre i propri piccoli giocano sereni.",
     "text3_title": "Agriturismo Pet Friendly",
     "text3_desc": "La famiglia Sgariglia è lieta di ospitare i vostri amici cani e gatti.",
-    "text3_desc2": "Con un piccolo supplemento i nostri amici pelosi potranno godere delle vacanze con voi e correre liberi e spenzierati nelle nostre campagne",
+    "text3_desc2": "Con un piccolo supplemento i nostri amici pelosi potranno godere delle vacanze con voi",
     "pretitle": "Agriturismo La Rondine",
     "title2": "Vicino a tutto ciò che serve",
     "text4": "A soli 6 chilometri dal nostro agriturismo, il mare ed una spiaggia sabbiosa e profonda, antistante una rigogliosa pineta per riposarsi all'ombra. A Marina di Castagneto potrete trovare negozi, ristoranti, bar, centro termale, ecc...",
@@ -80,14 +80,14 @@
     "title" :"Appartamenti a Bolgheri semplici e confortevoli",
     "subtitle" : "Scopri quello giusto per te!",
     "content1" : "Questo è ciò che vedrai appena sveglio",
-    "content2" : "L'agriturismo dispone di quattro appartamenti: 2 trilocali denominati Farfalla e Libellula, un monolocale denominato Coccinella ed un bilocale chiamato Jolly attrezzato per disabili.",
-    "content3" : "Tutti climatizzati, dotati di angolo cottura attrezzato, Wi-Fi gratuito, tv e riscaldamento autonomo. Disponibili lenzuola e coperte in loco. Lavatrice i comune."
+    "content2" : "L'agriturismo dispone di quattro appartamenti: 2 trilocali denominati Farfalla e Libellula, e due bilocali Coccinella e Jolly attrezzato per disabili.",
+    "content3" : "Tutti climatizzati, dotati di angolo cottura attrezzato, Wi-Fi gratuito, tv e riscaldamento autonomo. Per il vostro soggiorno avete a disposizione la biancheria da letto e da bagno. La lavatrice è in comune."
 
   },
   "jolly": {
   "title" : "Appartamento Jolly",
   "subtitle" : "Bilocale per 4 ospiti",
-  "description" : "Appartamento bilocale per 4 ospiti con possibilità di letto aggiuntivo, composto da 2 stanze al piano terreno",
+  "description" : "Appartamento bilocale, composto da 2 stanze al piano terreno",
   "desc1" : "Cucina-soggiorno di 14 mq con divano letto",
   "desc2" : "Camera matrimoniale di 15 mq",
   "desc3" : "Bagno con doccia attrezzato per disabili",
@@ -97,12 +97,12 @@
   "desc7" : "Colonnina di ricarica auto elettriche nella corte",
   "text1" : "Tariffa tutto compreso: biancheria da camera, biancheria da cucina (compreso stoviglie), biancheria da bagno, acqua, luce, gas, TV, riscaldamento, aria condizionata, giardino, barbecue, giochi per bambini, uso lavatrice condominiale.",
   "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, cambio biancheria settimanale al costo di € 20,00, Animali di taglia piccola e media supplemento di € 7,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
-"text3" : "Ampio e luminoso appartamento bilocale con accesso dal piano terra, con la veranda e la corte permette di vivere e godere delle zone comuni del nostro agriturismo, per un buon barbeque o momenti di relax sui lettini all'ombra dei pini del giardino"
+"text3" : "Ampio e luminoso appartamento bilocale con accesso dal piano terra, con la veranda e la corte permette di vivere e godere delle zone comuni del nostro agriturismo, per un buon barbeque o momenti di relax sui lettini del giardino"
   },
   "coccinella": {
   "title" : "Appartamento Coccinella",
   "subtitle" : "Bilocale per 3 ospiti",
-  "description" : "Appartamento bilocale per 3 ospiti con possibilità di letto aggiuntivo, composto da 2 stanze al primo piano",
+  "description" : "Appartamento bilocale, composto da 2 stanze al primo piano",
   "desc1" : "Cucina-soggiorno di 14 mq con poltrona e Tv",
   "desc2" : "Camera matrimoniale di 15 mq",
   "desc3" : "Bagno con doccia",
@@ -112,12 +112,12 @@
   "desc7" : "Colonnina di ricarica auto elettriche nella corte",
   "text1" : "Tariffa tutto compreso: biancheria da camera, biancheria da cucina (compreso stoviglie), biancheria da bagno, acqua, luce, gas, TV, riscaldamento, aria condizionata, giardino, barbecue, giochi per bambini, uso lavatrice condominiale.",
   "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, cambio biancheria settimanale al costo di € 20,00, Animali di taglia piccola e media supplemento di € 7,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
-"text3" : "Appartamento bilocale al primo piano con vista sulla corte, la vista sulle vigne e sul panorama di bolgheri permette di vivere una splendida vacanza, potrete usufruire della corte per un buon barbeque o momenti di relax sui lettini all'ombra dei pini del giardino"
+"text3" : "Appartamento bilocale al primo piano con vista sulla corte, la vista sulle vigne e sul panorama di Bolgheri permette di vivere una splendida vacanza, potrete usufruire della corte per un buon barbeque o momenti di relax sui lettini del giardino"
   },
   "farfalla": {
   "title" : "Appartamento Farfalla",
   "subtitle" : "Trilocale fino a 6 ospiti",
-  "description" : "Appartamento trilocale fino a 6 ospiti, composto da 3 stanze al primo piano",
+  "description" : "Appartamento trilocale, composto da 3 stanze al primo piano",
   "desc1" : "Cucina-soggiorno di 20 mq con divano",
   "desc2" : "Camera matrimoniale di 20 mq",
   "desc8" : "Camera matrimoniale di 14 mq con letto matrimoniale divisibile in due singoli",
@@ -129,12 +129,12 @@
   "desc7" : "Colonnina di ricarica auto elettriche nella corte",
   "text1" : "Tariffa tutto compreso: biancheria da camera, biancheria da cucina (compreso stoviglie), biancheria da bagno, acqua, luce, gas, TV, riscaldamento, aria condizionata, giardino, barbecue, giochi per bambini, uso lavatrice condominiale.",
   "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, cambio biancheria settimanale al costo di € 20,00, Animali di taglia piccola e media supplemento di € 7,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
-"text3" : "Appartamento bilocale al primo piano con vista sulla corte e balcone panoramico, la vista sulle vigne e sul panorama di bolgheri permette di vivere una splendida vacanza, potrete usufruire della corte per un buon barbeque o momenti di relax sui lettini all'ombra dei pini del giardino"
+"text3" : "Appartamento bilocale al primo piano con vista sulla corte e balcone panoramico, la vista sulle vigne e sul panorama di Bolgheri permette di vivere una splendida vacanza, potrete usufruire della corte per un buon barbeque o momenti di relax sui lettini del giardino"
   },
   "libellula": {
   "title" : "Appartamento Libellula",
   "subtitle" : "Trilocale fino a 5 ospiti",
-  "description" : "Appartamento trilocale fino a 5 ospiti, composto da 3 stanze al primo piano",
+  "description" : "Appartamento trilocale, composto da 3 stanze al primo piano",
   "desc1" : "Cucina-soggiorno di 15 mq",
   "desc2" : "Camera matrimoniale di 20 mq",
   "desc8" : "Camera matrimoniale di 14 mq con letto matrimoniale divisibile in due singoli",
@@ -146,7 +146,7 @@
   "desc7" : "Colonnina di ricarica auto elettriche nella corte",
   "text1" : "Tariffa tutto compreso: biancheria da camera, biancheria da cucina (compreso stoviglie), biancheria da bagno, acqua, luce, gas, TV, riscaldamento, aria condizionata, giardino, barbecue, giochi per bambini, uso lavatrice condominiale.",
   "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, cambio biancheria settimanale al costo di € 20,00, Animali di taglia piccola e media supplemento di € 7,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
-"text3" : "Appartamento bilocale al primo piano con vista sulla corte e balcone panoramico, la vista sulle vigne e sul panorama di bolgheri permette di vivere una splendida vacanza, potrete usufruire della corte per un buon barbeque o momenti di relax sui lettini all'ombra dei pini del giardino"
+"text3" : "Appartamento bilocale al primo piano con vista sulla corte e balcone panoramico, la vista sulle vigne e sul panorama di Bolgheri permette di vivere una splendida vacanza, potrete usufruire della corte per un buon barbeque o momenti di relax sui lettini del giardino"
   },
   "cantina" :{
     "title1" :"Prova i nostri vini in una fantastica degustazione",
