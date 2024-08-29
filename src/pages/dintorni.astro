@@ -18,117 +18,211 @@ import img5 from "../assets/img/cerreta.jpg";
 import img6 from "../assets/img/app/image00006.jpeg";
 
 changeLanguage("it");
----
 
-
-<MainLayout title="Appartamento Jolly - Agriturismo La Rondine Bolgheri">
-<Header/>
-<section class="hero relative z-[1] py-16 lg:py-28 px-0 bg-gray-100 bg-cover bg-no-repeat bg-center text-center" style={`background-image: url(${optimizedBackground.src});`}>
-    <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg sm:max-w-3xl">
-      <div class="text-sm text-primary mb-3">Cosa fare in vacanza a Bolgheri</div>
-  
-      <h1 class="text-4xl lg:text-6xl text-secondary font-extrabold mb-2">Tante opportunità per tutti i gusti</h1>
-  
-  
-      <div class="flex flex-wrap items-center gap-4 justify-center">
-      </div>
-    </div>
-  </section>
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img1} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">Costa degli Etruschi, un territorio unico!</h1>
-  
-          <p class="mb-6 text-gray-500 sm:text-lg md:mb-8">
-            Un lembo di terra pressoché intatto di natura preservata, di opere d'arte, di prodotti genuini e di buona gastronomia, di botteghe dai sapori antichi, di ospitalità e tradizione.
-            Uno straordinario paesaggio di boschi e campi curati meticolosamente, diretta espressione di una raffinata cultura del territorio.
-          </p>
-  
-  
-          <p class="mb-6 text-gray-500 sm:text-lg md:mb-8"> Mai troppo caldo in estate e temperatura ideale in autunno e primavera rendono il clima mite e piacevole nella Costa degli Etruschi, capace di creare veri spettacoli della natura, come gli olivi della campagna di Castagneto Carducci, presenti direttamente a ridosso del Viale dei Cipressi che da San Guido porta a Bolgheri, vecchi di millenni, con tronchi enormi di oltre 2,5 metri di diametro alla base e con altezze che raggiungono i 25 metri.</p>
-          <p class="mb-6 text-gray-500 sm:text-lg md:mb-8"> Il paesaggio del territorio di Castagneto Carducci e dei suoi dintorni si è modellato nel tempo in funzione della vite, assumendo caratteristiche di straordinaria ed affascinante bellezza. Terra dai dolci colli, dai panorami luminosi, dai colori che sfumano dall'ocra al verde e all'azzurro.
-            Un paesaggio viticolo movimentato che abbraccia un'ampia fascia, con colline irregolarmente disposte e la pianura costiera.
-            Una morfologia variegata di cui Castagneto Carducci va orgoglioso e che ha saputo meglio coniugare il turismo con l’enologia, merito anche della bellezza dei suoi paesaggi.</p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  
-<BookingBanner/>
-
-<div class="tab-features js-tabs bg-secondary py-16 lg:py-28 px-12" data-show-panel-class="tab-features__panel--display" data-hide-panel-class="tab-features__panel--hide">
-  <ul class="tab-features__controls-list relative flex items-center overflow-auto after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-px after:bg-gray-900/10 js-tabs__controls" aria-label="Tabs Interface">
-    <li class="tab-features__control-wrapper">
-      <a href="#tab-features-mil" class="tab-features__control relative block py-3 lg:py-5 pr-12 lg:pr-20 pl-3 lg:pl-5 text-primary no-underline font-medium transition-[background] duration-200 before:text-xs before:block before:mb-0.5 before:lg:mb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-px hover:bg-gray-900/[.025]" aria-selected="true">Mare</a>
-    </li>
-
-    <li class="tab-features__control-wrapper">
-      <a href="#tab-features-flo" class="tab-features__control relative block py-3 lg:py-5 pr-12 lg:pr-20 pl-3 lg:pl-5 text-primary no-underline font-medium transition-[background] duration-200 before:text-xs before:block before:mb-0.5 before:lg:mb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-px hover:bg-gray-900/[.025]">Dog Beach</a>
-    </li>
-
-    <li class="tab-features__control-wrapper">
-      <a href="#tab-features-rom" class="tab-features__control relative block py-3 lg:py-5 pr-12 lg:pr-20 pl-3 lg:pl-5 text-primary no-underline font-medium transition-[background] duration-200 before:text-xs before:block before:mb-0.5 before:lg:mb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-px hover:bg-gray-900/[.025]">Divertimenti</a>
-    </li>
-
-    <li class="tab-features__control-wrapper">
-      <a href="#tab-features-nap" class="tab-features__control relative block py-3 lg:py-5 pr-12 lg:pr-20 pl-3 lg:pl-5 text-primary no-underline font-medium transition-[background] duration-200 before:text-xs before:block before:mb-0.5 before:lg:mb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-px hover:bg-gray-900/[.025]">Terme e benessere</a>
-    </li>
-  </ul>
-
-  <div class="relative js-tabs__panels">
-    <section id="tab-features-mil" class="tab-features__panel pt-5 lg:pt-8 js-tabs__panel">
-      <figure>
-        <Image class="block w-full lg:w-3/4 rounded-lg" src={img2} alt="Image description">
-      </figure>
-      <p class="mt-4">Testo descrittivo della foto</p>
-    </section>
-
-    <section id="tab-features-flo" class="tab-features__panel pt-5 lg:pt-8 js-tabs__panel">
-      <figure>
-        <Image class="block w-full lg:w-3/4 rounded-lg" src={img3} alt="Image description">
-      </figure>
-      <p class="mt-4">Testo descrittivo della foto</p>
-
-    </section>
-
-    <section id="tab-features-rom" class="tab-features__panel pt-5 lg:pt-8 js-tabs__panel">
-      <figure>
-        <Image class="block w-full lg:w-3/4 rounded-lg" src={img4} alt="Image description">
-      </figure>
-      <p class="mt-4">Testo descrittivo della foto</p>
-
-    </section>
-
-    <section id="tab-features-nap" class="tab-features__panel pt-5 lg:pt-8 js-tabs__panel">
-      <figure>
-        <Image class="block  w-full lg:w-3/4 rounded-lg" src={img5} alt="Image description">
-      </figure>
-      <p class="mt-4">Testo descrittivo della foto</p>
-
-    </section>
-  </div>
-</div>
-<Footer/>
-</MainLayout>
-
-<style>
-  /* -------------------------------- 
-
-File#: _2_tabbed-features
-Title: Tabbed Features 
-Descr: A list of features filterable using a tabbed navigation
-Usage: codyhouse.co/license
-
--------------------------------- */
+-- -
+    <MainLayout>title;
+"Il Territorio - Agriturismo La Rondine Bolgheri" >
+    <Header>/>
+    < section;
+class {
+}
+"hero relative z-[1] py-16 lg:py-28 px-0 bg-gray-100 bg-cover bg-no-repeat bg-center text-center";
+style = {} `background-image: url(${optimizedBackground.src});`;
+ >
+    <div>class {
+    };
+"w-[calc(100%_-_3rem)] mx-auto max-w-lg sm:max-w-3xl" >
+    <div>class {
+    };
+"text-sm text-primary mb-3" > { t(); } < /div>
+    < h1;
+class {
+}
+"text-4xl lg:text-6xl text-secondary font-extrabold mb-2" > { t(); } < /h1>
+    < div;
+class {
+}
+"flex flex-wrap items-center gap-4 justify-center" >
+    <>/div>
+    < /div>
+    < /section>
+    < div;
+class {
+}
+"bg-secondary py-6 sm:py-8 lg:py-12" >
+    <div>class {
+    };
+"mx-auto max-w-screen-xl px-4 md:px-8" >
+    <div>class {
+    };
+"grid gap-8 md:grid-cols-2 lg:gap-12" >
+    <div><div>class {
+    };
+"h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto" >
+    <Image>src;
+{
+    img1;
+}
+loading = "lazy";
+alt = "Photo by Martin Sanchez";
+class {
+}
+"h-full w-full object-cover object-center" /  >
+    <>/div>
+    < /div>
+    < div;
+class {
+}
+"md:pt-8" >
+    <h1>class {
+    };
+"mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left" > { t(); } < /h1>
+    < p;
+class {
+}
+"mb-6 text-gray-500 sm:text-lg md:mb-8" > { t(); } < /p>
+    < p;
+class {
+}
+"mb-6 text-gray-500 sm:text-lg md:mb-8" > { t(); } < /p>
+    < p;
+class {
+}
+"mb-6 text-gray-500 sm:text-lg md:mb-8" > { t(); } < /p>
+    < /div>
+    < /div>
+    < /div>
+    < /div>
+    < BookingBanner /  >
+    <div>class {
+    };
+"tab-features js-tabs bg-secondary py-16 lg:py-28 px-12";
+data - show - panel - class {
+};
+"tab-features__panel--display";
+data - hide - panel - class {
+};
+"tab-features__panel--hide" >
+    <ul>class {
+    };
+"tab-features__controls-list relative flex items-center overflow-auto after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-px after:bg-gray-900/10 js-tabs__controls";
+aria - label;
+"Tabs Interface" >
+    <li>class {
+    };
+"tab-features__control-wrapper" >
+    <a>href;
+"#tab-features-mil";
+class {
+}
+"tab-features__control relative block py-3 lg:py-5 pr-12 lg:pr-20 pl-3 lg:pl-5 text-primary no-underline font-medium transition-[background] duration-200 before:text-xs before:block before:mb-0.5 before:lg:mb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-px hover:bg-gray-900/[.025]";
+aria - selected;
+"true" > { t(); } < /a>
+    < /li>
+    < li;
+class {
+}
+"tab-features__control-wrapper" >
+    <a>href;
+"#tab-features-flo";
+class {
+}
+"tab-features__control relative block py-3 lg:py-5 pr-12 lg:pr-20 pl-3 lg:pl-5 text-primary no-underline font-medium transition-[background] duration-200 before:text-xs before:block before:mb-0.5 before:lg:mb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-px hover:bg-gray-900/[.025]" > { t(); } < /a>
+    < /li>
+    < li;
+class {
+}
+"tab-features__control-wrapper" >
+    <a>href;
+"#tab-features-rom";
+class {
+}
+"tab-features__control relative block py-3 lg:py-5 pr-12 lg:pr-20 pl-3 lg:pl-5 text-primary no-underline font-medium transition-[background] duration-200 before:text-xs before:block before:mb-0.5 before:lg:mb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-px hover:bg-gray-900/[.025]" > { t(); } < /a>
+    < /li>
+    < li;
+class {
+}
+"tab-features__control-wrapper" >
+    <a>href;
+"#tab-features-nap";
+class {
+}
+"tab-features__control relative block py-3 lg:py-5 pr-12 lg:pr-20 pl-3 lg:pl-5 text-primary no-underline font-medium transition-[background] duration-200 before:text-xs before:block before:mb-0.5 before:lg:mb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-px hover:bg-gray-900/[.025]" > { t(); } < /a>
+    < /li>
+    < /ul>
+    < div;
+class {
+}
+"relative js-tabs__panels" >
+    <section>id;
+"tab-features-mil";
+class {
+}
+"tab-features__panel pt-5 lg:pt-8 js-tabs__panel" >
+    <figure><Image>class {
+    };
+"block w-full lg:w-3/4 rounded-lg";
+src = { img2 };
+alt = "Image description" >
+    <>/figure>
+    < p;
+class {
+}
+"mt-4" > { t(); } < /p>
+    < /section>
+    < section;
+id = "tab-features-flo";
+class {
+}
+"tab-features__panel pt-5 lg:pt-8 js-tabs__panel" >
+    <figure><Image>class {
+    };
+"block w-full lg:w-3/4 rounded-lg";
+src = { img3 };
+alt = "Image description" >
+    <>/figure>
+    < p;
+class {
+}
+"mt-4" > { t(); } < /p>
+    < /section>
+    < section;
+id = "tab-features-rom";
+class {
+}
+"tab-features__panel pt-5 lg:pt-8 js-tabs__panel" >
+    <figure><Image>class {
+    };
+"block w-full lg:w-3/4 rounded-lg";
+src = { img4 };
+alt = "Image description" >
+    <>/figure>
+    < p;
+class {
+}
+"mt-4" > { t(); } < /p>
+    < /section>
+    < section;
+id = "tab-features-nap";
+class {
+}
+"tab-features__panel pt-5 lg:pt-8 js-tabs__panel" >
+    <figure><Image>class {
+    };
+"block  w-full lg:w-3/4 rounded-lg";
+src = { img5 };
+alt = "Image description" >
+    <>/figure>
+    < p;
+class {
+}
+"mt-4" > { t(); } < /p>
+    < /section>
+    < /div>
+    < /div>
+    < Footer /  >
+    <>/MainLayout><style>;
+--- */
 .tab-features__controls-list {
   counter-reset: tab-features-list;
 }
