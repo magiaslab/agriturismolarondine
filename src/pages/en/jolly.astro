@@ -5,7 +5,7 @@ import Footer from "../../components/Footer.astro";
 import BookingBanner from "../../components/BookingBanner.astro";
 import i18next, { t, changeLanguage } from "i18next";
 const lang = i18next.language;
-const base = lang === "it" ? "" : `/${lang}`;
+const base = lang === "en" ? "" : `/${lang}`;
 import { getImage } from "astro:assets";
 import myBackground from "../../assets/img/app/image00002.jpeg";
 const optimizedBackground = await getImage({ src: myBackground, format: "webp" });
