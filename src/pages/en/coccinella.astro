@@ -5,7 +5,7 @@ import Footer from "../../components/Footer.astro";
 import BookingBanner from "../../components/BookingBanner.astro";
 import i18next, { t, changeLanguage } from "i18next";
 const lang = i18next.language;
-const base = lang === "en" ? "" : `/${lang}`;
+const base = lang === "it" ? "" : `/${lang}`;
 import { getImage } from "astro:assets";
 import myBackground from "../../assets/img/app/image00021.jpeg";
 const optimizedBackground = await getImage({ src: myBackground, format: "webp" });
@@ -24,12 +24,13 @@ changeLanguage("en");
 <section class="hero relative z-[1] py-16 lg:py-28 px-0 bg-secondary bg-cover bg-no-repeat bg-center" style={`background-image: url(${optimizedBackground.src});`}>
         <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
           <div class="max-w-2xl">
-        
-            <h1 class="text-4xl lg:text-6xl font-sans font-extrabold text-primary mb-2">{t("coccinella.title")}</h1>
+            <div  class=" max-w-screen-xl md:px-5 py-8 m-4 lg:mx-auto  lg:py-12 bg-white/90  rounded-xl sm:px-5">
+            <h1 class="text-4xl lg:text-6xl font-sans font-extrabold text-red-600 mb-2">{t("coccinella.title")}</h1>
       
-            <p class="leading-normal mb-6 mt-6 font-sans font-bold text-white">{t("coccinella.subtitle")}</p>
+            <p class="leading-normal mb-6 mt-6 font-sans font-bold text-crusta">{t("coccinella.subtitle")}</p>
         
             <div class="flex flex-wrap items-center gap-4">
+            </div>
             </div>
           </div>
         </div>
