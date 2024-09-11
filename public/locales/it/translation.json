@@ -37,7 +37,7 @@
   "content2_home":{
     "title": "Qui, solo il suono della campagna",
     "text2": "La tranquillità è garantita dal fatto che l'agriturismo si trova in fondo ad una strada chiusa di campagna (molto agevole), quindi non vi è possibilità alcuna di traffico. La casa è circondata dai vigneti di proprietà della famiglia, ai piedi delle colline di Castagneto Carducci e Bolgheri.",
-    "text3": "L'agriturismo dispone di quattro appartamenti: 2 trilocali denominati Farfalla e Libellula, e due bilocali Coccinella e Jolly attrezzato per disabili.",
+    "text3": "L'agriturismo dispone di quattro appartamenti: 2 trilocali denominati Farfalla e Libellula con balcone, e due bilocali Coccinella e Jolly quest'ultimo attrezzato per disabili.",
     "text4": "Tutti climatizzati con cucina completa, Wi-Fi gratuito, tv e riscaldamento autonomo, alcuni con balcone panoramico sulla campagna. Per il vostro soggiorno avete a disposizione la biancheria da letto e da bagno. La lavatrice è in comune.",
     "text5": "Agriturismo Pet Friendly: Accogliamo i vostri amici pelosi (di taglia piccola e media) con un piccolo supplemento, potete portarli con voi e trascorrere una vacanza perfetta per tutta la famiglia"
   },
@@ -79,8 +79,8 @@
     "pretitle": "Appartamenti in campagna per vacanze in Toscana a 6 km dal mare",
     "title" :"Appartamenti a Bolgheri semplici e confortevoli",
     "subtitle" : "Scopri quello giusto per te!",
-    "content1" : "Questo è ciò che vedrai appena sveglio",
-    "content2" : "L'agriturismo dispone di quattro appartamenti: 2 trilocali denominati Farfalla e Libellula, e due bilocali Coccinella e Jolly attrezzato per disabili.",
+    "content1" : "Questo è ciò che vedrai appena arrivato",
+    "content2" : "L'agriturismo dispone di quattro appartamenti: 2 trilocali denominati Farfalla e Libellula con balcone, e due bilocali Coccinella e Jolly quest'ultimo attrezzato per disabili.",
     "content3" : "Tutti climatizzati con cucina completa, Wi-Fi gratuito, tv e riscaldamento autonomo, alcuni con balcone panoramico sulla campagna. Per il vostro soggiorno avete a disposizione la biancheria da letto e da bagno. La lavatrice è in comune."
 
   },
@@ -97,8 +97,8 @@
   "desc7" : "Colonnina di ricarica auto elettriche nella corte su richiesta",
  "desc8" : "Check-in: dalle ore 15:00 alle 18:00 Check-out: entro le ore 10:00", 
   "text1" : "Tariffa tutto compreso: biancheria da camera, biancheria da cucina (compreso stoviglie), biancheria da bagno, acqua, luce, gas, TV, riscaldamento, aria condizionata, giardino, barbecue, giochi per bambini, uso lavatrice condominiale.",
-  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, cambio biancheria settimanale al costo di € 20,00, Animali di taglia piccola e media supplemento di € 7,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
-"text3" : "Ampio e luminoso appartamento bilocale con accesso dal piano terra, con la veranda e la corte permette di vivere e godere delle zone comuni del nostro agriturismo, per un buon barbeque o momenti di relax sui lettini del giardino"
+  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, Animali di taglia piccola e media supplemento di € 5,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
+"text3" : "Ampio e luminoso appartamento bilocale con accesso dal piano terra, con la veranda e il giardino permette di vivere e godere delle zone comuni del nostro agriturismo, per un buon barbeque o momenti di relax sui lettini prendisole"
   },
   "coccinella": {
   "title" : "Appartamento Coccinella",
@@ -113,8 +113,8 @@
   "desc7" : "Colonnina di ricarica auto elettriche nella corte su richiesta",
  "desc8" : "Check-in: dalle ore 15:00 alle 18:00 Check-out: entro le ore 10:00", 
   "text1" : "Tariffa tutto compreso: biancheria da camera, biancheria da cucina (compreso stoviglie), biancheria da bagno, acqua, luce, gas, TV, riscaldamento, aria condizionata, giardino, barbecue, giochi per bambini, uso lavatrice condominiale.",
-  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, cambio biancheria settimanale al costo di € 20,00, Animali di taglia piccola e media supplemento di € 7,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
-"text3" : "Appartamento bilocale al primo piano con vista sulla corte, la vista sulle vigne e sul panorama di Bolgheri permette di vivere una splendida vacanza, potrete usufruire della corte per un buon barbeque o momenti di relax sui lettini del giardino"
+  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, Animali di taglia piccola e media supplemento di € 5,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
+"text3" : "Appartamento bilocale al primo piano con vista sul giardino, permette di vivere una splendida vacanza, potrete usufruire del giardino per un buon barbeque o momenti di relax sui lettini prendisole"
   },
   "farfalla": {
   "title" : "Appartamento Farfalla",
@@ -131,8 +131,8 @@
   "desc7" : "Colonnina di ricarica auto elettriche nella corte su richiesta",
  "desc10" : "Check-in: dalle ore 15:00 alle 18:00 Check-out: entro le ore 10:00", 
   "text1" : "Tariffa tutto compreso: biancheria da camera, biancheria da cucina (compreso stoviglie), biancheria da bagno, acqua, luce, gas, TV, riscaldamento, aria condizionata, giardino, barbecue, giochi per bambini, uso lavatrice condominiale.",
-  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, cambio biancheria settimanale al costo di € 20,00, Animali di taglia piccola e media supplemento di € 7,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
-"text3" : "Appartamento bilocale al primo piano con vista sulla corte e balcone panoramico, la vista sulle vigne e sul panorama di Bolgheri permette di vivere una splendida vacanza, potrete usufruire della corte per un buon barbeque o momenti di relax sui lettini del giardino"
+  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, Animali di taglia piccola e media supplemento di € 5,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
+"text3" : "Appartamento trilocale al primo piano con vista sul giardino e sulla campagna dal balcone panoramico, permette di vivere una splendida vacanza, potrete usufruire del giardino per un buon barbeque o momenti di relax sui lettini prendisole"
   },
   "libellula": {
   "title" : "Appartamento Libellula",
@@ -149,8 +149,8 @@
   "desc7" : "Colonnina di ricarica auto elettriche nella corte su richiesta",
  "desc10" : "Check-in: dalle ore 15:00 alle 18:00 Check-out: entro le ore 10:00", 
   "text1" : "Tariffa tutto compreso: biancheria da camera, biancheria da cucina (compreso stoviglie), biancheria da bagno, acqua, luce, gas, TV, riscaldamento, aria condizionata, giardino, barbecue, giochi per bambini, uso lavatrice condominiale.",
-  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, cambio biancheria settimanale al costo di € 20,00, Animali di taglia piccola e media supplemento di € 7,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
-"text3" : "Appartamento bilocale al primo piano con vista sulla corte e balcone panoramico, la vista sulle vigne e sul panorama di Bolgheri permette di vivere una splendida vacanza, potrete usufruire della corte per un buon barbeque o momenti di relax sui lettini del giardino"
+  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, Animali di taglia piccola e media supplemento di € 5,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
+"text3" : "Appartamento trilocale al primo piano con vista sul giardino, sulle vigne e sul panorama di Bolgheri permette di vivere una splendida vacanza, potrete usufruire del giardino per un buon barbeque o momenti di relax sui lettini prendisole"
   },
   "cantina" :{
     "title1" :"Prova i nostri vini in una fantastica degustazione",
