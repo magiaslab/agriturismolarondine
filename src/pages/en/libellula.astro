@@ -10,12 +10,12 @@ import { getImage } from "astro:assets";
 import myBackground from "../../assets/img/app/image00008.jpeg";
 const optimizedBackground = await getImage({ src: myBackground, format: "webp" });
 import { Image } from "astro:assets";
-import img1 from "../../assets/img/app/image00001.jpeg";
-import img2 from "../../assets/img/app/image00008.jpeg";
-import img3 from "../../assets/img/app/image00003.jpeg";
-import img4 from "../../assets/img/app/image00004.jpeg";
-import img5 from "../../assets/img/app/image00005.jpeg";
-import img6 from "../../assets/img/app/image00002.jpeg";
+import img1 from "../../assets/img/app/nuove/libellula01.jpeg";
+import img2 from "../../assets/img/app/nuove/libellula02.jpeg";
+import img3 from "../../assets/img/app/nuove/libellula04.jpeg";
+import img4 from "../../assets/img/app/nuove/libellula05.jpeg";
+import img5 from "../../assets/img/app/nuove/libellula08.jpeg";
+import img6 from "../../assets/img/app/nuove/libellulavista.jpeg";
 
 changeLanguage("en");
 ---
@@ -24,19 +24,19 @@ changeLanguage("en");
 <MainLayout title="Appartamento libellula - Agriturismo La Rondine Bolgheri">
 <Header/>
 <section class="hero relative z-[1] py-16 lg:py-28 px-0 bg-secondary bg-cover bg-no-repeat bg-center" style={`background-image: url(${optimizedBackground.src});`}>
-        <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
-          <div class="max-w-2xl">
-            <div  class=" max-w-screen-xl md:px-5 py-8 m-4 lg:mx-auto  lg:py-12 bg-white/90  rounded-xl sm:px-5">
-            <h1 class="text-4xl lg:text-6xl font-sans font-extrabold text-blue-500 mb-2">{t("libellula.title")}</h1>
-      
-            <p class="leading-normal mb-6 mt-6 font-sans font-bold text-crusta">{t("libellula.subtitle")}</p>
-        
-            <div class="flex flex-wrap items-center gap-4">
-            </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
+    <div class="max-w-2xl">
+      <div  class=" max-w-screen-xl md:px-5 py-8 m-4 lg:mx-auto  lg:py-12 bg-white/90  rounded-xl sm:px-5">
+      <h1 class="text-4xl lg:text-6xl font-sans font-extrabold text-yellow-300 mb-2">{t("libellula.title")}</h1>
+
+      <p class="leading-normal mb-6 mt-6 font-sans font-bold text-crusta">{t("libellula.subtitle")}</p>
+  
+      <div class="flex flex-wrap items-center gap-4">
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
   <section class="bg-secondary dark:bg-gray-900">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
@@ -102,6 +102,12 @@ changeLanguage("en");
          </svg>
         <span>{t("libellula.desc7")}</span></span>
     </li>
+    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+      <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+       </svg>
+      <span>{t("libellula.desc10")}</span></span>
+  </li>
 </ul>
 
     </div>
@@ -110,14 +116,16 @@ changeLanguage("en");
 
   <BookingBanner/>
 
-<div class="bg-secondary grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-4 px-4 lg:px-16">
+<div class="bg-secondary grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-4 px-4 lg:px-16 pb-8">
     <div>
         <a data-fslightbox href={img1.src} class=" h-auto max-w-full rounded-lg">
+          
             <Image class="h-auto max-w-full rounded-lg" src={img1} alt="Image description" loading="lazy">
           </a>
     </div>
     <div>
         <a data-fslightbox href={img2.src} class=" h-auto max-w-full rounded-lg">
+
             <Image class="h-auto max-w-full rounded-lg" src={img2} alt="Image description" loading="lazy">
           </a>        </div>
     <div>
@@ -139,7 +147,45 @@ changeLanguage("en");
    
 </div>
 
+<div class="bg-secondary py-6 sm:py-8 lg:py-12">
+    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+      <!-- text - start -->
+      <div class="mb-10 md:mb-16">
+        <h2 class="mb-4 text-center text-2xl font-extrabold text-primary md:mb-6 lg:text-4xl">Vedi gli altri appartamenti</h2>
   
+        <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">Se l'appartamento Libellula non è quello giusto per te vedi gli altri appartamenti dell'agriturismo</p>
+      </div>
+      <!-- text - end -->
+  
+      <div class="grid gap-4 sm:grid-cols-2 md:gap-8 xl:grid-cols-3">
+        <!-- feature - start -->
+        <div class="flex flex-col rounded-lg border border-primary p-4 md:p-6">
+          <h3 class="mb-2 text-lg font-bold md:text-xl text-red-500">Coccinella</h3>
+          <p class="mb-4 text-gray-500">Bilocale piano primo</p>
+          <a href="/coccinella" class="mt-auto font-bold text-primary transition duration-100 hover:text-primary-600 active:text-indigo-700">Scoprilo</a>
+        </div>
+        <!-- feature - end -->
+  
+       <!-- feature - start -->
+       <div class="flex flex-col rounded-lg border border-primary p-4 md:p-6">
+        <h3 class="mb-2 text-lg font-bold md:text-xl text-yellow-500">Farfalla</h3>
+        <p class="mb-4 text-gray-500">Trilocale al piano primo</p>
+        <a href="/farfalla" class="mt-auto font-bold text-primary transition duration-100 hover:text-primary-600 active:text-indigo-700">Scoprilo</a>
+      </div>
+      <!-- feature - end -->
+        <!-- feature - start -->
+        <div class="flex flex-col rounded-lg border border-primary p-4 md:p-6">
+            <h3 class="mb-2 text-lg font-bold md:text-xl text-green-500">Jolly</h3>
+            <p class="mb-4 text-gray-500">Bilocale al piano terra</p>
+            <a href="/jolly" class="mt-auto font-bold text-primary transition duration-100 hover:text-primary-600 active:text-indigo-700">Scoprilo</a>
+          </div>
+          <!-- feature - end -->
+  
+        
+      </div>
+    </div>
+  </div>
+
 
 <Footer/>
 </MainLayout>

@@ -12,5 +12,17 @@ import react from "@astrojs/react";
 export default defineConfig({
   site: 'https://agriturismolaronine.it',
   integrations: [tailwind(), robotsTxt(), sitemap(), icon(), react(), astroI18next()],
-  
+  image: {
+    domains: ["res.cloudinary.com/magiaslabcdn"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+        pathname: '/magiaslabcdn/**',
+      },
+    ],
+  }
 });
+
+

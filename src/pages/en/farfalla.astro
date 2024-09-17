@@ -10,12 +10,12 @@ import { getImage } from "astro:assets";
 import myBackground from "../../assets/img/app/image00011.jpeg";
 const optimizedBackground = await getImage({ src: myBackground, format: "webp" });
 import { Image } from "astro:assets";
-import img1 from "../../assets/img/app/image00010.jpeg";
-import img2 from "../../assets/img/app/image00011.jpeg";
-import img3 from "../../assets/img/app/image00012.jpeg";
-import img4 from "../../assets/img/app/image00013.jpeg";
-import img5 from "../../assets/img/app/image00014.jpeg";
-import img6 from "../../assets/img/app/image00015.jpeg";
+import img1 from "../../assets/img/app/nuove/farfalla01.jpeg";
+import img2 from "../../assets/img/app/nuove/farfalla02.jpeg";
+import img3 from "../../assets/img/app/nuove/farfalla03.jpeg";
+import img4 from "../../assets/img/app/nuove/farfalla04.jpeg";
+import img5 from "../../assets/img/app/nuove/farfalla09.jpeg";
+import img6 from "../../assets/img/app/nuove/farfalla06.jpeg";
 
 changeLanguage("en");
 ---
@@ -102,6 +102,12 @@ changeLanguage("en");
          </svg>
         <span>{t("farfalla.desc7")}</span></span>
     </li>
+    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+      <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+       </svg>
+      <span>{t("farfalla.desc10")}</span></span>
+  </li>
 </ul>
 
     </div>
@@ -138,7 +144,44 @@ changeLanguage("en");
           </a>        </div>
    
 </div>
-
+<div class="bg-secondary py-6 sm:py-8 lg:py-12">
+    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+      <!-- text - start -->
+      <div class="mb-10 md:mb-16">
+        <h2 class="mb-4 text-center text-2xl font-extrabold text-primary md:mb-6 lg:text-4xl">Vedi gli altri appartamenti</h2>
+  
+        <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">Se l'appartamento Farfalla non è quello giusto per te vedi gli altri appartamenti dell'agriturismo</p>
+      </div>
+      <!-- text - end -->
+  
+      <div class="grid gap-4 sm:grid-cols-2 md:gap-8 xl:grid-cols-3">
+        <!-- feature - start -->
+        <div class="flex flex-col rounded-lg border border-primary p-4 md:p-6">
+          <h3 class="mb-2 text-lg font-bold md:text-xl text-red-500">Coccinella</h3>
+          <p class="mb-4 text-gray-500">Bilocale piano primo</p>
+          <a href="/coccinella" class="mt-auto font-bold text-primary transition duration-100 hover:text-primary-600 active:text-indigo-700">Scoprilo</a>
+        </div>
+        <!-- feature - end -->
+  
+       <!-- feature - start -->
+       <div class="flex flex-col rounded-lg border border-primary p-4 md:p-6">
+        <h3 class="mb-2 text-lg font-bold md:text-xl text-green-500">Jolly</h3>
+        <p class="mb-4 text-gray-500">Bilocale al piano terra</p>
+        <a href="/jolly" class="mt-auto font-bold text-primary transition duration-100 hover:text-primary-600 active:text-indigo-700">Scoprilo</a>
+      </div>
+      <!-- feature - end -->
+        <!-- feature - start -->
+        <div class="flex flex-col rounded-lg border border-primary p-4 md:p-6">
+            <h3 class="mb-2 text-lg font-bold md:text-xl text-blue-500">Libellula</h3>
+            <p class="mb-4 text-gray-500">Trilocale al piano primo</p>
+            <a href="/libellula" class="mt-auto font-bold text-primary transition duration-100 hover:text-primary-600 active:text-indigo-700">Scoprilo</a>
+          </div>
+          <!-- feature - end -->
+  
+        
+      </div>
+    </div>
+  </div>
   
 
 <Footer/>

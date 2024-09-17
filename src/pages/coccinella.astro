@@ -10,10 +10,12 @@ import { getImage } from "astro:assets";
 import myBackground from "../assets/img/app/image00021.jpeg";
 const optimizedBackground = await getImage({ src: myBackground, format: "webp" });
 import { Image } from "astro:assets";
-import img1 from "../assets/img/app/image00021.jpeg";
-import img2 from "../assets/img/app/image00022.jpeg";
-import img3 from "../assets/img/app/image00023.jpeg";
-import img5 from "../assets/img/app/image00018.jpeg";
+import img1 from "../assets/img/app/nuove/coccinella01.jpeg";
+import img2 from "../assets/img/app/nuove/coccinella02.jpeg";
+import img3 from "../assets/img/app/nuove/coccinella03.jpeg";
+import img4 from "../assets/img/app/nuove/coccinella04.jpeg";
+import img5 from "../assets/img/app/nuove/coccinella05.jpeg";
+import img6 from "../assets/img/app/nuove/coccinella06.jpeg";
 
 changeLanguage("it");
 ---
@@ -104,22 +106,30 @@ changeLanguage("it");
 
 <div class="bg-secondary grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-4 px-4 lg:px-16">
     <div>
-        <a data-fslightbox href={img1.src} class=" h-auto max-w-full rounded-lg">
-            <Image class="h-auto max-w-full rounded-lg" src={img1} alt="Image description" loading="lazy">
+        <a data-fslightbox href={img4.src} class=" h-auto max-w-full rounded-lg">
+            <Image class="h-auto max-w-full rounded-lg" src={img4} alt="Image description" loading="lazy">
           </a>
     </div>
+    <div>
+        <a data-fslightbox href={img5.src} class=" h-auto max-w-full rounded-lg">
+            <Image class="h-auto max-w-full rounded-lg" src={img5} alt="Image description" loading="lazy">
+          </a>        </div>
+    <div>
+        <a data-fslightbox href={img6.src} class=" h-auto max-w-full rounded-lg">
+            <Image class="h-auto max-w-full rounded-lg" src={img6} alt="Image description" loading="lazy">
+          </a>        </div>
+          <div>
+            <a data-fslightbox href={img1.src} class=" h-auto max-w-full rounded-lg">
+                <Image class="h-auto max-w-full rounded-lg" src={img1} alt="Image description" loading="lazy">
+              </a>        </div>
     <div>
         <a data-fslightbox href={img2.src} class=" h-auto max-w-full rounded-lg">
             <Image class="h-auto max-w-full rounded-lg" src={img2} alt="Image description" loading="lazy">
           </a>        </div>
-    <div>
-        <a data-fslightbox href={img3.src} class=" h-auto max-w-full rounded-lg">
-            <Image class="h-auto max-w-full rounded-lg" src={img3} alt="Image description" loading="lazy">
-          </a>        </div>
-    
-        <a data-fslightbox href={img5.src} class=" h-auto max-w-full rounded-lg">
-            <Image class="h-auto max-w-full rounded-lg" src={img5} alt="Image description" loading="lazy">
-          </a>        </div>
+          <div>
+            <a data-fslightbox href={img3.src} class=" h-auto max-w-full rounded-lg">
+                <Image class="h-auto max-w-full rounded-lg" src={img3} alt="Image description" loading="lazy">
+              </a>        </div>
     
    
 </div>
