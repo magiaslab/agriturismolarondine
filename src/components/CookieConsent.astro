@@ -1,8 +1,14 @@
 ---
 import 'vanilla-cookieconsent/dist/cookieconsent.css';
 import '../styles/ccElegantBlack.css';
+import { Icon } from 'astro-icon/components';
 ---
-<button type="button" data-cc="show-preferencesModal">Show preferences modal</button>
+<div class="fixed bottom-0 right-0 m-4">
+    <button class="bg-primary hover:bg-primary/80 text-white font-bold py-2 px-4 rounded flex items-center" type="button" data-cc="show-preferencesModal">
+        <Icon name="fa6-solid:cookie-bite" class="mr-2" />
+        Mostra cookie consent
+    </button>
+</div>
 
 <script>
     import { run } from 'vanilla-cookieconsent';

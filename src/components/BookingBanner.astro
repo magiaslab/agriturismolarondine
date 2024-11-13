@@ -8,17 +8,23 @@ const lang = i18next.language;
 const base = lang === 'it' ? '' : `/${lang}`;
 
 onMount(() => {
-  flatpickr("#datepicker-arrivo", {
-    dateFormat: "d-m-Y",
-    minDate: "today",
-    locale: lang,
-  });
+  const arrivoElement = document.querySelector("#datepicker-arrivo");
+  if (arrivoElement) {
+      flatpickr(arrivoElement, {
+      dateFormat: "d-m-Y",
+      minDate: "today",
+      locale: i18next.language,
+    });
+  }
 
-  flatpickr("#datepicker-partenza", {
-    dateFormat: "d-m-Y",
-    minDate: "today",
-    locale: lang,
-  });
+  const partenzaElement = document.querySelector("#datepicker-partenza");
+  if (partenzaElement) {
+    flatpickr(partenzaElement, {
+      dateFormat: "d-m-Y",
+      minDate: "today",
+      locale: i18next.language,
+    });
+  }
 });
 ---
 
@@ -31,12 +37,12 @@ onMount(() => {
           <p class="text-crusta font-sans font-bold text-sm">{t("booking.subtitle")}</p>
         </div>
         <div>
-          <label for="datepicker-arrivo" class="block mb-2 text-sm font-medium text-white">Data di arrivo</label>
-          <input id="datepicker-arrivo" name="Arrivo" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Data di Arrivo">
+          <label for="#datepicker-arrivo" class="block mb-2 text-sm font-medium text-white">Data di arrivo</label>
+          <input id="#datepicker-arrivo" name="Arrivo" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Data di Arrivo">
         </div>
         <div>
-          <label for="datepicker-partenza" class="block mb-2 text-sm font-medium text-white">Data di partenza</label>
-          <input id="datepicker-partenza" name="Partenza" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Data di Partenza">
+          <label for="#datepicker-partenza" class="block mb-2 text-sm font-medium text-white">Data di partenza</label>
+          <input id="#datepicker-partenza" name="Partenza" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Data di Partenza">
         </div>
         <div class="">
           <label for="numeroCamere" class="block mb-2 text-sm font-medium text-white">Num. app.</label>
