@@ -1,13 +1,29 @@
 ---
 import i18next, { t } from "i18next";
+import flatpickr from "flatpickr";
+import "flatpickr/dist/flatpickr.min.css";
+import { onMount } from "solid-js";
+
 const lang = i18next.language;
 const base = lang === 'it' ? '' : `/${lang}`;
 
+onMount(() => {
+  flatpickr("#datepicker-arrivo", {
+    dateFormat: "d-m-Y",
+    minDate: "today",
+    locale: lang,
+  });
+
+  flatpickr("#datepicker-partenza", {
+    dateFormat: "d-m-Y",
+    minDate: "today",
+    locale: lang,
+  });
+});
 ---
 
 <form action='https://secure.iperbooking.net/be/it/agriturismo-la-rondine-castagneto-carducci/' method='post'>
-
-<div class="bg-secondary py-6 sm:py-8 lg:py-16">
+  <div class="bg-secondary py-6 sm:py-8 lg:py-16">
     <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
       <div class="flex flex-col items-center justify-between gap-4 rounded-lg bg-green p-4 sm:flex-row md:p-8">
         <div class="flex flex-col items-center lg:items-start">
@@ -15,103 +31,96 @@ const base = lang === 'it' ? '' : `/${lang}`;
           <p class="text-crusta font-sans font-bold text-sm">{t("booking.subtitle")}</p>
         </div>
         <div>
-            <label for="datepicker-format2" class="block mb-2 text-sm font-medium text-white">Data di arrivo</label>
-
-      
-        <div class="relative max-w-sm">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-               <svg class="w-4 h-4 text-primary dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                </svg>
-            </div>
-            <input id="datepicker-format2" name="Arrivo" datepicker datepicker-format="dd-mm-yyyy" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Data di Arrivo">
-          </div>
+          <label for="datepicker-arrivo" class="block mb-2 text-sm font-medium text-white">Data di arrivo</label>
+          <input id="datepicker-arrivo" name="Arrivo" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Data di Arrivo">
         </div>
-          <div>
-          <label for="datepicker-format" class="block mb-2 text-sm font-medium text-white">Data di partenza</label>
-          <div class="relative max-w-sm">
-            
-
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-               <svg class="w-4 h-4 text-primary dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                </svg>
-            </div>
-            
-            <input id="datepicker-format" name="Partenza" datepicker datepicker-format="dd-mm-yyyy" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Seleziona">
-          </div>
+        <div>
+          <label for="datepicker-partenza" class="block mb-2 text-sm font-medium text-white">Data di partenza</label>
+          <input id="datepicker-partenza" name="Partenza" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Data di Partenza">
         </div>
-          <div class="">
+        <div class="">
           <label for="numeroCamere" class="block mb-2 text-sm font-medium text-white">Num. app.</label>
           <select id="numeroCamere" name="numeroCamere" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            
             <option selected value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
           </select>
         </div>
-        
         <div class="">
-            <label for="Camera_1_Adulti"  class="block mb-2 text-sm font-medium text-white">Adulti</label>
-            <select id="Camera_1_Adulti" name='Camera_1_Adulti' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            
-              <option value="1">1</option>
-              <option selected value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          </div>
-          <div class="">
-            <label for="Camera_1_Bambini"  class="block mb-2 text-sm font-medium text-white">Bambini</label>
-            <select hidden id="Camera_1_Bambini" name='Camera_1_Bambini' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <label for="Camera_1_Adulti"  class="block mb-2 text-sm font-medium text-white">Adulti</label>
+          <select id="Camera_1_Adulti" name='Camera_1_Adulti' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option value="1">1</option>
+            <option selected value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <div class="">
+          <label for="Camera_1_Bambini"  class="block mb-2 text-sm font-medium text-white">Bambini</label>
+          <select hidden id="Camera_1_Bambini" name='Camera_1_Bambini' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             <option selected value="0">Seleziona</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-            <select hidden name='Camera_1_EtaBambino_1'>
-                <option value='0' selected>0</option>
-                <option value='1'>1</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
-                <option value='4'>4</option>
-                <option value='5'>5</option>
-                <option value='6'>6</option>
-                <option value='7'>7</option>
-                <option value='8'>8</option>
-                <option value='9'>9</option>
-                <option value='10'>10</option>
-                <option value='11'>11</option>
-                <option value='12'>12</option>
-            </select>
-            <select hidden name='Camera_1_EtaBambino_2'>
-                <option value='0' selected>0</option>
-                <option value='1'>1</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
-                <option value='4'>4</option>
-                <option value='5'>5</option>
-                <option value='6'>6</option>
-                <option value='7'>7</option>
-                <option value='8'>8</option>
-                <option value='9'>9</option>
-                <option value='10'>10</option>
-                <option value='11'>11</option>
-                <option value='12'>12</option>
-            </select>
-          </div>
-          <select hidden name='IdTrattamento'>
-            <option value='0' selected>Appartamento</option>
-        </select>  
-  <input type="submit" value={t("nav.prenota")} class="inline-block rounded-lg bg-crusta px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base" >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          <select hidden name='Camera_1_EtaBambino_1'>
+            <option value='0' selected>0</option>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+            <option value='6'>6</option>
+            <option value='7'>7</option>
+            <option value='8'>8</option>
+            <option value='9'>9</option>
+            <option value='10'>10</option>
+            <option value='11'>11</option>
+            <option value='12'>12</option>
+          </select>
+          <select hidden name='Camera_1_EtaBambino_2'>
+            <option value='0' selected>0</option>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+            <option value='6'>6</option>
+            <option value='7'>7</option>
+            <option value='8'>8</option>
+            <option value='9'>9</option>
+            <option value='10'>10</option>
+            <option value='11'>11</option>
+            <option value='12'>12</option>
+          </select>
+        </div>
+        <select hidden name='IdTrattamento'>
+          <option value='0' selected>Appartamento</option>
+        </select>
+        <input type="submit" value={t("nav.prenota")} class="inline-block rounded-lg bg-crusta px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base" >
       </div>
     </div>
   </div>
-  
 </form>
 
+
+<style>
+
+.flatpickr-calendar {
+  background-color: #f0f0f0; /* Cambia il colore di sfondo */
+  color: #333; /* Cambia il colore del testo */
+}
+
+.flatpickr-day.selected {
+  background-color: #ff7f50; /* Cambia il colore del giorno selezionato */
+  color: #fff; /* Cambia il colore del testo del giorno selezionato */
+}
+
+
+
+</style>
 
 
 
