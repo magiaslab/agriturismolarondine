@@ -3,144 +3,116 @@ import i18next, { t } from "i18next";
 import Pikaday from "pikaday";
 import "pikaday/css/pikaday.css";
 import { createEffect, onCleanup } from "solid-js";
+import DatePicker from './DatePicker.jsx';
 
 const lang = i18next.language;
 const base = lang === 'it' ? '' : `/${lang}`;
+
+function handleDateSelect(date) {
+  console.log("Data selezionata:", date);
+}
+
+function handleDateSelectArrivo(date) {
+  document.getElementById('datepicker-arrivo').value = date.toLocaleDateString();
+}
+
+function handleDateSelectPartenza(date) {
+  document.getElementById('datepicker-partenza').value = date.toLocaleDateString();
+}
 ---
 
-<div client:only="solid">
-  <script>
-    import { createEffect, onCleanup } from "solid-js";
-
-    createEffect(() => {
-      const arrivoElement = document.querySelector("#datepicker-arrivo");
-      const partenzaElement = document.querySelector("#datepicker-partenza");
-
-      let arrivoPicker, partenzaPicker;
-
-      if (arrivoElement) {
-        arrivoPicker = new Pikaday({
-          field: arrivoElement,
-          format: 'DD-MM-YYYY',
-          minDate: new Date(),
-          i18n: lang === 'it' ? {
-            previousMonth: 'Mese precedente',
-            nextMonth: 'Mese successivo',
-            months: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
-            weekdays: ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'],
-            weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab']
-          } : undefined
-        });
-      }
-
-      if (partenzaElement) {
-        partenzaPicker = new Pikaday({
-          field: partenzaElement,
-          format: 'DD-MM-YYYY',
-          minDate: new Date(),
-          i18n: lang === 'it' ? {
-            previousMonth: 'Mese precedente',
-            nextMonth: 'Mese successivo',
-            months: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
-            weekdays: ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'],
-            weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab']
-          } : undefined
-        });
-      }
-
-      // Pulisci i picker quando il componente viene smontato
-      onCleanup(() => {
-        arrivoPicker?.destroy();
-        partenzaPicker?.destroy();
-      });
-    });
-  </script>
-</div>
-
-<form action='https://secure.iperbooking.net/be/it/agriturismo-la-rondine-castagneto-carducci/' method='post'>
-  <div class="bg-secondary py-6 sm:py-8 lg:py-16">
-    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-      <div class="flex flex-col items-center justify-between gap-4 rounded-lg bg-green p-4 sm:flex-row md:p-8">
-        <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
-          <h2 class="text-2xl font-bold text-secondary md:text-4xl">{t("booking.title")}</h2>
-          <p class="text-crusta font-sans font-bold text-sm">{t("booking.subtitle")}</p>
-        </div>
-        <div class="flex flex-col sm:flex-row sm:items-center sm:gap-4">
-          <div class="w-full">
-            <label for="datepicker-arrivo" class="block mb-2 text-sm font-medium text-white">{t("booking.data")}</label>
-            <input id="datepicker-arrivo" name="Arrivo" type="text" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder={t("booking.data")}>
+<div>
+  <form action='https://secure.iperbooking.net/be/it/agriturismo-la-rondine-castagneto-carducci/' method='post'>
+    <div class="bg-secondary py-6 sm:py-8 lg:py-16">
+      <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+        <div class="flex flex-col items-center justify-between gap-4 rounded-lg bg-green p-4 sm:flex-row md:p-8">
+          <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
+            <h2 class="text-2xl font-bold text-secondary md:text-4xl">{t("booking.title")}</h2>
+            <p class="text-crusta font-sans font-bold text-sm">{t("booking.subtitle")}</p>
           </div>
-          <div class="w-full">
-            <label for="datepicker-partenza" class="block mb-2 text-sm font-medium text-white">{t("booking.data_out")}</label>
-            <input id="datepicker-partenza" name="Partenza" type="text" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder={t("booking.data_out")}>
+          <div class="flex flex-col sm:flex-row sm:items-center sm:gap-4">
+            <div class="w-full">
+              <label for="datepicker-arrivo" class="block mb-2 text-sm font-medium text-white">{t("booking.data")}</label>
+              <div class="relative">
+                <DatePicker client:only="solid" onSelect={handleDateSelectArrivo} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+              </div>
+              <input id="datepicker-arrivo" name="Arrivo" type="hidden">
+            </div>
+            <div class="w-full">
+              <label for="datepicker-partenza" class="block mb-2 text-sm font-medium text-white">{t("booking.data_out")}</label>
+              <div class="relative">
+                <DatePicker client:only="solid" onSelect={handleDateSelectPartenza} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+              </div>
+              <input id="datepicker-partenza" name="Partenza" type="hidden">
+            </div>
           </div>
+          <div class="">
+            <label for="numeroCamere" class="block mb-2 text-sm font-medium text-white">{t("booking.appartamenti")}</label>
+            <select id="numeroCamere" name="numeroCamere" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="">
+            <label for="Camera_1_Adulti"  class="block mb-2 text-sm font-medium text-white">{t("booking.adulti")}</label>
+            <select id="Camera_1_Adulti" name='Camera_1_Adulti' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <option value="1">1</option>
+              <option selected value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="">
+            <label for="Camera_1_Bambini"  class="block mb-2 text-sm font-medium text-white">{t("booking.bambini")}</label>
+            <select hidden id="Camera_1_Bambini" name='Camera_1_Bambini' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <option selected value="0">{t("booking.seleziona")}</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            <select hidden name='Camera_1_EtaBambino_1'>
+              <option value='0' selected>0</option>
+              <option value='1'>1</option>
+              <option value='2'>2</option>
+              <option value='3'>3</option>
+              <option value='4'>4</option>
+              <option value='5'>5</option>
+              <option value='6'>6</option>
+              <option value='7'>7</option>
+              <option value='8'>8</option>
+              <option value='9'>9</option>
+              <option value='10'>10</option>
+              <option value='11'>11</option>
+              <option value='12'>12</option>
+            </select>
+            <select hidden name='Camera_1_EtaBambino_2'>
+              <option value='0' selected>0</option>
+              <option value='1'>1</option>
+              <option value='2'>2</option>
+              <option value='3'>3</option>
+              <option value='4'>4</option>
+              <option value='5'>5</option>
+              <option value='6'>6</option>
+              <option value='7'>7</option>
+              <option value='8'>8</option>
+              <option value='9'>9</option>
+              <option value='10'>10</option>
+              <option value='11'>11</option>
+              <option value='12'>12</option>
+            </select>
+          </div>
+          <select hidden name='IdTrattamento'>
+            <option value='0' selected>{t("booking.appartamento")}</option>
+          </select>
+          <input type="submit" value={t("nav.prenota")} class="inline-block rounded-lg bg-crusta px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base" >
         </div>
-        <div class="">
-          <label for="numeroCamere" class="block mb-2 text-sm font-medium text-white">{t("booking.appartamenti")}</label>
-          <select id="numeroCamere" name="numeroCamere" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            <option selected value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
-        </div>
-        <div class="">
-          <label for="Camera_1_Adulti"  class="block mb-2 text-sm font-medium text-white">{t("booking.adulti")}</label>
-          <select id="Camera_1_Adulti" name='Camera_1_Adulti' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            <option value="1">1</option>
-            <option selected value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
-        </div>
-        <div class="">
-          <label for="Camera_1_Bambini"  class="block mb-2 text-sm font-medium text-white">{t("booking.bambini")}</label>
-          <select hidden id="Camera_1_Bambini" name='Camera_1_Bambini' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            <option selected value="0">{t("booking.seleziona")}</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
-          <select hidden name='Camera_1_EtaBambino_1'>
-            <option value='0' selected>0</option>
-            <option value='1'>1</option>
-            <option value='2'>2</option>
-            <option value='3'>3</option>
-            <option value='4'>4</option>
-            <option value='5'>5</option>
-            <option value='6'>6</option>
-            <option value='7'>7</option>
-            <option value='8'>8</option>
-            <option value='9'>9</option>
-            <option value='10'>10</option>
-            <option value='11'>11</option>
-            <option value='12'>12</option>
-          </select>
-          <select hidden name='Camera_1_EtaBambino_2'>
-            <option value='0' selected>0</option>
-            <option value='1'>1</option>
-            <option value='2'>2</option>
-            <option value='3'>3</option>
-            <option value='4'>4</option>
-            <option value='5'>5</option>
-            <option value='6'>6</option>
-            <option value='7'>7</option>
-            <option value='8'>8</option>
-            <option value='9'>9</option>
-            <option value='10'>10</option>
-            <option value='11'>11</option>
-            <option value='12'>12</option>
-          </select>
-        </div>
-        <select hidden name='IdTrattamento'>
-          <option value='0' selected>{t("booking.appartamento")}</option>
-        </select>
-        <input type="submit" value={t("nav.prenota")} class="inline-block rounded-lg bg-crusta px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base" >
       </div>
     </div>
-  </div>
-</form>
+  </form>
+</div>
 
 
 
