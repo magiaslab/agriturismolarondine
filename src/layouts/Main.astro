@@ -27,25 +27,18 @@ import CookieConsent from '../components/CookieConsent.astro';
     description={t("site.description")}
     openGraph={{
       basic: {
-        title: "Agriturismo La Rondine Bolgheri",
-        type: "A type.",
-        image: "../assets/img/export (1).jpg",
+        title: t("og.title"),
+        type: "website",
+        image: t("og.image"),
+        url: "https://www.tuosito.com",
+        description: t("og.description"),
       }
     }}
-    twitter={{
-      creator: "@alessandrocipri"
-    }}
     extend={{
-      // extending the default link tags
       link: [{ rel: "icon", href: "/favicon.jpg" }],
-      // extending the default meta tags
       meta: [
-        {
-          name: "twitter:image",
-          content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
-        },
-        { name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
-        { name: "twitter:description", content: "Agent" },
+        { property: "og:locale", content: "it_IT" },
+        { property: "og:site_name", content: "Nome del tuo sito" },
       ],
     }}
   />
@@ -59,6 +52,7 @@ import CookieConsent from '../components/CookieConsent.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.jpg" />
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
     
@@ -71,6 +65,8 @@ import CookieConsent from '../components/CookieConsent.astro';
     <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
     <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
     <script is:inline src="/fslightbox.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <script> 
       import AOS from "aos"; 
       AOS.init(); 
