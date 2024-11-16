@@ -18,12 +18,15 @@ onMount(() => {
   }
 
   const partenzaElement = document.querySelector("#datepicker-partenza");
+  console.log("Elemento trovato:", partenzaElement);
   if (partenzaElement) {
     flatpickr(partenzaElement, {
       dateFormat: "d-m-Y",
       minDate: "today",
-      locale: i18next.language,
     });
+    console.log("Flatpickr inizializzato");
+  } else {
+    console.log("Elemento non trovato");
   }
 });
 ---
@@ -39,11 +42,11 @@ onMount(() => {
         <div class="flex flex-col sm:flex-row sm:items-center sm:gap-4">
           <div class="w-full">
             <label for="#datepicker-arrivo" class="block mb-2 text-sm font-medium text-white">{t("booking.data")}</label>
-            <input id="datepicker-arrivo" name="Arrivo" type="text" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder={t("booking.data")}>
+            <input id="datepicker-arrivo" name="Arrivo" type="text" class="form-field bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder={t("booking.data")}>
           </div>
           <div class="w-full">
             <label for="#datepicker-partenza" class="block mb-2 text-sm font-medium text-white">{t("booking.data_out")}</label>
-            <input id="datepicker-partenza" name="Partenza" type="text" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder={t("booking.data_out")}>
+            <input id="datepicker-partenza" name="Partenza" type="text" class="form-field bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder={t("booking.data_out")}>
           </div>
         </div>
         <div class="">
@@ -126,7 +129,22 @@ onMount(() => {
   color: #fff; /* Cambia il colore del testo del giorno selezionato */
 }
 
+.form-field {
+  width: 100%; /* Imposta la larghezza al 100% del contenitore */
+  max-width: 300px; /* Imposta una larghezza massima per evitare che diventi troppo grande su schermi più grandi */
+  box-sizing: border-box; /* Assicura che padding e border siano inclusi nella larghezza totale */
+}
 
+/* Applica la classe a tutti gli input e select */
+input[type="text"],
+select {
+  width: 100%; /* Assicura che gli elementi riempiano il contenitore */
+}
+
+/* Rimuovi eventuali padding o margini che potrebbero influire sulla larghezza */
+.p-2.5 {
+  padding: 0.5rem; /* Mantieni un padding uniforme */
+}
 
 </style>
 
