@@ -18,15 +18,12 @@ onMount(() => {
   }
 
   const partenzaElement = document.querySelector("#datepicker-partenza");
-  console.log("Elemento trovato:", partenzaElement);
   if (partenzaElement) {
     flatpickr(partenzaElement, {
       dateFormat: "d-m-Y",
       minDate: "today",
+      locale: i18next.language,
     });
-    console.log("Flatpickr inizializzato");
-  } else {
-    console.log("Elemento non trovato");
   }
 });
 ---
