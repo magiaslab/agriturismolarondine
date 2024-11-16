@@ -4,36 +4,31 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 import { onMount } from "solid-js";
 
-onMount(() => {
-  console.log("onMount eseguito");
+const lang = i18next.language;
+const base = lang === 'it' ? '' : `/${lang}`;
 
+onMount(() => {
   const arrivoElement = document.querySelector("#datepicker-arrivo");
   if (arrivoElement) {
-    console.log("Elemento arrivo trovato");
-    flatpickr(arrivoElement, {
+      flatpickr(arrivoElement, {
       dateFormat: "d-m-Y",
       minDate: "today",
       locale: i18next.language,
     });
-  } else {
-    console.error("Elemento arrivo non trovato");
   }
 
   const partenzaElement = document.querySelector("#datepicker-partenza");
   if (partenzaElement) {
-    console.log("Elemento partenza trovato");
     flatpickr(partenzaElement, {
       dateFormat: "d-m-Y",
       minDate: "today",
       locale: i18next.language,
     });
-  } else {
-    console.error("Elemento partenza non trovato");
   }
 });
 ---
 
-<form action='https://secure.iperbooking.net/be/it/agriturismo-la-rondine-castagneto-carducci/' method='post' class="px-4">
+<form action='https://secure.iperbooking.net/be/it/agriturismo-la-rondine-castagneto-carducci/' method='post'>
   <div class="bg-secondary py-6 sm:py-8 lg:py-16">
     <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
       <div class="flex flex-col items-center justify-between gap-4 rounded-lg bg-green p-4 sm:flex-row md:p-8">
