@@ -7,6 +7,25 @@ import { onMount } from "solid-js";
 const lang = i18next.language;
 const base = lang === 'it' ? '' : `/${lang}`;
 
+onMount(() => {
+  const arrivoElement = document.querySelector("#datepicker-arrivo");
+  const partenzaElement = document.querySelector("#datepicker-partenza");
+
+  if (arrivoElement) {
+    flatpickr(arrivoElement, {
+      dateFormat: "d-m-Y",
+      minDate: "today",
+    });
+  }
+
+  if (partenzaElement) {
+    flatpickr(partenzaElement, {
+      dateFormat: "d-m-Y",
+      minDate: "today",
+    });
+  }
+});
+
 
 ---
 
@@ -20,12 +39,12 @@ const base = lang === 'it' ? '' : `/${lang}`;
         </div>
         <div class="flex flex-col sm:flex-row sm:items-center sm:gap-4">
           <div class="w-full">
-            <label for="#datepicker-arrivo" class="block mb-2 text-sm font-medium text-white">{t("booking.data")}</label>
-            <input id="#datepicker-arrivo" name="Arrivo" type="text" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder={t("booking.data")}>
+            <label for="datepicker-arrivo" class="block mb-2 text-sm font-medium text-white">{t("booking.data")}</label>
+            <input id="datepicker-arrivo" name="Arrivo" type="text" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder={t("booking.data")}>
           </div>
           <div class="w-full">
-            <label for="#datepicker-partenza" class="block mb-2 text-sm font-medium text-white">{t("booking.data_out")}</label>
-            <input id="#datepicker-partenza" name="Partenza" type="text" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder={t("booking.data_out")}>
+            <label for="datepicker-partenza" class="block mb-2 text-sm font-medium text-white">{t("booking.data_out")}</label>
+            <input id="datepicker-partenza" name="Partenza" type="text" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder={t("booking.data_out")}>
           </div>
         </div>
         <div class="">
