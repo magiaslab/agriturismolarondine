@@ -13,11 +13,20 @@ function handleDateSelect(date) {
 }
 
 function handleDateSelectArrivo(date) {
-  document.getElementById('datepicker-arrivo').value = date.toLocaleDateString();
+  const formattedDate = formatDate(date);
+  document.getElementById('datepicker-arrivo').value = formattedDate;
+}
+
+function formatDate(date) {
+  const day = String(date.getDate()).padStart(2, '0');
+  const month = String(date.getMonth() + 1).padStart(2, '0'); // I mesi sono 0-indexed
+  const year = date.getFullYear();
+  return `${day}-${month}-${year}`;
 }
 
 function handleDateSelectPartenza(date) {
-  document.getElementById('datepicker-partenza').value = date.toLocaleDateString();
+  const formattedDate = formatDate(date);
+  document.getElementById('datepicker-partenza').value = formattedDate;
 }
 ---
 
@@ -34,21 +43,25 @@ function handleDateSelectPartenza(date) {
             <div class="w-full">
               <label for="datepicker-arrivo" class="block mb-2 text-sm font-medium text-white">{t("booking.data")}</label>
               <div class="relative">
-                <DatePicker client:only="solid" onSelect={handleDateSelectArrivo} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                <div class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 h-12 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style={{ border: 'none', background: 'transparent', width: '100%', height: '100%' }}>
+                  <DatePicker client:only="solid" onSelect={handleDateSelectArrivo} />
+                </div>
               </div>
               <input id="datepicker-arrivo" name="Arrivo" type="hidden">
             </div>
             <div class="w-full">
               <label for="datepicker-partenza" class="block mb-2 text-sm font-medium text-white">{t("booking.data_out")}</label>
               <div class="relative">
-                <DatePicker client:only="solid" onSelect={handleDateSelectPartenza} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                <div class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 h-12 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style={{ border: 'none', background: 'transparent', width: '100%', height: '100%' }}>
+                  <DatePicker client:only="solid" onSelect={handleDateSelectPartenza} />
+                </div>
               </div>
               <input id="datepicker-partenza" name="Partenza" type="hidden">
             </div>
           </div>
           <div class="">
             <label for="numeroCamere" class="block mb-2 text-sm font-medium text-white">{t("booking.appartamenti")}</label>
-            <select id="numeroCamere" name="numeroCamere" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <select id="numeroCamere" name="numeroCamere" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 h-12 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
               <option selected value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
