@@ -3,7 +3,7 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "react",
-    "types": ["solid-js"],
+    "types": ["solid-js", "svelte"],
     "typeRoots": ["./node_modules/@types", "./node_modules/solid-js"],
     "moduleResolution": "node",
     "esModuleInterop": true,

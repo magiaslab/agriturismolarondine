@@ -1,33 +1,61 @@
 ---
 import i18next, { t } from "i18next";
-import flatpickr from "flatpickr";
-import "flatpickr/dist/flatpickr.min.css";
-import { onMount } from "solid-js";
+import Pikaday from "pikaday";
+import "pikaday/css/pikaday.css";
+import { createEffect, onCleanup } from "solid-js";
 
 const lang = i18next.language;
 const base = lang === 'it' ? '' : `/${lang}`;
-
-onMount(() => {
-  const arrivoElement = document.querySelector("#datepicker-arrivo");
-  const partenzaElement = document.querySelector("#datepicker-partenza");
-
-  if (arrivoElement) {
-    flatpickr(arrivoElement, {
-      dateFormat: "d-m-Y",
-      minDate: "today",
-    });
-  }
-
-  if (partenzaElement) {
-    flatpickr(partenzaElement, {
-      dateFormat: "d-m-Y",
-      minDate: "today",
-    });
-  }
-});
-
-
 ---
+
+<div client:only="solid">
+  <script>
+    import { createEffect, onCleanup } from "solid-js";
+
+    createEffect(() => {
+      const arrivoElement = document.querySelector("#datepicker-arrivo");
+      const partenzaElement = document.querySelector("#datepicker-partenza");
+
+      let arrivoPicker, partenzaPicker;
+
+      if (arrivoElement) {
+        arrivoPicker = new Pikaday({
+          field: arrivoElement,
+          format: 'DD-MM-YYYY',
+          minDate: new Date(),
+          i18n: lang === 'it' ? {
+            previousMonth: 'Mese precedente',
+            nextMonth: 'Mese successivo',
+            months: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
+            weekdays: ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'],
+            weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab']
+          } : undefined
+        });
+      }
+
+      if (partenzaElement) {
+        partenzaPicker = new Pikaday({
+          field: partenzaElement,
+          format: 'DD-MM-YYYY',
+          minDate: new Date(),
+          i18n: lang === 'it' ? {
+            previousMonth: 'Mese precedente',
+            nextMonth: 'Mese successivo',
+            months: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
+            weekdays: ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'],
+            weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab']
+          } : undefined
+        });
+      }
+
+      // Pulisci i picker quando il componente viene smontato
+      onCleanup(() => {
+        arrivoPicker?.destroy();
+        partenzaPicker?.destroy();
+      });
+    });
+  </script>
+</div>
 
 <form action='https://secure.iperbooking.net/be/it/agriturismo-la-rondine-castagneto-carducci/' method='post'>
   <div class="bg-secondary py-6 sm:py-8 lg:py-16">
@@ -114,22 +142,6 @@ onMount(() => {
   </div>
 </form>
 
-
-<style>
-
-.flatpickr-calendar {
-  background-color: #f0f0f0; /* Cambia il colore di sfondo */
-  color: #333; /* Cambia il colore del testo */
-}
-
-.flatpickr-day.selected {
-  background-color: #ff7f50; /* Cambia il colore del giorno selezionato */
-  color: #fff; /* Cambia il colore del testo del giorno selezionato */
-}
-
-
-
-</style>
 
 
 
