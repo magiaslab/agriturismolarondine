@@ -11,23 +11,30 @@
       "contatti": "Contacts"
     },
     "contatti": {
-        "title": "Pagina contatti in italiano"
+        "title": "Contacts page in Italian"
     },
     "struttura": {
-        "title": "Pagina Glamping in Italiano"
+        "title": "Glamping Page in Italian"
       },
       "nav": {
     "home": "Home",
     "contatti": "Contact",
     "agriturismo": "Agritourism",
-    "appartamenti": "Apartaments",
+    "appartamenti": "Apartments",
     "prenota": "Booking Now",
     "dintorni": "Surroundings",
     "cantina":"Winery"
   },
   "booking": {
-    "title": "Booking Now!",
-    "subtitle": "You can only find the best price on our website."
+    "title": "Book Now!",
+    "subtitle": "Find the best price only on our website",
+    "btn": "Book Now",
+    "data": "Arrival Date",
+    "data_out": "Departure Date",
+    "appartamenti": "Apartments",
+    "adulti": "Adults",
+    "bambini": "Children",
+    "seleziona": "Select"
   },
   "content1_home":{
     "title": "Immersed in the vineyards of Bolgheri",
@@ -82,27 +89,29 @@
     "content1" : "This is what you'll see first thing in the morning.",
     "content2" : "The farmhouse offers four apartments 2 three-room apartments named Butterfly and Dragonfly, a studio apartment called Ladybug, and a two-room apartment called Jolly, equipped for disabled guests.",
     "content3" : "Each apartment features air conditioning, a fully equipped kitchenette, free Wi-Fi, TV, and individual heating. Bed linens and blankets are provided. A shared laundry room is available for guests."
-
-
   },
-  
   "jolly": {
-  "title" : "Jolly Apartment",
-  "subtitle" : "Two-room apartment for up to 4 people, with accessibility features for disabled guests",
-  "description" : "Two-bedroom ground floor apartment for 4 guests, with the possibility of an extra bed.",
-  "desc1" : "14 square meter combined kitchen and living room",
-  "desc2" : "Double bedroom of 15 square meters",
-  "desc3" : "Bathroom with shower, adapted for disabled guests",
-  "desc4" : "Air conditioning in all rooms",
-  "desc5" : "Tv LCD",
-  "desc6" : "Free Wi-Fi with free connection",
-  "desc7" : "EV charging point in the yard",
-  "text1" :"All-inclusive rate: bed linen, kitchen linen (including dishes), bath linen, water, electricity, gas, TV, heating, air conditioning, garden, barbecue, children's play equipment, use of the communal washing machine.",
-  "text2" : "Please note: Rates do not include the tourist tax imposed by the Municipality of Castagneto Carducci, weekly linen change at a cost of €20.00, small and medium-sized pets have a supplement of €7.00 per day, and final cleaning costs €40.00 per stay.",
-"text3" : "Spacious and bright two-room apartment with ground floor access. The veranda and courtyard allow you to enjoy the common areas of our farm, perfect for barbecues or relaxing on the sunbeds under the shade of the garden pines."
-
+  "title": "Jolly Apartment",
+  "subtitle": "Two-room apartment for 4 guests",
+  "description": "Two-room apartment, consisting of 2 rooms on the ground floor",
+  "desc1": "Kitchen-living room of 14 sqm with sofa bed",
+  "desc2": "Double bedroom of 15 sqm",
+  "desc3": "Bathroom with shower equipped for disabled guests",
+  "desc4": "Air conditioning in all rooms",
+  "desc5": "LCD TV",
+  "desc6": "Free Wi-Fi with free connection",
+  "desc7": "Electric car charging station in the courtyard upon request",
+  "desc8": "Check-in: from 3:00 PM to 6:00 PM Check-out: by 10:00 AM",
+  "text1": "All-inclusive rate: bed linen, kitchen linen (including dishes), bath linen, water, electricity, gas, TV, heating, air conditioning, garden, barbecue, children's play equipment, use of the communal washing machine.",
+  "text2": "Note: Rates do not include the tourist tax imposed by the Municipality of Castagneto Carducci, small and medium-sized pets have a supplement of €5.00 per day, final cleaning costs €30.00 per stay",
+  "text3": "Spacious and bright two-room apartment with ground floor access, the veranda and garden allow you to enjoy the common areas of our agriturismo, for a good barbecue or moments of relaxation on the sun loungers",
+  "altri": "See the other apartments",
+  "sottoaltro": "If the Jolly apartment does not satisfy you, see the other apartments",
+  "titl1altro": "Two-room apartment first floor",
+  "titl2altro": "Three-room apartment first floor",
+  "titl3altro": "Three-room apartment first floor",
+  "scoprilo": "Discover it"
   },
-  
   "coccinella": {
   "title" : "Coccinella Apartment",
   "subtitle" : "Two room apartment - 3 beds",
@@ -118,10 +127,14 @@
   "desc7" : "EV charging point in the yard",
   "text1" :"All-inclusive rate: bed linen, kitchen linen (including dishes), bath linen, water, electricity, gas, TV, heating, air conditioning, garden, barbecue, children's play equipment, use of the communal washing machine.",
   "text2" : "Please note: Rates do not include the tourist tax imposed by the Municipality of Castagneto Carducci, weekly linen change at a cost of €20.00, small and medium-sized pets have a supplement of €7.00 per day, and final cleaning costs €40.00 per stay.",
-"text3" : "Spacious two-bedroom apartment on the first floor boasting a courtyard view, vineyard and panoramic vistas of Bolgheri. Make the most of the courtyard for barbecues or simply unwind on sun loungers under the shade of the garden's pine trees."
-
+"text3" : "Spacious two-bedroom apartment on the first floor boasting a courtyard view, vineyard and panoramic vistas of Bolgheri. Make the most of the courtyard for barbecues or simply unwind on sun loungers under the shade of the garden's pine trees.",
+"altri":"See the other apartments",
+"sottoaltro":"If the Coccinella apartment does not satisfy you, see the other apartments",
+"titl1altro":"Three-room apartment first floor",
+"titl2altro":"Two-room apartment ground floor",
+"titl3altro":"Three-room apartment first floor",
+"scoprilo":"Discover it"
   },
-  
   "libellula": {
   "title" : "Libellula Apartment",
   "subtitle" : "Two room apartment - 3 beds",
@@ -137,10 +150,14 @@
   "desc7" : "EV charging point in the yard",
   "text1" :"All-inclusive rate: bed linen, kitchen linen (including dishes), bath linen, water, electricity, gas, TV, heating, air conditioning, garden, barbecue, children's play equipment, use of the communal washing machine.",
   "text2" : "Please note: Rates do not include the tourist tax imposed by the Municipality of Castagneto Carducci, weekly linen change at a cost of €20.00, small and medium-sized pets have a supplement of €7.00 per day, and final cleaning costs €40.00 per stay.",
-"text3" : "Spacious two-bedroom apartment on the first floor boasting a courtyard view, vineyard and panoramic vistas of Bolgheri. Make the most of the courtyard for barbecues or simply unwind on sun loungers under the shade of the garden's pine trees."
-
+"text3" : "Spacious two-bedroom apartment on the first floor boasting a courtyard view, vineyard and panoramic vistas of Bolgheri. Make the most of the courtyard for barbecues or simply unwind on sun loungers under the shade of the garden's pine trees.",
+"altri":"See the other apartments",
+"sottoaltro":"If the Libellula apartment does not satisfy you, see the other apartments",
+"titl1altro":"Three-room apartment first floor",
+"titl2altro":"Two-room apartment ground floor",
+"titl3altro":"Three-room apartment first floor",
+"scoprilo":"Discover it"
   },
-  
   "farfalla": {
   "title" : "Farfalla Apartment",
   "subtitle" : "Two room apartment - 3 beds",
@@ -156,10 +173,14 @@
   "desc7" : "EV charging point in the yard",
   "text1" :"All-inclusive rate: bed linen, kitchen linen (including dishes), bath linen, water, electricity, gas, TV, heating, air conditioning, garden, barbecue, children's play equipment, use of the communal washing machine.",
   "text2" : "Please note: Rates do not include the tourist tax imposed by the Municipality of Castagneto Carducci, weekly linen change at a cost of €20.00, small and medium-sized pets have a supplement of €7.00 per day, and final cleaning costs €40.00 per stay.",
-"text3" : "Spacious two-bedroom apartment on the first floor boasting a courtyard view, vineyard and panoramic vistas of Bolgheri. Make the most of the courtyard for barbecues or simply unwind on sun loungers under the shade of the garden's pine trees."
-
+"text3" : "Spacious two-bedroom apartment on the first floor boasting a courtyard view, vineyard and panoramic vistas of Bolgheri. Make the most of the courtyard for barbecues or simply unwind on sun loungers under the shade of the garden's pine trees.",
+"altri":"See the other apartments",
+"sottoaltro":"If the Farfalla apartment does not satisfy you, see the other apartments",
+"titl1altro":"Three-room apartment first floor",
+"titl2altro":"Two-room apartment ground floor",
+"titl3altro":"Three-room apartment first floor",
+"scoprilo":"Discover it"
   },
-  
   "cantina" :{
     "title1" :"Enjoy a delightful wine tasting featuring our wines.",
     "text1" :"For those interested, during their stay, guests will have the opportunity to visit the winery and taste our current wines. Moreover, during the harvest season, guests can witness the grape harvest firsthand, experiencing the excitement of rural work.",
@@ -170,9 +191,9 @@
     "text3": "The vineyards, owned by the Sgariglia family, are located at sea level between Castagneto Carducci and Bolgheri. Approximately 6 hectares of east-west facing vines are currently hand-harvested, resulting in a premium product at maturity. The grapes are processed artisanally using modern winemaking techniques.",
     "title3": "Our Crafted Wines",
     "text4": "Our production includes 5 wines: RIVERBERO Bolgheri DOC Superiore, MITERRE Bolgheri DOC, ASSIOLO Bolgheri DOC, VERMENTINO Bolgheri DOC, and ROSATO Bolgheri DOC.",
-    "title4": "Whit Passion",
+    "title4": "With Passion",
     "text5": "All production is aimed at achieving the highest possible quality. All my energy and passion have been and will continue to be crucial in growing all production, to bring to your tables not only a good wine, but something that makes you think of our land: Bolgheri and the whole of Tuscany.",
-    "btn3": "Discover the Winer",
+    "btn3": "Discover the Winery",
     "alt1": "La Rondine Farmhouse: Experience Bolgheri DOC Wine Tastings",
     "alt2": "La Rondine Farmhouse: Campo al Noce Winery producing Bolgheri wines",
     "alt3": "La Rondine Farmhouse, Campo al Noce Winery, Bolgheri: Wine production with a view of wooden barrels"
@@ -190,7 +211,12 @@
     "tab4": "Spa and Wellness",
     "textTab1": "The Etruscan Coast, with its pristine sandy beaches and dramatic cliffs, is the ideal destination for a seaside getaway",
     "textTab2": "At the beach with our furry friends, San Vincenzo, Bibbona, discover them all!!",
-    "textTab3": " Cavallino Matto, pure fun in one of the most beautiful parks in Italy.",
+    "textTab3": "Cavallino Matto, pure fun in one of the most beautiful parks in Italy.",
     "textTab4": "Thermal baths in Sassetta and Campiglia Marittima: wellness experiences beyond the seaside."
+  },
+  "cta": {
+    "title": "Discover our products with the holiday and tasting package",
+    "text": "Combine your stay in agriturismo with a tasting of our products. The famous Bolgheri wines in the world together with some enogastronomic specialties",
+    "btn": "See the offer"
   }
 }

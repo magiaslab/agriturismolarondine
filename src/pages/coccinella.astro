@@ -27,9 +27,9 @@ changeLanguage("it");
         <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
           <div class="max-w-2xl">
             <div  class=" max-w-screen-xl md:px-5 py-8 m-4 lg:mx-auto  lg:py-12 bg-white/90  rounded-xl sm:px-5">
-            <h1 class="text-4xl lg:text-6xl font-sans font-extrabold text-red-600 mb-2">{t("coccinella.title")}</h1>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-sans font-extrabold text-red-600 mb-2 text-center">{t("coccinella.title")}</h1>
       
-            <p class="leading-normal mb-6 mt-6 font-sans font-bold text-crusta">{t("coccinella.subtitle")}</p>
+            <p class="leading-normal mb-6 mt-6 font-sans font-bold text-crusta text-center">{t("coccinella.subtitle")}</p>
         
             <div class="flex flex-wrap items-center gap-4">
             </div>
@@ -106,65 +106,68 @@ changeLanguage("it");
 
 <div class="bg-secondary grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-4 px-4 lg:px-16">
     <div>
-        <a data-fslightbox href={img4.src} class=" h-auto max-w-full rounded-lg">
-            <Image class="h-auto max-w-full rounded-lg" src={img4} alt="Image description" loading="lazy">
+        <a data-fslightbox href={img4.src} class="h-auto max-w-full rounded-lg">
+            <Image class="same-height max-w-full rounded-lg" src={img4} alt="Image description" loading="lazy">
           </a>
     </div>
     <div>
-        <a data-fslightbox href={img5.src} class=" h-auto max-w-full rounded-lg">
-            <Image class="h-auto max-w-full rounded-lg" src={img5} alt="Image description" loading="lazy">
-          </a>        </div>
+        <a data-fslightbox href={img5.src} class="h-auto max-w-full rounded-lg">
+            <Image class="same-height max-w-full rounded-lg" src={img5} alt="Image description" loading="lazy">
+          </a>
+    </div>
     <div>
-        <a data-fslightbox href={img6.src} class=" h-auto max-w-full rounded-lg">
-            <Image class="h-auto max-w-full rounded-lg" src={img6} alt="Image description" loading="lazy">
-          </a>        </div>
-          <div>
-            <a data-fslightbox href={img1.src} class=" h-auto max-w-full rounded-lg">
-                <Image class="h-auto max-w-full rounded-lg" src={img1} alt="Image description" loading="lazy">
-              </a>        </div>
+        <a data-fslightbox href={img6.src} class="h-auto max-w-full rounded-lg">
+            <Image class="same-height max-w-full rounded-lg" src={img6} alt="Image description" loading="lazy">
+          </a>
+    </div>
     <div>
-        <a data-fslightbox href={img2.src} class=" h-auto max-w-full rounded-lg">
-            <Image class="h-auto max-w-full rounded-lg" src={img2} alt="Image description" loading="lazy">
-          </a>        </div>
-          <div>
-            <a data-fslightbox href={img3.src} class=" h-auto max-w-full rounded-lg">
-                <Image class="h-auto max-w-full rounded-lg" src={img3} alt="Image description" loading="lazy">
-              </a>        </div>
-    
-   
+        <a data-fslightbox href={img1.src} class="h-auto max-w-full rounded-lg">
+            <Image class="same-height max-w-full rounded-lg" src={img1} alt="Image description" loading="lazy">
+          </a>
+    </div>
+    <div>
+        <a data-fslightbox href={img2.src} class="h-auto max-w-full rounded-lg">
+            <Image class="same-height max-w-full rounded-lg" src={img2} alt="Image description" loading="lazy">
+          </a>
+    </div>
+    <div>
+        <a data-fslightbox href={img3.src} class="h-auto max-w-full rounded-lg">
+            <Image class="same-height max-w-full rounded-lg" src={img3} alt="Image description" loading="lazy">
+          </a>
+    </div>
 </div>
 
 <div class="bg-secondary py-6 sm:py-8 lg:py-12">
     <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
       <!-- text - start -->
       <div class="mb-10 md:mb-16">
-        <h2 class="mb-4 text-center text-2xl font-extrabold text-primary md:mb-6 lg:text-4xl">Vedi gli altri appartamenti</h2>
+        <h2 class="mb-4 text-center text-2xl font-extrabold text-primary md:mb-6 lg:text-4xl">{t("coccinella.altri")}</h2>
   
-        <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">Se l'appartamento Coccinella non è quello giusto per te vedi gli altri appartamenti dell'agriturismo</p>
+        <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">{t("coccinella.sottoaltro")}</p>
       </div>
       <!-- text - end -->
   
       <div class="grid gap-4 sm:grid-cols-2 md:gap-8 xl:grid-cols-3">
         <!-- feature - start -->
         <div class="flex flex-col rounded-lg border border-primary p-4 md:p-6">
-          <h3 class="mb-2 text-lg font-bold md:text-xl text-yellow-500">Farfalla</h3>
-          <p class="mb-4 text-gray-500">Trilocale al piano primo</p>
-          <a href="/farfalla" class="mt-auto font-bold text-primary transition duration-100 hover:text-primary-600 active:text-indigo-700">Scoprilo</a>
+            <h3 class="mb-2 text-lg font-bold md:text-xl text-yellow-500">Farfalla</h3>
+          <p class="mb-4 text-gray-500">{t("coccinella.titl2altro")}</p>
+          <a href={`${base}/farfalla`} class="mt-auto font-bold text-primary transition duration-100 hover:text-primary-600 active:text-indigo-700">{t("coccinella.scoprilo")}</a>
         </div>
         <!-- feature - end -->
   
        <!-- feature - start -->
        <div class="flex flex-col rounded-lg border border-primary p-4 md:p-6">
         <h3 class="mb-2 text-lg font-bold md:text-xl text-green-500">Jolly</h3>
-        <p class="mb-4 text-gray-500">Bilocale al piano terra</p>
-        <a href="/jolly" class="mt-auto font-bold text-primary transition duration-100 hover:text-primary-600 active:text-indigo-700">Scoprilo</a>
+        <p class="mb-4 text-gray-500">{t("coccinella.titl3altro")}</p>
+        <a href={`${base}/jolly`} class="mt-auto font-bold text-primary transition duration-100 hover:text-primary-600 active:text-indigo-700">{t("coccinella.scoprilo")}</a>
       </div>
       <!-- feature - end -->
         <!-- feature - start -->
         <div class="flex flex-col rounded-lg border border-primary p-4 md:p-6">
             <h3 class="mb-2 text-lg font-bold md:text-xl text-blue-500">Libellula</h3>
-            <p class="mb-4 text-gray-500">Trilocale al piano primo</p>
-            <a href="/libellula" class="mt-auto font-bold text-primary transition duration-100 hover:text-primary-600 active:text-indigo-700">Scoprilo</a>
+            <p class="mb-4 text-gray-500">{t("coccinella.titl3altro")}</p>
+            <a href={`${base}/libellula`} class="mt-auto font-bold text-primary transition duration-100 hover:text-primary-600 active:text-indigo-700">{t("coccinella.scoprilo")}</a>
           </div>
           <!-- feature - end -->
   
@@ -176,3 +179,10 @@ changeLanguage("it");
 
 <Footer/>
 </MainLayout>
+
+<style>
+  .same-height {
+    height: 400px; /* Imposta l'altezza desiderata */
+    object-fit: cover; /* Assicura che l'immagine si adatti bene all'altezza */
+}
+</style>

@@ -27,7 +27,14 @@
   },
   "booking": {
     "title": "Prenota ora!",
-    "subtitle": "il prezzo migliore lo trovi solo sul nostro sito"
+    "subtitle": "il prezzo migliore lo trovi solo sul nostro sito",
+    "btn": "Prenota ora",
+    "data": "Data di arrivo",
+    "data_out": "Data di partenza",
+    "appartamenti": "Appartamenti",
+    "adulti": "Adulti",
+    "bambini": "Bambini",
+    "seleziona": "Seleziona"
   },
   "content1_home":{
     "title": "Immerso nei vigneti di Bolgheri",
@@ -97,8 +104,15 @@
   "desc7" : "Colonnina di ricarica auto elettriche nella corte su richiesta",
  "desc8" : "Check-in: dalle ore 15:00 alle 18:00 Check-out: entro le ore 10:00", 
   "text1" : "Tariffa tutto compreso: biancheria da camera, biancheria da cucina (compreso stoviglie), biancheria da bagno, acqua, luce, gas, TV, riscaldamento, aria condizionata, giardino, barbecue, giochi per bambini, uso lavatrice condominiale.",
-  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, Animali di taglia piccola e media supplemento di € 5,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
-"text3" : "Ampio e luminoso appartamento bilocale con accesso dal piano terra, con la veranda e il giardino permette di vivere e godere delle zone comuni del nostro agriturismo, per un buon barbeque o momenti di relax sui lettini prendisole"
+  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, Animali di taglia piccola e media supplemento di € 5,00 al giorno, pulizie finali al costo di € 30,00 a soggiorno",
+"text3" : "Ampio e luminoso appartamento bilocale con accesso dal piano terra, con la veranda e il giardino permette di vivere e godere delle zone comuni del nostro agriturismo, per un buon barbeque o momenti di relax sui lettini prendisole",
+"altri":"Vedi gli altri appartamenti",
+"sottoaltro":"Se l'appartamento Jolly non ti soddisfa, vedi gli altri appartamenti",
+"titl1altro":"Bilocale piano primo",
+"titl2altro":"Trilocale piano primo",
+"titl3altro":"Triclocale piano primo",
+"scoprilo":"Scoprilo"
+
   },
   "coccinella": {
   "title" : "Appartamento Coccinella",
@@ -113,8 +127,14 @@
   "desc7" : "Colonnina di ricarica auto elettriche nella corte su richiesta",
  "desc8" : "Check-in: dalle ore 15:00 alle 18:00 Check-out: entro le ore 10:00", 
   "text1" : "Tariffa tutto compreso: biancheria da camera, biancheria da cucina (compreso stoviglie), biancheria da bagno, acqua, luce, gas, TV, riscaldamento, aria condizionata, giardino, barbecue, giochi per bambini, uso lavatrice condominiale.",
-  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, Animali di taglia piccola e media supplemento di € 5,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
-"text3" : "Appartamento bilocale al primo piano che permette di vivere una splendida vacanza, potrete usufruire del giardino per un buon barbeque o momenti di relax sui lettini prendisole"
+  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, Animali di taglia piccola e media supplemento di € 5,00 al giorno, pulizie finali al costo di € 30,00 a soggiorno",
+"text3" : "Appartamento bilocale al primo piano che permette di vivere una splendida vacanza, potrete usufruire del giardino per un buon barbeque o momenti di relax sui lettini prendisole",
+"altri":"Vedi gli altri appartamenti",
+"sottoaltro":"Se l'appartamento Coccinella non ti soddisfa, vedi gli altri appartamenti",
+"titl1altro":"Trilocale piano primo",
+"titl2altro":"Bilocale piano terra",
+"titl3altro":"Triclocale piano primo",
+"scoprilo":"Scoprilo"
   },
   "farfalla": {
   "title" : "Appartamento Farfalla",
@@ -131,8 +151,14 @@
   "desc7" : "Colonnina di ricarica auto elettriche nella corte su richiesta",
  "desc10" : "Check-in: dalle ore 15:00 alle 18:00 Check-out: entro le ore 10:00", 
   "text1" : "Tariffa tutto compreso: biancheria da camera, biancheria da cucina (compreso stoviglie), biancheria da bagno, acqua, luce, gas, TV, riscaldamento, aria condizionata, giardino, barbecue, giochi per bambini, uso lavatrice condominiale.",
-  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, Animali di taglia piccola e media supplemento di € 5,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
-"text3" : "Appartamento trilocale al primo piano con vista sul giardino e sulla campagna dal balcone panoramico, permette di vivere una splendida vacanza, potrete usufruire del giardino per un buon barbeque o momenti di relax sui lettini prendisole"
+  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, Animali di taglia piccola e media supplemento di € 5,00 al giorno, pulizie finali al costo di € 30,00 a soggiorno",
+"text3" : "Appartamento trilocale al primo piano con vista sul giardino e sulla campagna dal balcone panoramico, permette di vivere una splendida vacanza, potrete usufruire del giardino per un buon barbeque o momenti di relax sui lettini prendisole",
+"altri":"Vedi gli altri appartamenti",
+"sottoaltro":"Se l'appartamento Farfalla non ti soddisfa, vedi gli altri appartamenti",
+"titl1altro":"Trilocale piano primo",
+"titl2altro":"Bilocale piano terra",
+"titl3altro":"Triclocale piano primo",
+"scoprilo":"Scoprilo"
   },
   "libellula": {
   "title" : "Appartamento Libellula",
@@ -149,8 +175,14 @@
   "desc7" : "Colonnina di ricarica auto elettriche nella corte su richiesta",
  "desc10" : "Check-in: dalle ore 15:00 alle 18:00 Check-out: entro le ore 10:00", 
   "text1" : "Tariffa tutto compreso: biancheria da camera, biancheria da cucina (compreso stoviglie), biancheria da bagno, acqua, luce, gas, TV, riscaldamento, aria condizionata, giardino, barbecue, giochi per bambini, uso lavatrice condominiale.",
-  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, Animali di taglia piccola e media supplemento di € 5,00 al giorno, pulizie finali al costo di € 40,00 a soggiorno",
-"text3" : "Appartamento trilocale al primo piano con vista sul giardino, sulle vigne e sul panorama di Bolgheri permette di vivere una splendida vacanza, potrete usufruire del giardino per un buon barbeque o momenti di relax sui lettini prendisole"
+  "text2" : "N.B: le tariffe non comprendono, la tassa di soggiorno applicata dal Comune di Castagneto Carducci, Animali di taglia piccola e media supplemento di € 5,00 al giorno, pulizie finali al costo di € 30,00 a soggiorno",
+"text3" : "Appartamento trilocale al primo piano con vista sul giardino, sulle vigne e sul panorama di Bolgheri permette di vivere una splendida vacanza, potrete usufruire del giardino per un buon barbeque o momenti di relax sui lettini prendisole",
+"altri":"Vedi gli altri appartamenti",
+"sottoaltro":"Se l'appartamento Libellula non ti soddisfa, vedi gli altri appartamenti",
+"titl1altro":"Trilocale piano primo",
+"titl2altro":"Bilocale piano terra",
+"titl3altro":"Triclocale piano primo",
+"scoprilo":"Scoprilo"
   },
   "cantina" :{
     "title1" :"Prova i nostri vini in una fantastica degustazione",
@@ -184,5 +216,12 @@
     "textTab2": "Al mare con i nostri amici pelosi, San Vincenzo, Bibbona, scoprile tutte!!",
     "textTab3": "Cavallino Matto, divertimento puro in uno dei parchi più belli d'Italia",
     "textTab4": "Le terme, Sassetta, Campiglia Marittima, il benessere oltre il mare"
+  },
+  "cta": {
+    "title": "Scopri i nostri prodotti con il pacchetto vacanza e degustazione",
+    "text": "Abbina al soggiorno in agriturismo una degustazione dei nostri prodotti. I celebri vini di Bolgheri famosi in tutto il mondo insieme ad alcune particolarità enogastronomiche",
+    "btn": "Vedi l'offerta"
   }
+
+  
 }

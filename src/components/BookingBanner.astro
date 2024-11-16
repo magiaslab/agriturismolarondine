@@ -4,26 +4,31 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 import { onMount } from "solid-js";
 
-const lang = i18next.language;
-const base = lang === 'it' ? '' : `/${lang}`;
-
 onMount(() => {
+  console.log("onMount eseguito");
+
   const arrivoElement = document.querySelector("#datepicker-arrivo");
   if (arrivoElement) {
-      flatpickr(arrivoElement, {
+    console.log("Elemento arrivo trovato");
+    flatpickr(arrivoElement, {
       dateFormat: "d-m-Y",
       minDate: "today",
       locale: i18next.language,
     });
+  } else {
+    console.error("Elemento arrivo non trovato");
   }
 
   const partenzaElement = document.querySelector("#datepicker-partenza");
   if (partenzaElement) {
+    console.log("Elemento partenza trovato");
     flatpickr(partenzaElement, {
       dateFormat: "d-m-Y",
       minDate: "today",
       locale: i18next.language,
     });
+  } else {
+    console.error("Elemento partenza non trovato");
   }
 });
 ---
@@ -32,20 +37,22 @@ onMount(() => {
   <div class="bg-secondary py-6 sm:py-8 lg:py-16">
     <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
       <div class="flex flex-col items-center justify-between gap-4 rounded-lg bg-green p-4 sm:flex-row md:p-8">
-        <div class="flex flex-col items-center lg:items-start">
+        <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
           <h2 class="text-2xl font-bold text-secondary md:text-4xl">{t("booking.title")}</h2>
           <p class="text-crusta font-sans font-bold text-sm">{t("booking.subtitle")}</p>
         </div>
-        <div>
-          <label for="#datepicker-arrivo" class="block mb-2 text-sm font-medium text-white">Data di arrivo</label>
-          <input id="#datepicker-arrivo" name="Arrivo" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Data di Arrivo">
-        </div>
-        <div>
-          <label for="#datepicker-partenza" class="block mb-2 text-sm font-medium text-white">Data di partenza</label>
-          <input id="#datepicker-partenza" name="Partenza" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Data di Partenza">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:gap-4">
+          <div class="w-full">
+            <label for="#datepicker-arrivo" class="block mb-2 text-sm font-medium text-white">{t("booking.data")}</label>
+            <input id="datepicker-arrivo" name="Arrivo" type="text" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder={t("booking.data")}>
+          </div>
+          <div class="w-full">
+            <label for="#datepicker-partenza" class="block mb-2 text-sm font-medium text-white">{t("booking.data_out")}</label>
+            <input id="datepicker-partenza" name="Partenza" type="text" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder={t("booking.data_out")}>
+          </div>
         </div>
         <div class="">
-          <label for="numeroCamere" class="block mb-2 text-sm font-medium text-white">Num. app.</label>
+          <label for="numeroCamere" class="block mb-2 text-sm font-medium text-white">{t("booking.appartamenti")}</label>
           <select id="numeroCamere" name="numeroCamere" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             <option selected value="1">1</option>
             <option value="2">2</option>
@@ -54,7 +61,7 @@ onMount(() => {
           </select>
         </div>
         <div class="">
-          <label for="Camera_1_Adulti"  class="block mb-2 text-sm font-medium text-white">Adulti</label>
+          <label for="Camera_1_Adulti"  class="block mb-2 text-sm font-medium text-white">{t("booking.adulti")}</label>
           <select id="Camera_1_Adulti" name='Camera_1_Adulti' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             <option value="1">1</option>
             <option selected value="2">2</option>
@@ -63,9 +70,9 @@ onMount(() => {
           </select>
         </div>
         <div class="">
-          <label for="Camera_1_Bambini"  class="block mb-2 text-sm font-medium text-white">Bambini</label>
+          <label for="Camera_1_Bambini"  class="block mb-2 text-sm font-medium text-white">{t("booking.bambini")}</label>
           <select hidden id="Camera_1_Bambini" name='Camera_1_Bambini' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            <option selected value="0">Seleziona</option>
+            <option selected value="0">{t("booking.seleziona")}</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -103,7 +110,7 @@ onMount(() => {
           </select>
         </div>
         <select hidden name='IdTrattamento'>
-          <option value='0' selected>Appartamento</option>
+          <option value='0' selected>{t("booking.appartamento")}</option>
         </select>
         <input type="submit" value={t("nav.prenota")} class="inline-block rounded-lg bg-crusta px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base" >
       </div>
