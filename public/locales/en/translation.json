@@ -224,5 +224,12 @@
     "title": "Discover our products with the holiday and tasting package",
     "text": "Combine your stay in agriturismo with a tasting of our products. The famous Bolgheri wines in the world together with some enogastronomic specialties",
     "btn": "See the offer"
-  }
+  },
+  "form": {
+    "name": "Name",
+    "surname": "Surname",
+    "email": "Email address",
+    "message": "Message",
+    "submit": "Send"
+}
 }

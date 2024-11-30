@@ -229,7 +229,14 @@
     "title": "Scopri i nostri prodotti con il pacchetto vacanza e degustazione",
     "text": "Abbina al soggiorno in agriturismo una degustazione dei nostri prodotti. I celebri vini di Bolgheri famosi in tutto il mondo insieme ad alcune particolarità enogastronomiche",
     "btn": "Vedi l'offerta"
-  }
+  },
+  "form": {
+    "name": "Nome",
+    "surname": "Cognome",
+    "email": "Indirizzo Email",
+    "message": "Messaggio",
+    "submit": "Invia"
+}
 
   
 }
