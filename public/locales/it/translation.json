@@ -39,7 +39,10 @@
     "appartamenti": "Appartamenti",
     "adulti": "Adulti",
     "bambini": "Bambini",
-    "seleziona": "Seleziona"
+    "seleziona": "Seleziona",
+    "seleziona_data": "Seleziona la data",
+    "arrivo": "Arrivo",
+    "partenza": "Partenza"
   },
   "content1_home":{
     "title": "Immerso nei vigneti di Bolgheri",

@@ -1,131 +1,143 @@
 ---
 import i18next, { t } from "i18next";
-import Pikaday from "pikaday";
-import "pikaday/css/pikaday.css";
-import { createEffect, onCleanup } from "solid-js";
-import DatePicker from './DatePicker.jsx';
+import "flatpickr/dist/flatpickr.min.css";
+import { Italian } from "flatpickr/dist/l10n/it.js";
+import { english } from "flatpickr/dist/l10n/default.js";
 
-const lang = i18next.language;
-const base = lang === 'it' ? '' : `/${lang}`;
+const locale = i18next.language === 'it' ? Italian : english;
 
-function handleDateSelect(date) {
-  console.log("Data selezionata:", date);
-}
-
-function handleDateSelectArrivo(date) {
-  const formattedDate = formatDate(date);
-  document.getElementById('datepicker-arrivo').value = formattedDate;
-}
-
-function formatDate(date) {
-  const day = String(date.getDate()).padStart(2, '0');
-  const month = String(date.getMonth() + 1).padStart(2, '0'); // I mesi sono 0-indexed
-  const year = date.getFullYear();
-  return `${day}-${month}-${year}`;
-}
-
-function handleDateSelectPartenza(date) {
-  const formattedDate = formatDate(date);
-  document.getElementById('datepicker-partenza').value = formattedDate;
+if (typeof window !== "undefined") {
+  console.log("Inizializzazione datepicker di Flowbite");
 }
 ---
 
 <div>
   <form action='https://secure.iperbooking.net/be/it/agriturismo-la-rondine-castagneto-carducci/' method='post'>
-    <div class="bg-secondary py-6 sm:py-8 lg:py-16">
-      <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-        <div class="flex flex-col items-center justify-between gap-4 rounded-lg bg-green p-4 sm:flex-row md:p-8">
-          <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <h2 class="text-2xl font-bold text-secondary md:text-4xl">{t("booking.title")}</h2>
-            <p class="text-crusta font-sans font-bold text-sm">{t("booking.subtitle")}</p>
+    <div class="bg-secondary py-4 sm:py-6 lg:py-8">
+      <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-6 rounded-lg bg-green p-4 sm:p-6 lg:p-8">
+          {/* Header */}
+          <div class="text-center">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-secondary mb-2">{t("booking.title")}</h2>
+            <p class="text-crusta font-sans font-bold text-base sm:text-lg">{t("booking.subtitle")}</p>
           </div>
-          <div class="flex flex-col sm:flex-row sm:items-center sm:gap-4">
+
+          {/* Form Grid */}
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {/* Data Arrivo */}
             <div class="w-full">
               <label for="datepicker-arrivo" class="block mb-2 text-sm font-medium text-white">{t("booking.data")}</label>
-              <div class="relative">
-                <div class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 h-12 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style={{ border: 'none', background: 'transparent', width: '100%', height: '100%' }}>
-                  <DatePicker client:only="solid" onSelect={handleDateSelectArrivo} />
-                </div>
-              </div>
-              <input id="datepicker-arrivo" name="Arrivo" type="hidden">
+              <input 
+                id="datepicker-arrivo" 
+                data-datepicker 
+                data-datepicker-format="dd/mm/yyyy" 
+                type="text" 
+                name="arrivo" 
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" 
+                placeholder={t("booking.seleziona_data")}
+              />
             </div>
+
+            {/* Data Partenza */}
             <div class="w-full">
               <label for="datepicker-partenza" class="block mb-2 text-sm font-medium text-white">{t("booking.data_out")}</label>
-              <div class="relative">
-                <div class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 h-12 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style={{ border: 'none', background: 'transparent', width: '100%', height: '100%' }}>
-                  <DatePicker client:only="solid" onSelect={handleDateSelectPartenza} />
-                </div>
-              </div>
-              <input id="datepicker-partenza" name="Partenza" type="hidden">
+              <input 
+                id="datepicker-partenza" 
+                data-datepicker 
+                data-datepicker-format="dd/mm/yyyy" 
+                type="text" 
+                name="partenza" 
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" 
+                placeholder={t("booking.seleziona_data")}
+              />
+            </div>
+
+            {/* Numero Camere */}
+            <div class="w-full">
+              <label for="numeroCamere" class="block mb-2 text-sm font-medium text-white">{t("booking.appartamenti")}</label>
+              <select 
+                id="numeroCamere" 
+                name="numeroCamere" 
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+                <option selected value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+
+            {/* Adulti */}
+            <div class="w-full">
+              <label for="Camera_1_Adulti" class="block mb-2 text-sm font-medium text-white">{t("booking.adulti")}</label>
+              <select 
+                id="Camera_1_Adulti" 
+                name='Camera_1_Adulti' 
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+                <option value="1">1</option>
+                <option selected value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+
+            {/* Submit Button */}
+            <div class="w-full flex items-end">
+              <input 
+                type="submit" 
+                value={t("nav.prenota")} 
+                class="w-full rounded-lg bg-crusta px-4 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-crusta/90 focus:outline-none focus:ring-2 focus:ring-crusta/50"
+              />
             </div>
           </div>
-          <div class="">
-            <label for="numeroCamere" class="block mb-2 text-sm font-medium text-white">{t("booking.appartamenti")}</label>
-            <select id="numeroCamere" name="numeroCamere" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 h-12 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-              <option selected value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          </div>
-          <div class="">
-            <label for="Camera_1_Adulti"  class="block mb-2 text-sm font-medium text-white">{t("booking.adulti")}</label>
-            <select id="Camera_1_Adulti" name='Camera_1_Adulti' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-              <option value="1">1</option>
-              <option selected value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          </div>
-          <div class="">
-            <label for="Camera_1_Bambini"  class="block mb-2 text-sm font-medium text-white">{t("booking.bambini")}</label>
-            <select hidden id="Camera_1_Bambini" name='Camera_1_Bambini' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-              <option selected value="0">{t("booking.seleziona")}</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-            <select hidden name='Camera_1_EtaBambino_1'>
-              <option value='0' selected>0</option>
-              <option value='1'>1</option>
-              <option value='2'>2</option>
-              <option value='3'>3</option>
-              <option value='4'>4</option>
-              <option value='5'>5</option>
-              <option value='6'>6</option>
-              <option value='7'>7</option>
-              <option value='8'>8</option>
-              <option value='9'>9</option>
-              <option value='10'>10</option>
-              <option value='11'>11</option>
-              <option value='12'>12</option>
-            </select>
-            <select hidden name='Camera_1_EtaBambino_2'>
-              <option value='0' selected>0</option>
-              <option value='1'>1</option>
-              <option value='2'>2</option>
-              <option value='3'>3</option>
-              <option value='4'>4</option>
-              <option value='5'>5</option>
-              <option value='6'>6</option>
-              <option value='7'>7</option>
-              <option value='8'>8</option>
-              <option value='9'>9</option>
-              <option value='10'>10</option>
-              <option value='11'>11</option>
-              <option value='12'>12</option>
-            </select>
-          </div>
+
+          {/* Hidden Fields */}
           <select hidden name='IdTrattamento'>
             <option value='0' selected>{t("booking.appartamento")}</option>
           </select>
-          <input type="submit" value={t("nav.prenota")} class="inline-block rounded-lg bg-crusta px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base" >
         </div>
       </div>
     </div>
   </form>
 </div>
+
+<script>
+  import { Datepicker } from 'flowbite';
+  
+  const translations = {
+    months: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
+    weekDays: ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'],
+    weekDaysShort: ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'],
+    today: 'Oggi',
+    clear: 'Cancella',
+    cancel: 'Annulla',
+    submit: 'OK'
+  };
+
+  const options = {
+    format: 'dd/mm/yyyy',
+    autoHide: true,
+    monthsShort: translations.months,
+    months: translations.months,
+    weekDays: translations.weekDaysShort,
+    weekDaysFull: translations.weekDays,
+    today: translations.today,
+    clear: translations.clear,
+    cancel: translations.cancel,
+    submit: translations.submit,
+    onSelect: function(selectedDate, instance) {
+      instance.input.value = selectedDate.toLocaleDateString('it-IT');
+    }
+  };
+
+  // Inizializza i datepicker
+  const arrivoEl = document.getElementById('datepicker-arrivo');
+  const partenzaEl = document.getElementById('datepicker-partenza');
+  
+  if (arrivoEl) new Datepicker(arrivoEl, options);
+  if (partenzaEl) new Datepicker(partenzaEl, options);
+</script>
 
 
 
