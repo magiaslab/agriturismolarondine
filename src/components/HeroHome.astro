@@ -16,7 +16,7 @@ const base = lang === 'it' ? '' : `/${lang}`;
     <picture>
         <source media="(max-width: 480px)" srcset={optimizedBackgroundSmall.src} />
         <source media="(max-width: 768px)" srcset={optimizedBackgroundMedium.src} />
-        <img src={optimizedBackgroundLarge.src} alt="Background" class="absolute inset-0 w-full h-full object-cover" />
+        <img src={optimizedBackgroundLarge.src} alt="Background" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
     </picture>
     <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg sm:max-w-3xl flex items-center flex-col">
   
