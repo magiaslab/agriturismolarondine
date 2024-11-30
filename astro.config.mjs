@@ -10,7 +10,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://agriturismolaronine.it',
+  site: 'https://agriturismolarondine.it',
   integrations: [tailwind(), robotsTxt(), sitemap(), icon(), react(), astroI18next()],
   image: {
     domains: ["res.cloudinary.com/magiaslabcdn"],
