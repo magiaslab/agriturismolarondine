@@ -1,17 +1,27 @@
 ---
 import { getImage } from "astro:assets";
 import i18next, { t } from "i18next";
-import myBackground from "../assets/img/image00002.jpeg"
-const optimizedBackground = await getImage({src: myBackground, format: 'webp'});
+import myBackground from "../assets/img/image00002.jpeg";
+
+// Ottieni diverse versioni dell'immagine per diverse larghezze
+const optimizedBackgroundSmall = await getImage({src: myBackground, format: 'webp', width: 480});
+const optimizedBackgroundMedium = await getImage({src: myBackground, format: 'webp', width: 768});
+const optimizedBackgroundLarge = await getImage({src: myBackground, format: 'webp', width: 1280});
+
 const lang = i18next.language;
 const base = lang === 'it' ? '' : `/${lang}`;
 ---
 
-<section class="hero flex items-center min-h-screen relative z-[1] py-16 lg:py-28 px-0 bg-gray-100 bg-cover bg-no-repeat bg-center text-center" style={`background-image: url(${optimizedBackground.src});`}>
+<section class="hero flex items-center min-h-screen relative z-[1] py-16 lg:py-28 px-0 bg-gray-100 bg-cover bg-no-repeat bg-center text-center">
+    <picture>
+        <source media="(max-width: 480px)" srcset={optimizedBackgroundSmall.src} />
+        <source media="(max-width: 768px)" srcset={optimizedBackgroundMedium.src} />
+        <img src={optimizedBackgroundLarge.src} alt="Background" class="absolute inset-0 w-full h-full object-cover" />
+    </picture>
     <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg sm:max-w-3xl flex items-center flex-col">
   
       <h1 data-aos="zoom-in" data-aos-easing="linear" data-aos-delay="300" data-aos-duration="1500" class="text-5xl mb-8 lg:text-7xl font-sans font-black subpixel-antialiased text-white uppercase">{t("hero.title")}</h1>
-  <h2 data-aos="zoom-in-up" data-aos-easing="linear" data-aos-delay="600" data-aos-duration="1500" class="text-4xl text-white font-serif mb-5">{t("hero.claim")}</h2>
+      <h2 data-aos="zoom-in-up" data-aos-easing="linear" data-aos-delay="600" data-aos-duration="1500" class="text-4xl text-white font-serif mb-5">{t("hero.claim")}</h2>
       <p data-aos="fade-up" data-aos-easing="linear" data-aos-delay="300" data-aos-duration="1500" class="leading-normal subpixel-antialiased font-sans font-bold text-secondary text-xl mb-6">{t("hero.subtitle")}</p>
       <div class="flex flex-wrap items-center gap-4 justify-center">
         <a href="https://secure.iperbooking.net/be/it/agriturismo-la-rondine-castagneto-carducci/" class="bg-crusta text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-crusta-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700">{t("hero.prenota")}</a>
