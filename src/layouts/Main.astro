@@ -30,14 +30,14 @@ import CookieConsent from '../components/CookieConsent.astro';
         title: t("og.title"),
         type: "website",
         image: t("og.image"),
-        url: "https://www.tuosito.com",
+        url: "https://www.agriturismolarondine.it",
       }
     }}
     extend={{
       link: [{ rel: "icon", href: "/favicon.jpg" }],
       meta: [
         { property: "og:locale", content: "it_IT" },
-        { property: "og:site_name", content: "Nome del tuo sito" },
+        { property: "og:site_name", content: "Agriturismo La Rondine" },
       ],
     }}
   />
@@ -51,7 +51,7 @@ import CookieConsent from '../components/CookieConsent.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.jpg" />
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" media="print" onload="this.media='all'">
 </head>
 <body>
     
