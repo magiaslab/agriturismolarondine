@@ -12,10 +12,12 @@ Sito web per l'Agriturismo La Rondine, un agriturismo situato in Toscana con app
 
 ## 📦 Dipendenze Principali
 
-- Astro: ^4.16.18
+- Astro: ^5.12.1
 - React: ^18.3.1
 - Tailwind CSS: ^3.4.17
 - Swiper: ^11.2.10
+- @astrojs/react: ^4.3.0
+- @astrojs/tailwind: ^6.0.2
 
 ## 🛠️ Installazione e Sviluppo
 
@@ -65,7 +67,10 @@ src/
 
 ## 🔧 Aggiornamenti Recenti
 
-- ✅ Aggiornate dipendenze di sicurezza
+- ✅ Aggiornato Astro da v4 a v5 (5.12.1)
+- ✅ Aggiornato @astrojs/react a v4.3.0
+- ✅ Aggiornato @astrojs/tailwind a v6.0.2
+- ✅ Risolte vulnerabilità di sicurezza (da 7 a 4 moderate)
 - ✅ Risolti warning sugli import non utilizzati
 - ✅ Configurato Netlify per Node.js 20
 - ✅ Ottimizzata configurazione di build
