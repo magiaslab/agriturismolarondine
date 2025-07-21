@@ -12,15 +12,26 @@ import CasolareHome from "../components/CasolareHome.astro";
 import Video from "../components/Video.astro";
 import TerritorioHome from "../components/Territorio_home.astro";
 import Cta from "../components/Cta.astro";
+import AgriturismoSchema from "../components/AgriturismoSchema.astro";
+import PerformanceOptimizer from "../components/PerformanceOptimizer.astro";
+import { getSeoData } from "../utils/seo";
 
 changeLanguage("it");
+
+const seoData = getSeoData('home');
 ---
 
 
 
 
 
-<MainLayout title="Agriturismo La Rondine Bolgheri">
+<MainLayout 
+  title={seoData.title}
+  description={seoData.description}
+  canonical={seoData.canonical}
+>
+<PerformanceOptimizer />
+<AgriturismoSchema />
 <Header/>
 <HeroHome/>
 

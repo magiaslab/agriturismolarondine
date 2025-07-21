@@ -6,16 +6,26 @@ import AppartamentiHome from "../components/Appartamenti_home.astro";
 import HeroApp from "../components/HeroApp.astro";
 import ContentApp from "../components/ContentApp1.astro";
 import BookingBanner from "../components/BookingBanner.astro";
+import AgriturismoSchema from "../components/AgriturismoSchema.astro";
+import PerformanceOptimizer from "../components/PerformanceOptimizer.astro";
+import { getSeoData } from "../utils/seo";
 import i18next, { t, changeLanguage } from "i18next";
 
 changeLanguage("it");
 
 const lang = i18next.language;
 const base = lang === "it" ? "" : `/${lang}`;
+const seoData = getSeoData('appartamenti');
 ---
 
 
-<MainLayout title="Agriturismo La Rondine Bolgheri">
+<MainLayout 
+  title={seoData.title}
+  description={seoData.description}
+  canonical={seoData.canonical}
+>
+<PerformanceOptimizer />
+<AgriturismoSchema />
 <Header/>
 <HeroApp/>
 <ContentApp/>

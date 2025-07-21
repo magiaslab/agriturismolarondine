@@ -1,0 +1,36 @@
+---
+// Componente per ottimizzazioni performance
+---
+
+<!-- Preconnect per domini esterni -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="dns-prefetch" href="https://res.cloudinary.com" />
+
+<!-- Preload per risorse critiche -->
+<link rel="preload" href="/assets/img/sfondohome.webp" as="image" type="image/webp" />
+<link rel="preload" href="/assets/img/export (1).png" as="image" type="image/png" />
+
+<!-- Resource hints per performance -->
+<link rel="prefetch" href="/agriturismo" />
+<link rel="prefetch" href="/appartamenti" />
+<link rel="prefetch" href="/cantina" />
+
+<script>
+  // Core Web Vitals monitoring
+  if ('PerformanceObserver' in window) {
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'largest-contentful-paint') {
+          console.log('LCP:', entry.startTime);
+        }
+        if (entry.entryType === 'first-input') {
+          const firstInputEntry = entry as PerformanceEventTiming;
+          console.log('FID:', firstInputEntry.processingStart - firstInputEntry.startTime);
+        }
+      }
+    });
+    
+    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+  }
+</script> 

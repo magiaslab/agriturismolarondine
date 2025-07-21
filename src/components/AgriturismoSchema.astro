@@ -1,0 +1,102 @@
+---
+// Componente per Schema.org markup - Agriturismo La Rondine
+const { url } = Astro;
+const baseUrl = 'https://agriturismolarondine.it';
+---
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Agriturismo La Rondine",
+  "description": "Ospitalità a Bolgheri Costa degli Etruschi - Agriturismo familiare immerso nei vigneti di Bolgheri",
+  "url": baseUrl,
+  "telephone": "+39-0565-749-XXX",
+  "email": "info@agriturismolarondine.it",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Località Campo al Noce",
+    "addressLocality": "Bolgheri",
+    "addressRegion": "Toscana",
+    "postalCode": "57022",
+    "addressCountry": "IT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.2333,
+    "longitude": 10.6167
+  },
+  "openingHours": "Mo-Su 00:00-23:59",
+  "priceRange": "€€",
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Wi-Fi gratuito",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification", 
+      "name": "Parcheggio gratuito",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Pet friendly",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Aria condizionata",
+      "value": true
+    }
+  ],
+  "image": [
+    `${baseUrl}/assets/img/export (1).png`,
+    `${baseUrl}/assets/img/sfondohome.webp`
+  ],
+  "sameAs": [
+    "https://www.facebook.com/agriturismolarondine",
+    "https://www.instagram.com/agriturismolarondine"
+  ],
+  "areaServed": {
+    "@type": "Place",
+    "name": "Bolgheri, Costa degli Etruschi, Toscana"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Appartamenti Agriturismo",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "LodgingUnit",
+          "name": "Appartamento Farfalla",
+          "description": "Trilocale fino a 6 ospiti con balcone panoramico"
+        }
+      },
+      {
+        "@type": "Offer", 
+        "itemOffered": {
+          "@type": "LodgingUnit",
+          "name": "Appartamento Libellula",
+          "description": "Trilocale fino a 5 ospiti con balcone"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "LodgingUnit", 
+          "name": "Appartamento Coccinella",
+          "description": "Bilocale per 2-3 ospiti"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "LodgingUnit",
+          "name": "Appartamento Jolly", 
+          "description": "Bilocale per 4 ospiti attrezzato per disabili"
+        }
+      }
+    ]
+  }
+})} /> 
