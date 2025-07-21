@@ -1,0 +1,121 @@
+---
+// Schema.org markup per Agriturismo La Rondine
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Agriturismo La Rondine",
+  "description": "Agriturismo familiare immerso nei vigneti di Bolgheri, a 6 km dal mare. Appartamenti confortevoli con vista panoramica sulla campagna toscana.",
+  "url": "https://agriturismolarondine.it",
+  "telephone": "+39-0565-XXXXXX",
+  "email": "info@agriturismolarondine.it",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Campo al Noce",
+    "addressLocality": "Bolgheri",
+    "addressRegion": "Toscana",
+    "postalCode": "57022",
+    "addressCountry": "IT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.2333,
+    "longitude": 10.6167
+  },
+  "openingHours": "Mo-Su 00:00-23:59",
+  "priceRange": "€€",
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Wi-Fi gratuito",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification", 
+      "name": "Parcheggio gratuito",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Pet friendly",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Aria condizionata",
+      "value": true
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Appartamenti",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "LodgingUnit",
+          "name": "Appartamento Farfalla",
+          "description": "Trilocale fino a 6 ospiti con balcone panoramico",
+          "numberOfBedrooms": 2,
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "value": 54,
+            "unitCode": "MTK"
+          }
+        }
+      },
+      {
+        "@type": "Offer", 
+        "itemOffered": {
+          "@type": "LodgingUnit",
+          "name": "Appartamento Libellula",
+          "description": "Trilocale fino a 5 ospiti con vista vigneti",
+          "numberOfBedrooms": 2,
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "value": 49,
+            "unitCode": "MTK"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "LodgingUnit", 
+          "name": "Appartamento Coccinella",
+          "description": "Bilocale per 2-3 ospiti al primo piano",
+          "numberOfBedrooms": 1,
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "value": 29,
+            "unitCode": "MTK"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "LodgingUnit",
+          "name": "Appartamento Jolly", 
+          "description": "Bilocale per 4 ospiti attrezzato per disabili",
+          "numberOfBedrooms": 1,
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "value": 29,
+            "unitCode": "MTK"
+          }
+        }
+      }
+    ]
+  },
+  "image": [
+    "https://agriturismolarondine.it/assets/img/export (1).jpg",
+    "https://agriturismolarondine.it/assets/img/campo-al-noce.webp"
+  ],
+  "sameAs": [
+    "https://www.facebook.com/agriturismolarondine",
+    "https://www.instagram.com/agriturismolarondine"
+  ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} /> 

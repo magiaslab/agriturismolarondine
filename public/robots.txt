@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://agriturismolaronine.it/sitemap-index.xml
+Sitemap: https://agriturismolarondine.it/sitemap-index.xml

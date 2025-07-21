@@ -6,20 +6,32 @@ import AppartamentiHome from "../components/Appartamenti_home.astro";
 import HeroApp from "../components/HeroApp.astro";
 import ContentApp from "../components/ContentApp1.astro";
 import BookingBanner from "../components/BookingBanner.astro";
+import AgriturismoSchema from "../components/AgriturismoSchema.astro";
 import i18next, { t, changeLanguage } from "i18next";
+import { pageSEOConfigs } from "../utils/seo";
 
 changeLanguage("it");
 
 const lang = i18next.language;
 const base = lang === "it" ? "" : `/${lang}`;
+
+// SEO ottimizzato per la pagina appartamenti
+const seoTitle = pageSEOConfigs.appartamenti.title;
+const seoDescription = pageSEOConfigs.appartamenti.description;
+const canonicalUrl = "https://agriturismolarondine.it/appartamenti/";
 ---
 
 
-<MainLayout title="Agriturismo La Rondine Bolgheri">
-<Header/>
-<HeroApp/>
-<ContentApp/>
-<AppartamentiHome />
-<BookingBanner/>
-<Footer/>
+<MainLayout 
+  title={seoTitle}
+  description={seoDescription}
+  canonical={canonicalUrl}
+>
+  <AgriturismoSchema />
+  <Header/>
+  <HeroApp/>
+  <ContentApp/>
+  <AppartamentiHome />
+  <BookingBanner/>
+  <Footer/>
 </MainLayout>

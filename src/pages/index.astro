@@ -12,26 +12,36 @@ import CasolareHome from "../components/CasolareHome.astro";
 import Video from "../components/Video.astro";
 import TerritorioHome from "../components/Territorio_home.astro";
 import Cta from "../components/Cta.astro";
+import AgriturismoSchema from "../components/AgriturismoSchema.astro";
 
 changeLanguage("it");
+
+// SEO ottimizzato per la homepage
+const seoTitle = "Agriturismo La Rondine - Vacanze in Toscana tra Vigneti e Mare | Bolgheri";
+const seoDescription = "Scopri l'Agriturismo La Rondine a Bolgheri: appartamenti confortevoli immersi nei vigneti toscani, a soli 6 km dal mare. Vacanze perfette in famiglia con degustazioni di vini DOC.";
+const canonicalUrl = "https://agriturismolarondine.it/";
 ---
 
 
 
 
 
-<MainLayout title="Agriturismo La Rondine Bolgheri">
-<Header/>
-<HeroHome/>
-
-<BookingBanner/>
-<Content1Home/>
-<Content2Home/>
-<AppartamentiHome/>
-<Cta/>
-<Video/>
-<CasolareHome/>
-<TerritorioHome/>
-<Footer/>
+<MainLayout 
+  title={seoTitle}
+  description={seoDescription}
+  canonical={canonicalUrl}
+>
+  <AgriturismoSchema />
+  <Header/>
+  <HeroHome/>
+  <BookingBanner/>
+  <Content1Home/>
+  <Content2Home/>
+  <AppartamentiHome/>
+  <Cta/>
+  <Video/>
+  <CasolareHome/>
+  <TerritorioHome/>
+  <Footer/>
 </MainLayout>
 

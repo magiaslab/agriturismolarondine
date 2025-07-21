@@ -1,0 +1,37 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  class?: string;
+  loading?: "lazy" | "eager";
+  priority?: boolean;
+}
+
+const { 
+  src, 
+  alt, 
+  width = 800, 
+  height = 600, 
+  class: className = "",
+  loading = "lazy",
+  priority = false 
+} = Astro.props;
+
+// Genera srcset per responsive images
+const srcset = `${src} 1x, ${src.replace('.jpg', '@2x.jpg').replace('.webp', '@2x.webp')} 2x`;
+---
+
+<img 
+  src={src}
+  alt={alt}
+  width={width}
+  height={height}
+  class={className}
+  loading={priority ? "eager" : loading}
+  decoding="async"
+  srcset={srcset}
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+  onerror="this.style.display='none'"
+/> 

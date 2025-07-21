@@ -1,6 +1,6 @@
 ---
 import { SEO } from "astro-seo";
-const {title} = Astro.props;
+const {title, description, canonical, schema} = Astro.props;
 import i18next, { t } from "i18next";
 import 'aos/dist/aos.css'; 
 import { HeadHrefLangs } from "astro-i18next/components";
@@ -16,64 +16,85 @@ import '@fontsource/montserrat/700.css';
 import '@fontsource/montserrat/800.css';
 import '@fontsource/montserrat/900.css';
 import CookieConsent from '../components/CookieConsent.astro';
----
 
+// Default SEO values
+const defaultTitle = title || t("site.title");
+const defaultDescription = description || t("site.description");
+const defaultCanonical = canonical || Astro.url.href;
+---
 
 <!DOCTYPE html>
 <html lang={i18next.language} class="scroll-smooth">
 <head>
-    <SEO
-    title={t("site.title")}
-    description={t("site.description")}
-    openGraph={{
-      basic: {
-        title: t("og.title"),
-        type: "website",
-        image: t("og.image"),
-        url: "https://www.agriturismolarondine.it",
-      }
-    }}
-    extend={{
-      link: [{ rel: "icon", href: "/favicon.jpg" }],
-      meta: [
-        { property: "og:locale", content: "it_IT" },
-        { property: "og:site_name", content: "Agriturismo La Rondine" },
-      ],
-    }}
-  />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>{t("site.title")}</title>
-    <meta name="description" content={t("site.description")} />
+    
+    <SEO
+      title={defaultTitle}
+      description={defaultDescription}
+      canonical={defaultCanonical}
+      openGraph={{
+        basic: {
+          title: defaultTitle,
+          type: "website",
+          image: t("og.image"),
+          url: defaultCanonical,
+        },
+        optional: {
+          description: defaultDescription,
+          siteName: "Agriturismo La Rondine",
+          locale: i18next.language === "it" ? "it_IT" : "en_US",
+        }
+      }}
+      twitter={{
+        creator: "@agriturismolarondine",
+        card: "summary_large_image",
+      }}
+      extend={{
+        link: [
+          { rel: "icon", href: "/favicon.jpg" },
+          { rel: "canonical", href: defaultCanonical },
+        ],
+        meta: [
+          { name: "generator", content: Astro.generator },
+          { name: "robots", content: "index, follow" },
+          { name: "author", content: "Agriturismo La Rondine" },
+          { property: "og:locale", content: i18next.language === "it" ? "it_IT" : "en_US" },
+          { property: "og:site_name", content: "Agriturismo La Rondine" },
+        ],
+      }}
+    />
+    
     <HeadHrefLangs />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.jpg" />
-    <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/assets/img/export (1).jpg" as="image">
+    
+    <!-- External CSS with optimization -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" media="print" onload="this.media='all'">
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZMG6J5XPH"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-3ZMG6J5XPH');
     </script>
+    
+    <!-- Schema.org markup -->
+    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
 </head>
 <body>
-    
-<slot />
-<CookieConsent />
+    <slot />
+    <CookieConsent />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-<script is:inline defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
-
-    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
-    <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <!-- Optimized script loading -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js" defer></script>
+    <script is:inline defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
     <script is:inline src="/fslightbox.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
 
     <script> 
       import AOS from "aos"; 

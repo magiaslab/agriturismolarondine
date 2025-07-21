@@ -1,0 +1,62 @@
+---
+// Componente per ottimizzazioni performance
+---
+
+<!-- Preconnect per domini esterni -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+<!-- DNS prefetch per risorse critiche -->
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+
+<!-- Preload font critici -->
+<link rel="preload" href="/assets/fonts/montserrat-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/open-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- Preload immagini critiche -->
+<link rel="preload" href="/assets/img/export (1).jpg" as="image">
+<link rel="preload" href="/assets/img/campo-al-noce.webp" as="image">
+
+<!-- Resource hints per performance -->
+<link rel="prefetch" href="/appartamenti/">
+<link rel="prefetch" href="/cantina/">
+<link rel="prefetch" href="/dintorni/">
+
+<!-- Service Worker per caching -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('SW registered: ', registration);
+        })
+        .catch(registrationError => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    });
+  }
+</script>
+
+<!-- Performance monitoring -->
+<script>
+  // Core Web Vitals monitoring
+  if ('PerformanceObserver' in window) {
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'largest-contentful-paint') {
+          console.log('LCP:', entry.startTime);
+        }
+        if (entry.entryType === 'first-input') {
+          console.log('FID:', entry.processingStart - entry.startTime);
+        }
+        if (entry.entryType === 'layout-shift') {
+          console.log('CLS:', entry.value);
+        }
+      }
+    });
+    
+    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+  }
+</script> 
