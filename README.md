@@ -1,47 +1,90 @@
-# Astro Starter Kit: Minimal
+# Agriturismo La Rondine
 
-```sh
-npm create astro@latest -- --template minimal
+Sito web per l'Agriturismo La Rondine, un agriturismo situato in Toscana con appartamenti, cantina e degustazioni di vini.
+
+## 🚀 Tecnologie Utilizzate
+
+- **Astro** - Framework per siti web statici
+- **React** - Per componenti interattivi
+- **Tailwind CSS** - Per lo styling
+- **Swiper** - Per i carousel
+- **astro-i18next** - Per l'internazionalizzazione (IT/EN)
+
+## 📦 Dipendenze Principali
+
+- Astro: ^4.16.18
+- React: ^18.3.1
+- Tailwind CSS: ^3.4.17
+- Swiper: ^11.2.10
+
+## 🛠️ Installazione e Sviluppo
+
+```bash
+# Installa le dipendenze
+npm install
+
+# Avvia il server di sviluppo
+npm run dev
+
+# Build per la produzione
+npm run build
+
+# Preview del build
+npm run preview
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## 🌐 Deployment
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Il sito è configurato per il deployment su Netlify con:
 
-## 🚀 Project Structure
+- **Node.js 20** - Versione LTS supportata
+- **Build command**: `npm run build`
+- **Publish directory**: `dist`
+- **Redirects**: Configurati per SPA routing
 
-Inside of your Astro project, you'll see the following folders and files:
+### Configurazione Netlify
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+Il file `netlify.toml` include:
+- Ottimizzazione delle immagini
+- Minificazione CSS/JS
+- Pretty URLs
+- Redirect per SPA
+
+## 📁 Struttura del Progetto
+
+```
+src/
+├── components/     # Componenti riutilizzabili
+├── layouts/        # Layout delle pagine
+├── pages/          # Pagine del sito
+│   ├── en/         # Pagine in inglese
+│   └── ...         # Pagine in italiano
+├── assets/         # Immagini e risorse
+└── styles/         # File CSS personalizzati
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🔧 Aggiornamenti Recenti
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- ✅ Aggiornate dipendenze di sicurezza
+- ✅ Risolti warning sugli import non utilizzati
+- ✅ Configurato Netlify per Node.js 20
+- ✅ Ottimizzata configurazione di build
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🌍 Internazionalizzazione
 
-## 🧞 Commands
+Il sito supporta italiano e inglese con:
+- Routing automatico (`/en/` per inglese)
+- Traduzioni gestite con astro-i18next
+- SEO ottimizzato per entrambe le lingue
 
-All commands are run from the root of the project, from a terminal:
+## 📸 Ottimizzazione Immagini
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- Compressione automatica durante il build
+- Formati WebP per prestazioni ottimali
+- Lazy loading implementato
 
-## 👀 Want to learn more?
+## 🔒 Sicurezza
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Vulnerabilità di sicurezza risolte
+- Dipendenze aggiornate alle ultime versioni stabili
+- Configurazione HTTPS forzata su Netlify
