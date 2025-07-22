@@ -1,51 +1,37 @@
 ---
+import { getImage } from "astro:assets";
 import Image from "astro/components/Image.astro";
 import i18next, { t } from "i18next";
+import myBackground from "../assets/img/sfondohome.png"
+const optimizedBackground = await getImage({src: myBackground, format: 'webp'});
 const lang = i18next.language;
 const base = lang === 'it' ? '' : `/${lang}`;
-import img1 from "../assets/img/image00001.jpeg"
-import img2 from "../assets/img/image00003.jpeg"
-import img3 from "../assets/img/image00008.jpeg"
-import img4 from "../assets/img/image00010.jpeg"
-import img5 from "../assets/img/image00004.jpeg"
-import logo1 from "../assets/img/logo-rondine.png"
+import img1 from "../assets/img/Azienda-vinicola-toscana.webp"
+import logo1 from "../assets/img/Logo-bassa.webp"
 import logo2 from "../assets/img/lop_bolgheri.png"
+import logo3 from "../assets/img/logoambitocde.png"
 
 ---
 
-<section class="bg-secondary dark:bg-gray-900 px-4" >
-    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-4 xl:gap-0 lg:py-16 lg:grid-cols-12">
-       
-       
-        <div class="rounded-lg lg:mt-0 lg:col-span-6 lg:flex">
-            <div class="grid gap-2" data-aos="fade-right" data-aos-delay="300" data-aos-easing="linear">
-                <div>
-                    <Image class="h-auto max-w-full rounded-lg" src={img3} alt="">
-                </div>
-                <div class="grid grid-cols-2 gap-2">
-                    <div>
-                        <Image class="h-auto max-w-full rounded-lg" src={img2} alt="">
-                    </div>
-                    <div>
-                        <Image class="h-auto max-w-full rounded-lg" src={img1} alt="">
-                    </div>
-                    <div>
-                        <Image class="h-auto max-w-full rounded-lg" src={img4} alt="">
-                    </div>
-                    <div>
-                        <Image class="h-auto max-w-full rounded-lg" src={img5}alt="">
-                    </div>
-                </div>
-            </div>
-        </div>         
-        <div class="mr-auto place-self-center lg:col-span-6 ml-8 mt-7 lg:mt-0">
-            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-primary">{t("casolare_home.title")}</h1>
-            <p class="max-w-2xl mb-6 text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{t("casolare_home.text1")}</p>
-            <p class="max-w-2xl mb-6 text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{t("casolare_home.text2")}</p>
-            <a href="https://www.bolgheridoc.com/" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center rounded-lg hover:bg-gray-100  focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-600 focus:ring-4 dark:focus:ring-gray-600">
-              <Image src={logo2} alt="Logo Bolgheri" class="w-8 h-8 mr-2">
-              {t("casolare_home.button")}
-            </a>
-        </div>       
-    </div>
+
+<section class="bg-secondary dark:bg-gray-900 px-4">
+  <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+      <div class="mr-auto place-self-center lg:col-span-7">
+          <h1 class="max-w-2xl mb-6 text-4xl lg:text-6xl text-primary font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">{t("casolare_home.title")}</h1>
+          <p class="max-w-2xl mb-6 text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{t("casolare_home.text1")}</p>
+          <p class="max-w-2xl mb-6 text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{t("casolare_home.text2")}</p>
+
+          <a href="https://www.campoalnoce.it/" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center  rounded-lg hover:bg-gray-100  focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+            <Image src={logo1} alt="Campo al Noce" width={150}/>         </a>
+          <a href="https://www.bolgheridoc.com/" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center rounded-lg hover:bg-gray-100  focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+            <Image src={logo2} alt="Logo Cantina" width={100}/>         </a>
+          </a> 
+          <a href="https://www.costadeglietruschi.eu/" class="inline-flex items-center justify-center px-5 py-3 mb-3 text-base font-medium text-center rounded-lg hover:bg-gray-100  focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+            <Image src={logo3} alt="Logo Cantina" width={150}/>         </a>
+          </a> 
+      </div>
+      <div class="lg:mt-0 lg:col-span-5 lg:flex">
+          <Image src={img1} alt="mockup" class="rounded-lg container" width={900}>
+      </div>                
+  </div>
 </section>
