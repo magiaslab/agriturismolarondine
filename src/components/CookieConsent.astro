@@ -1,21 +1,43 @@
 ---
-import 'vanilla-cookieconsent/dist/cookieconsent.css';
-import '../styles/ccElegantBlack.css';
-import { Icon } from 'astro-icon/components';
+// Cookie consent semplificato e leggero
 ---
-<div class="fixed bottom-0 right-0 m-4">
-    <button class="bg-primary hover:bg-primary/80 text-white font-bold py-2 px-4 rounded flex items-center" type="button" data-cc="show-preferencesModal">
-        <Icon name="fa6-solid:cookie-bite" class="mr-2" />
-        Mostra cookie consent
-    </button>
+
+<div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 z-50" style="display: none;">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="text-sm">
+            <p>Utilizziamo i cookie per migliorare la tua esperienza. Continuando a navigare, accetti il nostro utilizzo dei cookie.</p>
+        </div>
+        <div class="flex gap-2">
+            <button id="accept-cookies" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded text-sm">
+                Accetta tutti
+            </button>
+            <button id="reject-cookies" class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded text-sm">
+                Rifiuta
+            </button>
+        </div>
+    </div>
 </div>
 
 <script>
-    import { run } from 'vanilla-cookieconsent';
-    import { config } from './CookieConsentConfig';
-
-    // toggle custom black theme
-    document.body.classList.add('cc--elegant-black');
-
-    run(config);
+    // Cookie consent leggero
+    document.addEventListener('DOMContentLoaded', function() {
+        const cookieConsent = document.getElementById('cookie-consent');
+        const acceptBtn = document.getElementById('accept-cookies');
+        const rejectBtn = document.getElementById('reject-cookies');
+        
+        // Controlla se l'utente ha già fatto una scelta
+        if (!localStorage.getItem('cookieConsent')) {
+            cookieConsent.style.display = 'block';
+        }
+        
+        acceptBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            cookieConsent.style.display = 'none';
+        });
+        
+        rejectBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            cookieConsent.style.display = 'none';
+        });
+    });
 </script>

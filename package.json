@@ -37,8 +37,7 @@
     "submitjson": "^0.8.1",
     "svelte": "^5.2.1",
     "swiper": "^11.1.7",
-    "tailwindcss": "^3.4.4",
-    "vanilla-cookieconsent": "^3.0.1"
+    "tailwindcss": "^3.4.4"
   },
   "devDependencies": {
     "@iconify-json/fa6-solid": "^1.1.23",
