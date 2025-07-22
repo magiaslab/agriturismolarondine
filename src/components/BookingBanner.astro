@@ -1,14 +1,6 @@
 ---
 import i18next, { t } from "i18next";
-import "flatpickr/dist/flatpickr.min.css";
-import { Italian } from "flatpickr/dist/l10n/it.js";
-import { english } from "flatpickr/dist/l10n/default.js";
-
-const locale = i18next.language === 'it' ? Italian : english;
-
-if (typeof window !== "undefined") {
-  console.log("Inizializzazione datepicker di Flowbite");
-}
+// Rimuovo importazioni duplicate - flatpickr è già nel layout
 ---
 
 <div>
@@ -103,40 +95,22 @@ if (typeof window !== "undefined") {
 </div>
 
 <script>
-  import { Datepicker } from 'flowbite';
-  
-  const translations = {
-    months: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
-    weekDays: ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'],
-    weekDaysShort: ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'],
-    today: 'Oggi',
-    clear: 'Cancella',
-    cancel: 'Annulla',
-    submit: 'OK'
-  };
+  // Script ottimizzato - solo inizializzazione datepicker
+  document.addEventListener('DOMContentLoaded', function() {
+    // Usa Flowbite se disponibile
+    if (window.flowbite && window.flowbite.Datepicker) {
+      const options = {
+        format: 'dd/mm/yyyy',
+        autoHide: true
+      };
 
-  const options = {
-    format: 'dd/mm/yyyy',
-    autoHide: true,
-    monthsShort: translations.months,
-    months: translations.months,
-    weekDays: translations.weekDaysShort,
-    weekDaysFull: translations.weekDays,
-    today: translations.today,
-    clear: translations.clear,
-    cancel: translations.cancel,
-    submit: translations.submit,
-    onSelect: function(selectedDate, instance) {
-      instance.input.value = selectedDate.toLocaleDateString('it-IT');
+      const arrivoEl = document.getElementById('datepicker-arrivo');
+      const partenzaEl = document.getElementById('datepicker-partenza');
+      
+      if (arrivoEl) new window.flowbite.Datepicker(arrivoEl, options);
+      if (partenzaEl) new window.flowbite.Datepicker(partenzaEl, options);
     }
-  };
-
-  // Inizializza i datepicker
-  const arrivoEl = document.getElementById('datepicker-arrivo');
-  const partenzaEl = document.getElementById('datepicker-partenza');
-  
-  if (arrivoEl) new Datepicker(arrivoEl, options);
-  if (partenzaEl) new Datepicker(partenzaEl, options);
+  });
 </script>
 
 
