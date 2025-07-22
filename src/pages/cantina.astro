@@ -3,7 +3,7 @@ import MainLayout from "../layouts/Main.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import BookingBanner from "../components/BookingBanner.astro";
-import SliderCantina from "../components/SliderCantinaIt.jsx";
+import LightweightSlider from "../components/LightweightSlider.astro";
 import VideoCantina from "../components/VideoCantina.astro";
 import i18next, { t, changeLanguage } from "i18next";
 const lang = i18next.language;
@@ -23,12 +23,28 @@ import img8 from "../assets/img/image00013.jpeg";
 import img9 from "../assets/img/campo-al-noce_03.webp";
 
 changeLanguage("it");
+
+// Configurazione slider cantina
+const cantinaImages = [
+  {
+    src: "/img/vini-di-bolgheri_03.webp",
+    alt: t("cantina.slider.alt1")
+  },
+  {
+    src: "/img/Vino-di-Bolgheri-03.webp", 
+    alt: t("cantina.slider.alt2")
+  },
+  {
+    src: "/img/Vino-di-Bolgheri-07.webp",
+    alt: t("cantina.slider.alt3")
+  }
+];
 ---
 
 
 <MainLayout title="Appartamento Jolly - Agriturismo La Rondine Bolgheri">
 <Header/>
-<SliderCantina client:load />
+<LightweightSlider images={cantinaImages} autoplay={true} interval={5000} />
 <section class="bg-secondary dark:bg-gray-900">
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
         <div class="mr-auto place-self-center lg:col-span-7">
@@ -107,15 +123,12 @@ changeLanguage("it");
           </a>        </div>
     <div>
         <a data-fslightbox href={img8.src} class=" h-auto max-w-full rounded-lg">
-            <Image class="h-auto max-w-full rounded-lg" src={img8} alt={t("cantina.alt2")} loading="lazy">
+            <Image class="h-auto max-w-full rounded-lg" src={img8} alt={t("cantina.alt1")} loading="lazy">
           </a>        </div>
     <div>
         <a data-fslightbox href={img9.src} class=" h-auto max-w-full rounded-lg">
-            <Image class="h-auto max-w-full rounded-lg" src={img9} alt={t("cantina.alt3")} loading="lazy">
+            <Image class="h-auto max-w-full rounded-lg" src={img9} alt={t("cantina.alt1")} loading="lazy">
           </a>        </div>
-   
-</div>
-
-<BookingBanner/>
+  </div>
 <Footer/>
 </MainLayout>

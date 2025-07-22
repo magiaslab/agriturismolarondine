@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/Main.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Slider from "../components/sliderHomeIt.jsx";
+import LightweightSlider from "../components/LightweightSlider.astro";
 import BookingBanner from "../components/BookingBanner.astro";
 import { getImage } from "astro:assets";
 import { Image } from "astro:assets";
@@ -10,7 +10,7 @@ import i18next, { t, changeLanguage } from "i18next";
 import myBackground from "../assets/img/image00002.jpeg";
 const optimizedBackground = await getImage({ src: myBackground, format: "webp" });
 const lang = i18next.language;
-const base = lang === "it" ? "" : `/${lang}`;
+const base = lang === 'it' ? '' : `/${lang}`;
 import Img1 from "../assets/img/image00001.jpeg";
 import Img2 from "../assets/img/image00002.jpeg";
 import Img3 from "../assets/img/image00003.jpeg";
@@ -22,6 +22,26 @@ import Content1 from "../components/Content1_agri.astro";
 import Content2 from "../components/Content2_agri.astro";
 
 changeLanguage("it");
+
+// Configurazione slider agriturismo
+const agriturismoImages = [
+  {
+    src: "/img/campo-al-noce.webp",
+    alt: t("agriturismo.slider.alt1")
+  },
+  {
+    src: "/img/campo-al-noce_01.webp",
+    alt: t("agriturismo.slider.alt2")
+  },
+  {
+    src: "/img/campo-al-noce_03.webp",
+    alt: t("agriturismo.slider.alt3")
+  },
+  {
+    src: "/img/campo-al-noce_04.webp",
+    alt: t("agriturismo.slider.alt4")
+  }
+];
 ---
 
 
@@ -30,7 +50,7 @@ changeLanguage("it");
 
 <MainLayout title="Agriturismo La Rondine Bolgheri">
 <Header/>
-<Slider client:load />
+<LightweightSlider images={agriturismoImages} autoplay={true} interval={4000} />
 <BookingBanner/>
 <Content1/>
   <div class="adv-gallery-v6 w-full overflow-hidden pt-8 lg:pt-12 pb-20 lg:pb-32 2xl:flex 2xl:justify-center bg-secondary">

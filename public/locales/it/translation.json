@@ -87,7 +87,13 @@
     "text4": "A soli 6 chilometri dal nostro agriturismo, il mare ed una spiaggia sabbiosa e profonda, antistante una rigogliosa pineta per riposarsi all'ombra. A Marina di Castagneto potrete trovare negozi, ristoranti, bar, centro termale, ecc...",
     "text5": "Non esistono problemi di parcheggio per il mare: un simpatico trenino/navetta gratuito che fa su e giù tutto il giorno, vi accompagnerà da Donoratico a Marina di Castagneto (tempo di viaggio 10 minuti a 20 chilometri/ora).",
     "text6": "La posizione strategica della struttura, vi permetterà di raggiungere in breve tempo sia le città d'arte più famose della Toscana, sia i piccoli borghi, ricchi di storia, cultura e fascino, come Bolgheri (4 km), Castagneto Carducci (6 km), Populonia (15 km) e molti altri.",
-    "text7": "Tante le possibilità di svago: oltre al mare, centro termale a Marina di Castagneto (6 Km), escursioni in quad o in bicicletta, shopping, ristoranti, una degustazione dei nostri vini D.O.C., ecc..."
+    "text7": "Tante le possibilità di svago: oltre al mare, centro termale a Marina di Castagneto (6 Km), escursioni in quad o in bicicletta, shopping, ristoranti, una degustazione dei nostri vini D.O.C., ecc...",
+    "slider": {
+      "alt1": "Campo al Noce - Agriturismo La Rondine",
+      "alt2": "Vigneti di Bolgheri - Vista panoramica",
+      "alt3": "Campo al Noce - Produzione vini",
+      "alt4": "Territorio di Bolgheri - Paesaggio toscano"
+    }
 
   },
   "appartamenti": {
@@ -207,7 +213,12 @@
     "btn3": "Scopri la cantina",
     "alt1": "Agriturismo la Rondine Degustazione vini doc bolgheri",
     "alt2": "Agriturismo la Rondine Cantina Campo al Noce Bolgheri vini prodotti",
-    "alt3": "Agriturismo la Rondine Cantina Campo al Noce Bolgheri vini prodotti vista delle botti in legno"
+    "alt3": "Agriturismo la Rondine Cantina Campo al Noce Bolgheri vini prodotti vista delle botti in legno",
+    "slider": {
+      "alt1": "Vini di Bolgheri - Cantina Campo al Noce",
+      "alt2": "Vino di Bolgheri DOC - Produzione artigianale",
+      "alt3": "Degustazione vini - Cantina familiare"
+    }
   },
   "territorio": {
     "pretitle": "Cosa fare in vacanza a Bolgheri",
