@@ -1,7 +1,6 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade } from 'swiper/modules';
+import { Pagination, Navigation, EffectFade } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -9,89 +8,28 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 
-
-// import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-
-
-export default function App() {
+export default function SliderCantinaEn() {
   return (
-    <>
-      <Swiper
-      effect="fade"
-        spaceBetween={30}
-        
-        
-        centeredSlides={true}
-        autoplay={{
-          delay: 8000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        loop={true}
-        navigation={false}
-        modules={[Autoplay, Pagination, Navigation, EffectFade]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-        <section className="hero flex items-center min-h-screen relative z-[1] py-16 lg:py-28 px-0 bg-gray-100 bg-cover bg-no-repeat bg-center text-center bg-[url('/img/campo-al-noce.webp')]" >
-  <div className="w-[calc(100%_-_3rem)] mx-auto max-w-lg sm:max-w-3xl">
-  <div className="text-3xl text-secondary font-extrabold font-sans mb-3">Campo al Noce Winery</div>
-
-<h1 className="text-6xl font-sans font-extrabold text-white mb-2">A farmhouse with vineyards all around</h1>
-
-
-    <div className="flex flex-wrap items-center gap-4 justify-center">
-    </div>
-  </div>
-</section>
-
-          
-          </SwiperSlide>
-        <SwiperSlide>
-        <section className="hero flex items-center min-h-screen relative z-[1] py-16 lg:py-28 px-0 bg-gray-100 bg-cover bg-no-repeat bg-center text-center bg-[url('/img/campo-al-noce_01.webp')]" >
-  <div className="w-[calc(100%_-_3rem)] mx-auto max-w-lg sm:max-w-3xl">
-
-
-    <div className="flex flex-wrap items-center gap-4 justify-center">
-    </div>
-  </div>
-</section>
-        </SwiperSlide>
-        <SwiperSlide>
-        <section className="hero flex items-center min-h-screen relative z-[1] py-16 lg:py-28 px-0 bg-gray-100 bg-cover bg-no-repeat bg-center text-center bg-[url('/img/campo-al-noce_03.webp')]" >
-  <div className="w-[calc(100%_-_3rem)] mx-auto max-w-lg sm:max-w-3xl">
-
-
-    <div className="flex flex-wrap items-center gap-4 justify-center">
-    </div>
-  </div>
-</section>
-        </SwiperSlide>
-        <SwiperSlide>
-        <section className="hero flex items-center min-h-screen relative z-[1] py-16 lg:py-28 px-0 bg-gray-100 bg-cover bg-no-repeat bg-center text-center bg-[url('/img/campo-al-noce_04.webp')]" >
-  <div className="w-[calc(100%_-_3rem)] mx-auto max-w-lg sm:max-w-3xl">
-
-
-    <div className="flex flex-wrap items-center gap-4 justify-center">
-    </div>
-  </div>
-</section>
-        </SwiperSlide>
-        <SwiperSlide>
-        <section className="hero flex items-center min-h-screen relative z-[1] py-16 lg:py-28 px-0 bg-gray-100 bg-cover bg-no-repeat bg-center text-center bg-[url('/img/vini-di-bolgheri_03.webp')]" >
-  <div className="w-[calc(100%_-_3rem)] mx-auto max-w-lg sm:max-w-3xl">
-
-
-    <div className="flex flex-wrap items-center gap-4 justify-center">
-    </div>
-  </div>
-</section>
-        </SwiperSlide>
-   
-      </Swiper>
-    </>
+    <Swiper
+      spaceBetween={30}
+      effect={'fade'}
+      centeredSlides={true}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={true}
+      modules={[Pagination, Navigation, EffectFade]}
+      className="mySwiper"
+    >
+      <SwiperSlide>
+        <img src="/img/vini-di-bolgheri_03.webp" alt="Vini di Bolgheri" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="/img/Vino-di-Bolgheri-03.webp" alt="Vino di Bolgheri 3" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="/img/Vino-di-Bolgheri-07.webp" alt="Vino di Bolgheri 7" />
+      </SwiperSlide>
+    </Swiper>
   );
 }
