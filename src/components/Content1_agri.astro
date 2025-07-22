@@ -12,12 +12,12 @@ import img5 from "../assets/img/image00004.jpeg"
 
 ---
 
-<section class="bg-secondary dark:bg-gray-900" >
+<section class="bg-secondary dark:bg-gray-900 px-4" >
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-4 xl:gap-0 lg:py-16 lg:grid-cols-12">
        
        
         <div class="rounded-lg lg:mt-0 lg:col-span-6 lg:flex">
-            <div class="grid gap-2">
+            <div class="grid gap-2" data-aos="fade-right" data-aos-delay="300" data-aos-easing="linear">
                 <div>
                     <Image class="h-auto max-w-full rounded-lg" src={img3} alt="">
                 </div>
@@ -39,11 +39,13 @@ import img5 from "../assets/img/image00004.jpeg"
         </div>         
         <div class="mr-auto place-self-center lg:col-span-6 ml-8 mt-7 lg:mt-0">
             <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-primary">{t("agriturismo.title")}</h1>
-            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-s lg:text-s dark:text-gray-400">{t("agriturismo.text1")}</p>
-            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-s lg:text-s dark:text-gray-400">{t("agriturismo.text2")}</p>
-            <h2 class="max-w-2xl mb-4 text-2xl font-extrabold tracking-tight leading-none md:text-3xl xl:text-4xl text-primary">{t("agriturismo.text3_title")}</h2>
-            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-s lg:text-s dark:text-gray-400">{t("agriturismo.text3_desc")}</p>
-            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-s lg:text-s dark:text-gray-400">{t("agriturismo.text3_desc2")}</p>
+            <p class="max-w-2xl mb-6 text-gray-500 lg:mb-8 md:text-s lg:text-s dark:text-gray-400">{t("agriturismo.text1")}</p>
+            <p class="max-w-2xl mb-6 text-gray-500 lg:mb-8 md:text-s lg:text-s dark:text-gray-400">{t("agriturismo.text2")}</p>
+            <h2 class="max-w-2xl mb-4 text-2xl font-semibold tracking-tight leading-none md:text-3xl xl:text-4xl text-primary">{t("agriturismo.text3_title")}</h2>
+            <p class="max-w-2xl mb-6 text-gray-500 lg:mb-8 md:text-s lg:text-s dark:text-gray-400">{t("agriturismo.text3_desc")}</p>
+            <p class="max-w-2xl mb-6 text-gray-500 lg:mb-8 md:text-s lg:text-s dark:text-gray-400">{t("agriturismo.text3_desc2")}</p>
+
+
         </div>       
     </div>
 </section>
