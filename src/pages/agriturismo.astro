@@ -21,24 +21,30 @@ import Img7 from "../assets/img/image00009.jpeg";
 import Content1 from "../components/Content1_agri.astro";
 import Content2 from "../components/Content2_agri.astro";
 
+// Import immagini per lo slider
+import sliderImg1 from "../assets/img/campo-al-noce.webp";
+import sliderImg2 from "../assets/img/campo-al-noce_03.webp";
+import sliderImg3 from "../assets/img/image00001.jpeg";
+import sliderImg4 from "../assets/img/image00002.jpeg";
+
 changeLanguage("it");
 
-// Configurazione slider agriturismo
+// Configurazione slider agriturismo con immagini ottimizzate
 const agriturismoImages = [
   {
-    src: "/img/campo-al-noce.webp",
+    src: sliderImg1.src,
     alt: t("agriturismo.slider.alt1")
   },
   {
-    src: "/img/campo-al-noce_01.webp",
+    src: sliderImg2.src,
     alt: t("agriturismo.slider.alt2")
   },
   {
-    src: "/img/campo-al-noce_03.webp",
+    src: sliderImg3.src,
     alt: t("agriturismo.slider.alt3")
   },
   {
-    src: "/img/campo-al-noce_04.webp",
+    src: sliderImg4.src,
     alt: t("agriturismo.slider.alt4")
   }
 ];

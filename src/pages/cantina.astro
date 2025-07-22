@@ -22,20 +22,25 @@ import img7 from "../assets/img/image00012.jpeg";
 import img8 from "../assets/img/image00013.jpeg";
 import img9 from "../assets/img/campo-al-noce_03.webp";
 
+// Import immagini per lo slider
+import sliderImg1 from "../assets/img/vini-di-bolgheri.jpg";
+import sliderImg2 from "../assets/img/Vino-di-Bolgheri-03.webp";
+import sliderImg3 from "../assets/img/Vino-di-Bolgheri-07.webp";
+
 changeLanguage("it");
 
-// Configurazione slider cantina
+// Configurazione slider cantina con immagini ottimizzate
 const cantinaImages = [
   {
-    src: "/img/vini-di-bolgheri_03.webp",
+    src: sliderImg1.src,
     alt: t("cantina.slider.alt1")
   },
   {
-    src: "/img/Vino-di-Bolgheri-03.webp", 
+    src: sliderImg2.src, 
     alt: t("cantina.slider.alt2")
   },
   {
-    src: "/img/Vino-di-Bolgheri-07.webp",
+    src: sliderImg3.src,
     alt: t("cantina.slider.alt3")
   }
 ];

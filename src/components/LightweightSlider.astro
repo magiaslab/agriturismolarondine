@@ -12,7 +12,11 @@ export interface Props {
 const { images, autoplay = true, interval = 5000 } = Astro.props;
 ---
 
-<div class="lightweight-slider relative overflow-hidden rounded-lg shadow-lg">
+<div 
+  class="lightweight-slider relative overflow-hidden rounded-lg shadow-lg"
+  data-autoplay={autoplay.toString()}
+  data-interval={interval.toString()}
+>
   <div class="slider-container flex transition-transform duration-500 ease-in-out">
     {images.map((image, index) => (
       <div class="slider-slide min-w-full">
@@ -21,6 +25,7 @@ const { images, autoplay = true, interval = 5000 } = Astro.props;
           alt={image.alt} 
           class="w-full h-64 md:h-96 lg:h-[500px] object-cover"
           loading={index === 0 ? "eager" : "lazy"}
+          decoding="async"
         />
       </div>
     ))}
