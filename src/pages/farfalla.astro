@@ -7,533 +7,178 @@ import i18next, { t, changeLanguage } from "i18next";
 const lang = i18next.language;
 const base = lang === "it" ? "" : `/${lang}`;
 import { getImage } from "astro:assets";
-import myBackground from "../assets/img/app/image00001.jpeg";
+import myBackground from "../assets/img/app/image00011.jpeg";
 const optimizedBackground = await getImage({ src: myBackground, format: "webp" });
 import { Image } from "astro:assets";
-import img1 from "../assets/img/app/image00002.jpeg";
-import img2 from "../assets/img/app/image00003.jpeg";
-import img3 from "../assets/img/app/image00004.jpeg";
-import img4 from "../assets/img/app/image00005.jpeg";
-import img5 from "../assets/img/app/image00006.jpeg";
-import img6 from "../assets/img/app/image00007.jpeg";
-import img7 from "../assets/img/app/image00008.jpeg";
-import img8 from "../assets/img/app/image00009.jpeg";
-import img9 from "../assets/img/app/image00010.jpeg";
-import img10 from "../assets/img/app/image00011.jpeg";
-import img11 from "../assets/img/app/image00012.jpeg";
-import img12 from "../assets/img/app/image00013.jpeg";
-import img13 from "../assets/img/app/image00014.jpeg";
-import img14 from "../assets/img/app/image00015.jpeg";
-import img15 from "../assets/img/app/image00016.jpeg";
-import img16 from "../assets/img/app/image00017.jpeg";
-import img17 from "../assets/img/app/image00018.jpeg";
-import img18 from "../assets/img/app/image00019.jpeg";
-import img19 from "../assets/img/app/image00020.jpeg";
-import img20 from "../assets/img/app/image00021.jpeg";
-import img21 from "../assets/img/app/image00022.jpeg";
-import img22 from "../assets/img/app/image00023.jpeg";
+import img1 from "../assets/img/app/nuove/farfalla01.jpeg";
+import img2 from "../assets/img/app/nuove/farfalla02.jpeg";
+import img3 from "../assets/img/app/nuove/farfalla03.jpeg";
+import img4 from "../assets/img/app/nuove/farfalla04.jpeg";
+import img5 from "../assets/img/app/nuove/farfalla09.jpeg";
+import img6 from "../assets/img/app/nuove/farfalla06.jpeg";
 
 changeLanguage("it");
 ---
+
+
+<MainLayout title="Appartamento Farfalla - Agriturismo La Rondine Bolgheri">
+<Header/>
+<section class="hero relative z-[1] py-16 lg:py-28 px-0 bg-secondary bg-cover bg-no-repeat bg-center" style={`background-image: url(${optimizedBackground.src});`}>
+    <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
+      <div class="max-w-2xl">
+        <div class="max-w-screen-xl md:px-5 py-8 m-4 lg:mx-auto lg:py-12 bg-white/90 rounded-xl sm:px-5">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-sans font-extrabold text-red-600 mb-2 text-center">{t("farfalla.title")}</h1>
+          <p class="leading-normal mb-6 mt-6 font-sans font-bold text-crusta text-center">{t("farfalla.subtitle")}</p>
+          <div class="flex flex-wrap items-center gap-4">
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+  <section class="bg-secondary dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2 class="mb-4 text-2xl lg:text-4xl tracking-tight font-bold text-green dark:text-white">{t("farfalla.description")}</h2>
+            <p class="mb-4 font-medium font-sans">{t("farfalla.text3")}</p>
+            <p class="mb-4 text-base ">{t("farfalla.text1")}</p>
+            <p class="mb-4 text-base ">{t("farfalla.text2")}</p>
+        </div>
+
+<ul class="space-y-4 text-left text-gray-500 dark:text-gray-400">
     
-<MainLayout title="Appartamento farfalla - Agriturismo La Rondine Bolgheri">
-  <Header/>
-  <section class="hero relative z-[1] py-16 lg:py-28 px-0 bg-gray-100 bg-cover bg-no-repeat bg-center text-center" style={`background-image: url(${optimizedBackground.src});`}>
-      <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg sm:max-w-3xl">
-        <div class="text-sm text-primary mb-3">{t("farfalla.pretitle")}</div>
-  
-        <h1 class="text-4xl lg:text-6xl text-secondary font-extrabold mb-2">{t("farfalla.title")}</h1>
-  
-  
-        <div class="flex flex-wrap items-center gap-4 justify-center">
-        </div>
-      </div>
-    </section>
-    <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-      <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-        <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-          <div>
-            <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-              <Image src={img1} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-            </div>
-          </div>
-  
-          <div class="md:pt-8">
-  
-            <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title2")}</h1>
-  
-            <p class="mb-4 text-base">{t("farfalla.text1")}</p>
-            <p class="mb-4 text-base">{t("farfalla.text2")}</p>
-  
-  
-          </div>
-        </div>
-      </div>
+    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+        <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+         </svg>
+        <span>{t("farfalla.desc1")}</span>
+    </li>
+    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+        <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+         </svg>
+        <span>{t("farfalla.desc2")}</span>
+    </li>
+    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+        <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+         </svg>
+        <span>{t("farfalla.desc8")}</span>
+    </li>
+    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+        <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+         </svg>
+        <span>{t("farfalla.desc9")}</span>
+    </li>
+    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+        <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+         </svg>
+        <span>{t("farfalla.desc3")}</span>
+    </li>
+    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+        <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+         </svg>
+        <span>{t("farfalla.desc4")}</span>
+    </li>
+    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+        <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+         </svg>
+        <span>{t("farfalla.desc5")}</span>
+    </li>
+    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+        <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+         </svg>
+        <span>{t("farfalla.desc6")}</span>
+    </li>
+    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+        <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+         </svg>
+        <span>{t("farfalla.desc7")}</span>
+    </li>
+    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+      <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+       </svg>
+      <span>{t("farfalla.desc10")}</span>
+  </li>
+</ul>
+
     </div>
-  
+  </section>
+
+
   <BookingBanner/>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img2} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
+
+<div class="bg-secondary grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-4 px-4 lg:px-16 pb-8">
+    <div>
+        <a data-fslightbox href={img1.src} class="h-auto max-w-full rounded-lg">
+            <Image class="same-height max-w-full rounded-lg" src={img1} alt="Appartamento Farfalla" loading="lazy">
+          </a>
+    </div>
+    <div>
+        <a data-fslightbox href={img2.src} class="h-auto max-w-full rounded-lg">
+            <Image class="same-height max-w-full rounded-lg" src={img2} alt="Appartamento Farfalla" loading="lazy">
+          </a>
+    </div>
+    <div>
+        <a data-fslightbox href={img3.src} class="h-auto max-w-full rounded-lg">
+            <Image class="same-height max-w-full rounded-lg" src={img3} alt="Appartamento Farfalla" loading="lazy">
+          </a>
+    </div>
+    <div>
+        <a data-fslightbox href={img4.src} class="h-auto max-w-full rounded-lg">
+            <Image class="same-height max-w-full rounded-lg" src={img4} alt="Appartamento Farfalla" loading="lazy">
+          </a>
+    </div>
+    <div>
+        <a data-fslightbox href={img5.src} class="h-auto max-w-full rounded-lg">
+            <Image class="same-height max-w-full rounded-lg" src={img5} alt="Appartamento Farfalla" loading="lazy">
+          </a>
+    </div>
+    <div>
+        <a data-fslightbox href={img6.src} class="h-auto max-w-full rounded-lg">
+            <Image class="same-height max-w-full rounded-lg" src={img6} alt="Appartamento Farfalla" loading="lazy">
+          </a>
+    </div>
+</div>
+
+<div class="bg-secondary py-6 sm:py-8 lg:py-12">
+    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+      <div class="mb-10 md:mb-16">
+        <h2 class="mb-4 text-center text-2xl font-extrabold text-primary md:mb-6 lg:text-4xl">{t("farfalla.altri")}</h2>
+        <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">{t("farfalla.sottoaltro")}</p>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2 md:gap-8 xl:grid-cols-3">
+        <div class="flex flex-col rounded-lg border border-primary p-4 md:p-6">
+          <h3 class="mb-2 text-lg font-bold md:text-xl text-yellow-500">Coccinella</h3>
+          <p class="mb-4 text-gray-500">{t("farfalla.titl2altro")}</p>
+          <a href={`${base}/coccinella`} class="mt-auto font-bold text-primary transition duration-100 hover:text-primary-600 active:text-indigo-700">{t("farfalla.scoprilo")}</a>
         </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title3")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text3")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text4")}</p>
-  
-  
+        <div class="flex flex-col rounded-lg border border-primary p-4 md:p-6">
+          <h3 class="mb-2 text-lg font-bold md:text-xl text-green-500">Jolly</h3>
+          <p class="mb-4 text-gray-500">{t("farfalla.titl3altro")}</p>
+          <a href={`${base}/jolly`} class="mt-auto font-bold text-primary transition duration-100 hover:text-primary-600 active:text-indigo-700">{t("farfalla.scoprilo")}</a>
+        </div>
+        <div class="flex flex-col rounded-lg border border-primary p-4 md:p-6">
+          <h3 class="mb-2 text-lg font-bold md:text-xl text-blue-500">Libellula</h3>
+          <p class="mb-4 text-gray-500">{t("farfalla.titl3altro")}</p>
+          <a href={`${base}/libellula`} class="mt-auto font-bold text-primary transition duration-100 hover:text-primary-600 active:text-indigo-700">{t("farfalla.scoprilo")}</a>
         </div>
       </div>
     </div>
   </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img3} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title4")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text5")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text6")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img4} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title5")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text7")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text8")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img5} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title6")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text9")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text10")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img6} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title7")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text11")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text12")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img7} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title8")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text13")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text14")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img8} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title9")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text15")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text16")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img9} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title10")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text17")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text18")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img10} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title11")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text19")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text20")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img11} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title12")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text21")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text22")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img12} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title13")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text23")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text24")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img13} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title14")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text25")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text26")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img14} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title15")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text27")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text28")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img15} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title16")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text29")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text30")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img16} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title17")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text31")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text32")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img17} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title18")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text33")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text34")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img18} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title19")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text35")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text36")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img19} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title20")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text37")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text38")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img20} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title21")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text39")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text40")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img21} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title22")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text41")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text42")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="bg-secondary py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-            <Image src={img22} loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
-          </div>
-        </div>
-  
-        <div class="md:pt-8">
-  
-          <h1 class="mb-4 text-center text-2xl font-extrabold text-primary sm:text-3xl md:mb-6 md:text-left">{t("farfalla.title23")}</h1>
-  
-          <p class="mb-4 text-base">{t("farfalla.text43")}</p>
-          <p class="mb-4 text-base">{t("farfalla.text44")}</p>
-  
-  
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <Footer/>
+
+<Footer/>
 </MainLayout>
+
+<style>
+  .same-height {
+    height: 400px;
+    object-fit: cover;
+  }
+</style>
